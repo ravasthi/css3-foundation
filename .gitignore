@@ -1,6 +1,8 @@
 .sass-cache/
 .DS_Store
 .bundle/
+.powenv
+.rvmrc
 images/icon-*.png
 styles-compiled/
-
+tmp/
