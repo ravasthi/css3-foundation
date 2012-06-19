@@ -1,8 +1,16 @@
-.sass-cache/
+# Mac OS
 .DS_Store
+
+# Bundler
 .bundle/
-.powenv
-.rvmrc
+
+# Compass
+.sass-cache/
 images/icon-*.png
 styles-compiled/
+
+# Pow/RVM
+.powenv
+.powrc
+.rvmrc
 tmp/
