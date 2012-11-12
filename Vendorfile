@@ -2,7 +2,7 @@
 # Run `vendorer` to install jQuery and jQuery UI dependencies into scripts/lib.
 
 JQUERY_VER = "1.8.2"
-JQUERY_UI_VER = "1.8.24"
+JQUERY_UI_VER = "1.9.1"
 
 folder "scripts/lib" do
 
@@ -12,10 +12,12 @@ folder "scripts/lib" do
 
   # Standard jQuery/UI dist
   #
-  file "jquery.js",         "http://code.jquery.com/jquery-#{JQUERY_VER}.js"
-  file "jquery-ui.js",      "http://jquery-ui.googlecode.com/svn/tags/#{JQUERY_UI_VER}/ui/jquery-ui.js"
+  file "jquery.js",         "ajax.googleapis.com/ajax/libs/jquery/#{JQUERY_VER}/jquery.js"
+  file "jquery-ui.js",      "http://ajax.googleapis.com/ajax/libs/jqueryui/#{JQUERY_UI_VER}/jquery-ui.js"
 
   # jQuery UI components
   #
-  file "jquery-ui.widget.js", "http://jquery-ui.googlecode.com/svn/tags/#{JQUERY_UI_VER}/ui/jquery.ui.widget.js"
+  file "jquery-ui.widget.js", "https://raw.github.com/jquery/jquery-ui/#{JQUERY_UI_VER}/ui/jquery.ui.widget.js" do |path|
+    rewrite(path) { |content| content.gsub(/@VERSION/, JQUERY_UI_VER) }
+  end
 end

@@ -49,6 +49,6 @@ DEPENDENCIES
   rack-livereload
   rake
   rb-fsevent
-  sass (~> 3.2.0.alpha)
+  sass
   sassy-buttons
   vendorer
