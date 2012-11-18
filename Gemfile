@@ -4,7 +4,7 @@ gem 'rake'
 
 # compass
 gem "compass", ">= 0.12"
-gem 'guard-compass'
+gem 'guard-compass', :git => "git://github.com/guard/guard-compass.git"
 gem "rb-fsevent"
 gem "sassy-buttons"
 gem "sass"

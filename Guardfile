@@ -4,6 +4,6 @@ guard 'livereload' do
   watch(%r{.+})
 end
 
-guard 'compass' do
+guard 'compass', :compile_on_start => true do
   watch(%r{styles/.*\.scss})
 end
