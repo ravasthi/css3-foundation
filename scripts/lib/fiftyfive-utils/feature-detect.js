@@ -37,3 +37,10 @@ fiftyfive.featureDetect.placeholder = function() {
     return ("placeholder" in i) && ("placeholder" in t);
 };
 
+/*
+** SVG support.
+** cf <http://stackoverflow.com/questions/654112/how-do-you-detect-support-for-vml-or-svg-in-a-browser>
+*/
+fiftyfive.featureDetect.svg = function() {
+    return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1");
+};
