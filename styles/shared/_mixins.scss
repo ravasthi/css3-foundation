@@ -41,7 +41,7 @@
   }
 }
 
-@mixin inline-list
+@mixin inline-list($spacing: 0.33em)
 {
   display: inline;
   margin: 0;
@@ -50,7 +50,24 @@
   li
   {
     display: inline;
-    margin-right: 0.33em;
+    margin-right: $spacing;
+
+    &:last-of-type
+    {
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin inline-block-list($spacing: $column-width)
+{
+  margin: 0;
+  list-style-type: none;
+
+  li
+  {
+    display: inline-block;
+    margin-right: $spacing;
 
     &:last-of-type
     {
