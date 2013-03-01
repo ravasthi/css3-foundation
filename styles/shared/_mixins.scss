@@ -115,3 +115,34 @@
   line-height : $small-text-line-height;
 }
 
+/*----------[ photos/images ]---------------------------------------------------
+*/
+/*
+** Mixin for including a retina image as a background.
+**
+** Parameters:
+**  $image-name   : The filename of the image without the extension.
+**  $image-width  : The width of the 1x image.
+**  $image-height : The height of the 1x image.
+**  $type         : The extension of the image file. Defaults to 'png.'
+**  $bg-color     : The background color. Defaults to 'transparent.'
+**  $bg-repeat    : The background-repeat setting. Defaults to 'no-repeat.'
+**  $bg-pos-x     : The horizontal position of the background. Defaults to 'center.'
+**  $bg-pos-y     : The vertical position of the background. Defaults to 'center.'
+**
+*/
+@mixin retina-background($image-name, $image-width, $image-height, $type: "png",
+                         $bg-color: transparent, $bg-repeat: no-repeat,
+                         $bg-pos-x: center, $bg-pos-y: center)
+{
+  $full-image-name   : "#{$image-name}.#{$type}";
+  $retina-image-name : "#{$image-name}@2x.#{$type}";
+
+  background: $bg-color image-url($full-image-name) $bg-repeat $bg-pos-x $bg-pos-y;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2)
+  {
+    background-image: image-url($retina-image-name);
+    @include background-size($image-width $image-height);
+  }
+}
