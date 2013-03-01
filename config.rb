@@ -2,15 +2,19 @@
 require 'sassy-buttons'
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path               = "/"
 
-css_dir = "styles-compiled"
-sass_dir = "styles"
-additional_import_paths = ["styles/basics", "styles/shared"]
+css_dir                 = "styles-compiled"
+sass_dir                = "styles"
+additional_import_paths = [
+  "styles/basics",
+  "styles/shared",
+  "styles/shared/sass-icon-fonts"
+]
 
-images_dir = "images"
-javascripts_dir = "scripts"
+images_dir              = "images"
+javascripts_dir         = "scripts"
 
-relative_assets = true
+relative_assets         = true
 
-line_comments = false
+line_comments           = false

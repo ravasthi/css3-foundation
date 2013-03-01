@@ -91,6 +91,12 @@
   line-height : $subheading-text-line-height;
 }
 
+@mixin large-text
+{
+  font-size   : $large-text-size;
+  line-height : $large-text-line-height;
+}
+
 @mixin body-text
 {
   font-size   : $body-text-size;

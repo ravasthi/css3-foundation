@@ -21,3 +21,45 @@ folder "scripts/lib" do
     rewrite(path) { |content| content.gsub(/@VERSION/, JQUERY_UI_VER) }
   end
 end
+
+# Sass icon fonts
+#
+from "git://github.com/rstacruz/sass_icon_fonts.git" do
+  file "styles/shared/sass-icon-fonts/_elusive.sass",       "_elusive.sass"
+  file "styles/shared/sass-icon-fonts/_entypo.sass",        "_entypo.sass"
+  file "styles/shared/sass-icon-fonts/_entypo-social.sass", "_entypo-social.sass"
+  file "styles/shared/sass-icon-fonts/_font-awesome.sass",  "_font-awesome.sass"
+  file "styles/shared/sass-icon-fonts/_typicons.sass",      "_typicons.sass"
+end
+
+folder "fonts" do
+  # Elusive
+  #
+  from "git://github.com/aristath/elusive-iconfont.git" do
+    folder "elusive",               "font"
+  end
+
+  # Entypo
+  #
+  file "entypo/entypo.eot",         "http://www.entypo.com/css/entypo.eot"
+  file "entypo/entypo.svg",         "http://www.entypo.com/css/entypo.svg"
+  file "entypo/entypo.ttf",         "http://www.entypo.com/css/entypo.ttf"
+  file "entypo/entypo.woff",        "http://www.entypo.com/css/entypo.woff"
+  file "entypo/entypo-social.eot",  "http://www.entypo.com/css/entypo-social.eot"
+  file "entypo/entypo-social.svg",  "http://www.entypo.com/css/entypo-social.svg"
+  file "entypo/entypo-social.ttf",  "http://www.entypo.com/css/entypo-social.ttf"
+  file "entypo/entypo-social.woff", "http://www.entypo.com/css/entypo-social.woff"
+
+  # Font Awesome
+  #
+  from "git://github.com/FortAwesome/Font-Awesome.git" do
+    folder "font-awesome",          "font"
+  end
+
+  # Typicons
+  #
+  file "typicons/typicons.eot",     "http://typicons.com/media/fonts/typicons-regular-webfont.eot"
+  file "typicons/typicons.svg",     "http://typicons.com/media/fonts/typicons-regular-webfont.svg"
+  file "typicons/typicons.ttf",     "http://typicons.com/media/fonts/typicons-regular-webfont.ttf"
+  file "typicons/typicons.woff",    "http://typicons.com/media/fonts/typicons-regular-webfont.woff"
+end

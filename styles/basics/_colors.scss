@@ -62,11 +62,15 @@ $link                   : $blue;
 $visited-link           : $eggplant-purple;
 
 $highlighted-text-color : white;
-$subheading-text-color  : $teal;
+$heading-text-color     : $leaf-green;
+$subheading-text-color  : $orange;
 
-$error-feedback         : darken($red, 10);
-$warning-feedback       : darken($bright-yellow, 10);
 $success-feedback       : darken($leaf-green, 3);
+$success-feedback-bg    : desaturate(lighten($success-feedback, 55), 20);
+$warning-feedback       : darken($bright-yellow, 10);
+$warning-feedback-bg    : lighten($warning-feedback, 48);
+$error-feedback         : darken($red, 10);
+$error-feedback-bg      : lighten($error-feedback, 55);
 
 /*----------[ forms ]-----------------------------------------------------------
 */

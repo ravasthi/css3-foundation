@@ -16,7 +16,7 @@
 
     & > section > h1
     {
-      margin-bottom: 2 * $body-text-line-height - ($page-heading-text-size + $vertical-nudge + 0.1);
+      margin-bottom: 3 * $body-text-line-height - ($page-heading-text-size + $vertical-nudge + 1px);
       border-bottom: 1px solid $light-stroke;
       padding-bottom: $vertical-nudge;
       color: darken($orange, 5);

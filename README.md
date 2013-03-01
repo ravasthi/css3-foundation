@@ -17,6 +17,7 @@ To use this project, the following must be installed on your computer:
 * Integration with the [jQuery](http://jquery.com/ "jQuery: The Write Less, Do More, JavaScript Library") and [jQuery UI](http://jqueryui.com/ "jQuery UI - Home") JavaScript libraries, as well as [55 Minutes' own set of JS utilities and conveniences](https://github.com/55minutes/fiftyfive-util-js/).
 * A style guide similar to the [Twitter bootstrap](http://twitter.github.com/bootstrap/ "Bootstrap, from Twitter") containing examples of the default styles defined in the project.
 * The [1140 CSS grid](http://cssgrid.net "The 1140px CSS Grid System &middot; Fluid down to mobile") for rapid prototyping.
+* Integration with various icon-font libraries: [Font Awesome](http://fortawesome.github.com/Font-Awesome/ "Font Awesome, the iconic font designed for use with Twitter Bootstrap"), [Elusive](http://aristeides.com/elusive-iconfont/ "Elusive icons, an icons font designed for use with Bootstrap"), [Entypo](http://www.entypo.com "Entypo - 250+ carefully crafted pictograms") and [Typicons](http://typicons.com "Typicons"), with help from Rico Sta. Cruz's [Sass Icon Fonts](https://github.com/rstacruz/sass_icon_fonts) project.
 * Ruby version management: if you have either RVM or rbenv installed, this project comes bundled with a `.rbenv-version` file to make your environment setup easier.
 
 ## Getting Started ##

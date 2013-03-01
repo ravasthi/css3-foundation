@@ -7,6 +7,7 @@
 /*----------[ table of contents ]-----------------------------------------------
 | tags
 | non-semantic styles
+| icon fonts
 */
 
 
@@ -75,33 +76,30 @@ dd
 
 h1
 {
-  margin-bottom: $body-text-line-height * 2 - $page-heading-text-line-height;
+  margin-bottom: $body-text-line-height * 3 - $page-heading-text-line-height;
   padding: 0;
   @include heading-text;
+  color: $heading-text-color;
 }
 
 h2
 {
-  margin: 1.5 * $body-text-line-height 0 $body-text-line-height / 2;
+  margin: $body-text-line-height 0 $body-text-line-height / 2;
   color: $subheading-text-color;
   @include subheading-text;
 }
 
 h3
 {
-  margin: $body-text-line-height 0 0;
-  font-weight: normal;
-  font-style: italic;
+  margin: 0.75 * $body-text-line-height 0 0;
+  @include large-text;
 }
 
-// For large headings, use ligatures if available.
 h1, h2, h3
 {
+  // For large headings, use ligatures if available.
   text-rendering: optimizeLegibility;
-}
 
-h1, h2, h3
-{
   & + blockquote,
   & + dl,
   & + ol,
@@ -269,3 +267,6 @@ span.keep-together
   font-size: 0;
 }
 
+/*----------[ icon fonts ]------------------------------------------------------
+*/
+@include fa-font;
