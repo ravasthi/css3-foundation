@@ -1,7 +1,7 @@
 # Vendorfile for use with vendorer command. https://github.com/grosser/vendorer
 # Run `vendorer` to install jQuery and jQuery UI dependencies into scripts/lib.
 
-JQUERY_VER = "1.9.1"
+JQUERY_VER = "1.10.2"
 JQUERY_UI_VER = "1.10.3"
 
 folder "scripts/lib" do
@@ -53,7 +53,7 @@ folder "fonts" do
   # Font Awesome
   #
   from "git://github.com/FortAwesome/Font-Awesome.git" do
-    folder "font-awesome",          "build/assets/font-awesome/font"
+    folder "font-awesome",          "font"
   end
 
   # Typicons
