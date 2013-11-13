@@ -12,7 +12,7 @@ folder "scripts/lib" do
 
   # Standard jQuery/UI dist
   #
-  file "jquery.js",         "ajax.googleapis.com/ajax/libs/jquery/#{JQUERY_VER}/jquery.js"
+  file "jquery.js",         "http://ajax.googleapis.com/ajax/libs/jquery/#{JQUERY_VER}/jquery.js"
   file "jquery-ui.js",      "http://ajax.googleapis.com/ajax/libs/jqueryui/#{JQUERY_UI_VER}/jquery-ui.js"
 
   # jQuery UI components
@@ -53,7 +53,7 @@ folder "fonts" do
   # Font Awesome
   #
   from "git://github.com/FortAwesome/Font-Awesome.git" do
-    folder "font-awesome",          "font"
+    folder "font-awesome",          "fonts"
   end
 
   # Typicons
