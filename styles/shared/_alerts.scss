@@ -25,7 +25,7 @@
     {
       background-color: $success-feedback-bg;
       color: $success-feedback;
-      @include fa-icon(ok);
+      @include fa-icon(check);
     }
 
     &.warning
@@ -39,7 +39,7 @@
     {
       background-color: $error-feedback-bg;
       color: $error-feedback;
-      @include fa-icon(exclamation-sign);
+      @include fa-icon(exclamation-triangle);
     }
   }
 }
