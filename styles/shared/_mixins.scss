@@ -117,6 +117,17 @@
 
 /*----------[ photos/images ]---------------------------------------------------
 */
+@mixin retina
+{
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+         only screen and (-moz-min-device-pixel-ratio: 1.5),
+         only screen and (-o-min-device-pixel-ratio: 3/2),
+         only screen and (min-device-pixel-ratio: 1.5)
+  {
+    @content;
+  }
+}
+
 /*
 ** Mixin for including a retina image as a background.
 **
@@ -140,7 +151,7 @@
 
   background: $bg-color image-url($full-image-name) $bg-repeat $bg-pos-x $bg-pos-y;
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2)
+  @include retina
   {
     background-image: image-url($retina-image-name);
     @include background-size($image-width $image-height);

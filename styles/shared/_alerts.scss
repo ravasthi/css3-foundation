@@ -39,7 +39,7 @@
     {
       background-color: $error-feedback-bg;
       color: $error-feedback;
-      @include fa-icon(exclamation-circle);
+      @include fa-icon(exclamation-triangle);
     }
   }
 }
