@@ -25,11 +25,12 @@ end
 # Sass icon fonts
 #
 from "git://github.com/rstacruz/sass_icon_fonts.git" do
-  file "styles/shared/sass-icon-fonts/_elusive.sass",       "_elusive.sass"
-  file "styles/shared/sass-icon-fonts/_entypo.sass",        "_entypo.sass"
-  file "styles/shared/sass-icon-fonts/_entypo-social.sass", "_entypo-social.sass"
-  file "styles/shared/sass-icon-fonts/_font-awesome.sass",  "_font-awesome.sass"
-  file "styles/shared/sass-icon-fonts/_typicons.sass",      "_typicons.sass"
+  file "styles/shared/sass-icon-fonts/_elusive.sass",          "_elusive.sass"
+  file "styles/shared/sass-icon-fonts/_entypo.sass",           "_entypo.sass"
+  file "styles/shared/sass-icon-fonts/_entypo-social.sass",    "_entypo-social.sass"
+  file "styles/shared/sass-icon-fonts/_font-awesome.sass",     "_font-awesome.sass"
+  file "styles/shared/sass-icon-fonts/_foundation-icons.sass", "_foundicons-general.sass"
+  file "styles/shared/sass-icon-fonts/_typicons.sass",         "_typicons.sass"
 end
 
 folder "fonts" do
@@ -49,6 +50,12 @@ folder "fonts" do
   file "entypo/entypo-social.svg",  "http://www.entypo.com/css/entypo-social.svg"
   file "entypo/entypo-social.ttf",  "http://www.entypo.com/css/entypo-social.ttf"
   file "entypo/entypo-social.woff", "http://www.entypo.com/css/entypo-social.woff"
+
+  # Foundation icons
+  #
+  from "git@github.com:zurb/foundation-icons.git" do
+    folder "foundation-icons",      "foundation_icons_general/fonts"
+  end
 
   # Font Awesome
   #
