@@ -10,8 +10,6 @@
 
 // Reset - use Compass' reset mixins
 @import "compass/reset";
-@include global-reset;
-@include reset-html5;
 
 // Third-party mixins
 @import "compass/css3";

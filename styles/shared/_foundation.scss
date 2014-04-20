@@ -74,6 +74,11 @@ dd
   margin: 0 0 $body-text-line-height;
 }
 
+em
+{
+  font-style: italic;
+}
+
 h1
 {
   margin-bottom: $body-text-line-height * 3 - $page-heading-text-line-height;
@@ -151,6 +156,11 @@ pre
   padding: $body-text-line-height / 2 $column-width / 2;
   overflow: auto;
   background-color: $accent-bg;
+}
+
+strong
+{
+  font-weight: bold;
 }
 
 sub, sup
