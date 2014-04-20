@@ -1,13 +1,13 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
 gem 'rake'
 
 # compass
-gem "compass", "~> 0.13.alpha.10"
+gem 'compass', '~> 1.0.0.alpha.19'
 gem 'guard-compass'
-gem "rb-fsevent"
-gem "sassy-buttons"
-gem "sass"
+gem 'rb-fsevent'
+gem 'sassy-buttons'
+gem 'sass'
 
 # livereload
 gem 'guard-livereload'
@@ -17,4 +17,4 @@ gem 'rack-livereload'
 gem 'powder'
 
 # vendored assets
-gem "vendorer"
+gem 'vendorer'
