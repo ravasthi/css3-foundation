@@ -1,8 +1,8 @@
 @import "sassy-buttons";
 
-//   Sassy Button defaults
-//   These are the base defaults for the buttons, if you are going to use similar buttons on an entire site,
-//   overriding these can save you some time by calling the sassy button mixin with less arguments.
+//  Sassy Button defaults
+//  These are the base defaults for the buttons, if you are going to use similar buttons on an entire site,
+//  overriding these can save you some time by calling the sassy button mixin with less arguments.
 
 $button-border-width     : 1px;
 $button-line-height      : $secondary-text-line-height;
@@ -10,18 +10,18 @@ $button-vertical-padding : 3px;
 $button-text-family      : $body-text-family;
 $button-border-radius    : 6px;
 
-$sb-base-color     : $button-base-bg;
-$sb-second-color   : false;
-$sb-border-radius  : $button-border-radius;
-$sb-border-width   : $button-border-width;
-$sb-padding        : $button-vertical-padding $column-width;
-$sb-font-size      : $secondary-text-size;
-$sb-line-height    : $button-line-height;
-$sb-text-color     : $button-text-color;
-$sb-text-style     : "normal";
-$sb-gradient-style : "matte";
-$sb-pseudo-states  : true;
-$sb-ie-support     : false;
+$sb-base-color           : $button-base-bg;
+$sb-second-color         : false;
+$sb-border-radius        : $button-border-radius;
+$sb-border-width         : $button-border-width;
+$sb-padding              : $button-vertical-padding $column-width;
+$sb-font-size            : $secondary-text-size;
+$sb-line-height          : $button-line-height;
+$sb-text-color           : $button-text-color;
+$sb-text-style           : "normal";
+$sb-gradient-style       : "matte";
+$sb-pseudo-states        : true;
+$sb-ie-support           : false;
 
 //  Mixin that gets included when calling the sassy-button-structure if you need any
 //  styles applied to all your sassy buttons, add it here.
@@ -30,10 +30,11 @@ $sb-ie-support     : false;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  line-height: $sb-line-height; }
+  line-height: $sb-line-height;
+}
 
-//  *    Mixin reference
-//  *   -----------------------------------------
-//  *   @include sassy-button(gradient-style, border-radius, font-size, first-color, second-color, text-color, text-style, auto-states, ie-support);
-//  *   @include sassy-button-structure(-border-radius, font-size, padding);
-//  *   @include sassy-button-gradient(gradient-style, first-color, second-color, text-color, text-style, auto-states, ie-support);
+//   Mixin reference
+//  -----------------------------------------
+//  @include sassy-button(gradient-style, border-radius, font-size, first-color, second-color, text-color, text-style, auto-states, ie-support);
+//  @include sassy-button-structure(-border-radius, font-size, padding);
+//  @include sassy-button-gradient(gradient-style, first-color, second-color, text-color, text-style, auto-states, ie-support);
