@@ -45,7 +45,7 @@ Files in this project are organized into directories like so:
     css3-foundation/
     ├── images
     ├── scripts
-    │   └── lib
+    │   └── vendor
     ├── styles
     │   ├── basics
     │   └── shared
