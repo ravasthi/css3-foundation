@@ -9,7 +9,7 @@ sass_dir                = "styles"
 additional_import_paths = [
   "styles/basics",
   "styles/shared",
-  "styles/shared/sass-icon-fonts"
+  "styles/vendor/icon-fonts"
 ]
 
 images_dir              = "images"

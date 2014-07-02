@@ -2,7 +2,7 @@
 */
 #style-guide
 {
-  #page
+  & > .page
   {
     padding: $body-text-line-height $column-width;
   }
@@ -214,7 +214,7 @@
 
 @media (min-width: 1200px)
 {
-  #style-guide #page
+  #style-guide .page
   {
     max-width: 1200px;
   }

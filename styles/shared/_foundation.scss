@@ -16,6 +16,7 @@
 a
 {
   color: $link;
+  @include transition(color 0.3s ease-in-out 0);
 
   &:visited
   {

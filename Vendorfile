@@ -1,5 +1,5 @@
 # Vendorfile for use with vendorer command. https://github.com/grosser/vendorer
-# Run `vendorer` to install jQuery and jQuery UI dependencies into scripts/vendor.
+# Run `vendorer` to install JS library dependencies, style mixins and fonts.
 
 JQUERY_VER = "2.1.1"
 JQUERY_UI_VER = "1.11.0"
@@ -8,7 +8,7 @@ folder "scripts/vendor" do
 
   # 55 Minutes JavaScript utils (master)
   #
-  folder "fiftyfive-utils", "git://github.com/55minutes/fiftyfive-util-js.git"
+  folder "fiftyfive-utils", "git@github.com:55minutes/fiftyfive-util-js.git"
 
   # Standard jQuery/UI dist
   #
@@ -17,56 +17,42 @@ folder "scripts/vendor" do
 
   # jQuery UI components
   #
-  file "jquery-ui.widget.js", "https://raw.github.com/jquery/jquery-ui/#{JQUERY_UI_VER}/ui/jquery.ui.widget.js" do |path|
+  file "jquery-ui.widget.js", "https://raw.github.com/jquery/jquery-ui/#{JQUERY_UI_VER}/ui/widget.js" do |path|
     rewrite(path) { |content| content.gsub(/@VERSION/, JQUERY_UI_VER) }
   end
 end
 
-# Sass icon fonts
+# Icon font sass mixins
 #
-from "git://github.com/rstacruz/sass_icon_fonts.git" do
-  file "styles/shared/sass-icon-fonts/_elusive.sass",          "_elusive.sass"
-  file "styles/shared/sass-icon-fonts/_entypo.sass",           "_entypo.sass"
-  file "styles/shared/sass-icon-fonts/_entypo-social.sass",    "_entypo-social.sass"
-  file "styles/shared/sass-icon-fonts/_font-awesome.sass",     "_font-awesome.sass"
-  file "styles/shared/sass-icon-fonts/_foundation-icons.sass", "_foundicons-general.sass"
-  file "styles/shared/sass-icon-fonts/_typicons.sass",         "_typicons.sass"
+from "git@github.com:rstacruz/iconfonts.git" do
+  file "styles/vendor/icon-fonts/_elusive.scss",            "stylesheets/elusive.scss"
+  file "styles/vendor/icon-fonts/_font-awesome.scss",       "stylesheets/font-awesome.scss"
+  file "styles/vendor/icon-fonts/_foundation-general.scss", "stylesheets/foundicons-general.scss"
+  file "styles/vendor/icon-fonts/_ionicons.scss",           "stylesheets/ionicons.scss"
 end
 
 folder "fonts" do
   # Elusive
   #
-  from "git://github.com/aristath/elusive-iconfont.git" do
-    folder "elusive",               "fonts"
+  from "git@github.com:aristath/elusive-iconfont.git" do
+    folder "elusive",      "fonts"
   end
-
-  # Entypo
-  #
-  file "entypo/entypo.eot",         "http://www.entypo.com/css/entypo.eot"
-  file "entypo/entypo.svg",         "http://www.entypo.com/css/entypo.svg"
-  file "entypo/entypo.ttf",         "http://www.entypo.com/css/entypo.ttf"
-  file "entypo/entypo.woff",        "http://www.entypo.com/css/entypo.woff"
-  file "entypo/entypo-social.eot",  "http://www.entypo.com/css/entypo-social.eot"
-  file "entypo/entypo-social.svg",  "http://www.entypo.com/css/entypo-social.svg"
-  file "entypo/entypo-social.ttf",  "http://www.entypo.com/css/entypo-social.ttf"
-  file "entypo/entypo-social.woff", "http://www.entypo.com/css/entypo-social.woff"
 
   # Foundation icons
   #
   from "git@github.com:zurb/foundation-icons.git" do
-    folder "foundation-icons",      "foundation_icons_general/fonts"
+    folder "foundation",   "foundation_icons_general/fonts"
   end
 
   # Font Awesome
   #
-  from "git://github.com/FortAwesome/Font-Awesome.git" do
-    folder "font-awesome",          "fonts"
+  from "git@github.com:FortAwesome/Font-Awesome.git" do
+    folder "font-awesome", "fonts"
   end
 
-  # Typicons
+  # Ionicons
   #
-  file "typicons/typicons.eot",     "https://raw.github.com/stephenhutchings/typicons.font/master/src/font/typicons.eot"
-  file "typicons/typicons.svg",     "https://raw.github.com/stephenhutchings/typicons.font/master/src/font/typicons.svg"
-  file "typicons/typicons.ttf",     "https://raw.github.com/stephenhutchings/typicons.font/master/src/font/typicons.ttf"
-  file "typicons/typicons.woff",    "https://raw.github.com/stephenhutchings/typicons.font/master/src/font/typicons.woff"
+  from "git@github.com:driftyco/ionicons.git" do
+    folder "ion",          "fonts"
+  end
 end
