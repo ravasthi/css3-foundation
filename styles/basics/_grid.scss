@@ -9,3 +9,14 @@ $gutter-width     : 1.5 * $column-width;
 
 $vertical-nudge   : $body-text-line-height / 4;
 $section-spacing  : 2 * $body-text-line-height;
+
+/*----------[ susy grid setup ]-------------------------------------------------
+| Use this for responsive grid layouts. Tweak as necessary for your needs.
+| cf Susy documentation: http://susydocs.oddbird.net/en/latest/
+*/
+$susy: (
+  columns: 12,
+  gutters: .25
+);
+
+@include layout($susy);

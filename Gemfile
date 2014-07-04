@@ -4,6 +4,7 @@ gem 'rake'
 
 # compass
 gem 'compass', '~> 1.0.0.alpha.19'
+gem 'susy'
 gem 'guard-compass'
 gem 'rb-fsevent'
 gem 'sassy-buttons'

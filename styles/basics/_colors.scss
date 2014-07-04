@@ -56,6 +56,7 @@ $disabled-stroke : $silver;
 */
 $body-text-color        : $charcoal;
 $secondary-text-color   : $grey;
+$light-text-color       : lighten($grey, 15);
 $disabled-text-color    : $silver;
 
 $link                   : $blue;
