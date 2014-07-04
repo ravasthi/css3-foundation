@@ -7,8 +7,6 @@ To use this project, the following must be installed on your computer:
 * [Ruby](http://www.ruby-lang.org/en/)
 * [RubyGems](http://rubygems.org/)
 * [Bundler](http://gembundler.com/)
-* [compass gem](https://github.com/chriseppstein/compass)
-* [sassy-buttons gem](https://github.com/jhardy/Sassy-Buttons)
 
 ## Feature Highlights ##
 
@@ -16,9 +14,10 @@ To use this project, the following must be installed on your computer:
 * Best practices recommended by the [320 and Up](http://stuffandnonsense.co.uk/projects/320andup/ "320 and up") boilerplate project, as well as our own experience developing web applications.
 * Integration with the [jQuery](http://jquery.com/ "jQuery: The Write Less, Do More, JavaScript Library") and [jQuery UI](http://jqueryui.com/ "jQuery UI - Home") JavaScript libraries, as well as [55 Minutes' own set of JS utilities and conveniences](https://github.com/55minutes/fiftyfive-util-js/).
 * A style guide similar to the [Twitter bootstrap](http://twitter.github.com/bootstrap/ "Bootstrap, from Twitter") containing examples of the default styles defined in the project.
-* The [1140 CSS grid](http://cssgrid.net "The 1140px CSS Grid System &middot; Fluid down to mobile") for rapid prototyping.
-* Integration with various icon-font libraries: [Font Awesome](http://fortawesome.github.com/Font-Awesome/ "Font Awesome, the iconic font designed for use with Twitter Bootstrap"), [Elusive](http://aristeides.com/elusive-iconfont/ "Elusive icons, an icons font designed for use with Bootstrap"), [Entypo](http://www.entypo.com "Entypo - 250+ carefully crafted pictograms") and [Typicons](http://typicons.com "Typicons"), with help from Rico Sta. Cruz's [Sass Icon Fonts](https://github.com/rstacruz/sass_icon_fonts) project.
-* Ruby version management: if you have either RVM or rbenv installed, this project comes bundled with a `.rbenv-version` file to make your environment setup easier.
+* Integration with the [Susy layout framework](http://susy.oddbird.net).
+* Integration with various icon-font libraries with help from Rico Sta. Cruz’s [icon fonts](https://github.com/rstacruz/iconfonts) project.
+* Ruby version management: if you have either RVM or rbenv installed, this project comes bundled with a `.ruby-version` file to make your environment setup easier.
+* Integration with [Pow](http://pow.cx "Pow: Zero-configuration Rack server for Mac OS X"), [Guard](http://guardgem.org ""), and [LiveReload](http://livereload.com "LiveReload"), for *really* painless development.
 
 ## Getting Started ##
 
@@ -26,13 +25,13 @@ To use this project, the following must be installed on your computer:
 2. Change into the <code>css3-foundation/</code> directory in your favorite terminal application and type <code>bundle install</code>.
 3. Steps 1 and 2 are one-time-only setup requirements. Hereafter, all you need to do is run the following command from <code>css3-foundation/</code>:
 
-        bundle exec compass watch
+        bundle exec guard
 
-    This will monitor changes to your source files and recompile the output on demand. To compile the code one time only, type:
+    This will monitor changes to your source files, recompile the Sass, and reload your browser. To compile the Sass files one time only, type:
 
         bundle exec compass compile
 
-    More details can be found in the [Compass documentation](http://compass-style.org/reference/compass/ "Compass Core Framework | Compass Documentation").
+    More details can be found in the [Compass](http://compass-style.org/reference/compass/ "Compass Core Framework | Compass Documentation") and [Guard](http://guardgem.org "") documentation.
 
     If you're interested in using this foundation with the [Apache Wicket](http://wicket.apache.org/) framework, you'll want to check out our [fiftyfive-wicket](https://github.com/55minutes/fiftyfive-wicket) project, which includes a Maven archetype that bundles all of these CSS3 and HTML5 practices and integrates them nicely with Wicket.
 
