@@ -163,7 +163,7 @@
   $img-width  : image-width("#{$image}.#{$type}");
   $img-height : image-height("#{$image}.#{$type}");
 
+  @include retina-background($image, $img-width, $img-height, $type);
   width: $img-width;
   height: $img-height;
-  @include retina-background($image, $img-width, $img-height, $type);
 }
