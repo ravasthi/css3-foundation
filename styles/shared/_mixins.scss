@@ -115,6 +115,31 @@
   line-height : $small-text-line-height;
 }
 
+/*----------[ forms ]-----------------------------------------------------------
+*/
+@mixin placeholder-text
+{
+  ::-webkit-input-placeholder
+  {
+     @content;
+  }
+
+  :-moz-placeholder
+  { /* Firefox 18- */
+    @content;
+  }
+
+  ::-moz-placeholder
+  { /* Firefox 19+ */
+    @content;
+  }
+
+  :-ms-input-placeholder
+  {
+    @content;
+  }
+}
+
 /*----------[ photos/images ]---------------------------------------------------
 */
 @mixin retina
