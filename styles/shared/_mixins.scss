@@ -157,3 +157,13 @@
     @include background-size($image-width $image-height);
   }
 }
+
+@mixin retina-graphic($image, $type: "png")
+{
+  $img-width  : image-width("#{$image}.#{$type}");
+  $img-height : image-height("#{$image}.#{$type}");
+
+  width: $img-width;
+  height: $img-height;
+  @include retina-background($image, $img-width, $img-height, $type);
+}
