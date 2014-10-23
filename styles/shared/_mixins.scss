@@ -119,22 +119,22 @@
 */
 @mixin placeholder-text
 {
-  ::-webkit-input-placeholder
+  &::-webkit-input-placeholder
   {
      @content;
   }
 
-  :-moz-placeholder
+  &:-moz-placeholder
   { /* Firefox 18- */
     @content;
   }
 
-  ::-moz-placeholder
+  &::-moz-placeholder
   { /* Firefox 19+ */
     @content;
   }
 
-  :-ms-input-placeholder
+  &:-ms-input-placeholder
   {
     @content;
   }
