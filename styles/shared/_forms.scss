@@ -24,10 +24,11 @@ textarea
 {
   margin: 0;
   border: 1px solid $stroke;
-  padding: ($body-text-line-height - $secondary-text-size - 0.2) / 2;
+  padding: (($body-text-line-height - $secondary-text-size - 2)/2) $horizontal-nudge;
   background-color: white;
   font-family:  $body-text-family;
   font-size: $secondary-text-size;
+  line-height: $secondary-text-size;
 }
 
 input[type=email][disabled],

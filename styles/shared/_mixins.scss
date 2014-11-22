@@ -141,6 +141,31 @@
   line-height : $small-text-line-height;
 }
 
+/*----------[ forms ]-----------------------------------------------------------
+*/
+@mixin placeholder-text
+{
+  &::-webkit-input-placeholder
+  {
+     @content;
+  }
+
+  &:-moz-placeholder
+  { /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder
+  { /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder
+  {
+    @content;
+  }
+}
+
 /*----------[ photos/images ]---------------------------------------------------
 */
 @mixin retina
@@ -182,4 +207,14 @@
     background-image: image-url($retina-image-name);
     @include background-size($image-width $image-height);
   }
+}
+
+@mixin retina-graphic($image, $type: "png")
+{
+  $img-width  : image-width("#{$image}.#{$type}");
+  $img-height : image-height("#{$image}.#{$type}");
+
+  @include retina-background($image, $img-width, $img-height, $type);
+  width: $img-width;
+  height: $img-height;
 }
