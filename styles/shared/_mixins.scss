@@ -76,6 +76,32 @@
   }
 }
 
+// Put this on a UL to get text and bullets colored differently.
+@mixin colored-bullets($gutter-size: $column-width, $bullet-character: '\2022', $color: $secondary-text-color)
+{
+  margin-left: 0;
+
+  &, li
+  {
+    list-style: none;
+  }
+
+  li
+  {
+    padding-left: $gutter-size;
+  }
+
+  li:before
+  {
+    display: inline-block;
+    margin-left: -$gutter-size;
+    width: $gutter-size;
+    font-size: 1.2em;
+    color: $color;
+    content: $bullet-character;
+  }
+}
+
 /*----------[ typography ]------------------------------------------------------
 | Common font-size/line-height combinations.
 */
