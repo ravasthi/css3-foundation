@@ -1,0 +1,8 @@
+# Enable gzip compression
+AddOutputFilterByType DEFLATE text/html text/plain application/javascript text/css
+
+# Turn on browser caching
+Header unset Last-Modified
+FileETag none
+ExpiresActive On
+ExpiresDefault "access plus 1 week"
