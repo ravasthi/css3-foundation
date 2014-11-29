@@ -34,21 +34,8 @@
   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
   <!-- header javascript -->
-  <!-- stand-alone utilities -->
-  <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/55_utils.js">
+  <script type="text/javascript" src="scripts-compiled/application-header.js">
   </script>
-
-  <script type="text/javascript">
-    document.getElementsByTagName("html")[0].className += fiftyfive.util.getIEClass();
-
-    // scroll to hide iPhone URL bar; from http://remysharp.com/2010/08/05/doing-it-right-skipping-the-iphone-url-bar/
-    /iphone/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-      if (!pageYOffset) window.scrollTo(0, 1);
-    }, 1000);
-  </script>
-
-  <!-- HTML5 and media query polyfill for IE8 and below -->
-  <script src="scripts/vendor/shivs-custom.js" type="text/javascript"></script>
 
   <title>Please log in</title>
 </head>
@@ -84,35 +71,7 @@
   </div> <!-- /.page -->
 
   <!-- all other javascript goes at the end of the body -->
-  <!-- libraries -->
-  <script type="text/javascript" src="scripts/vendor/jquery.js">
-  </script>
-  <!-- <script type="text/javascript" src="scripts/vendor/jquery-ui.js">
-  </script> -->
-  <script type="text/javascript" src="scripts/vendor/jquery-ui.widget.js">
-  </script>
-
-  <!-- utilities and library extensions -->
-  <!-- uncomment as necessary -->
-  <!-- <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/cookies.js">
-  </script>
-  <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/dump.js">
-  </script>
-  <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/strftime.js">
-  </script> -->
-  <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/feature-detect.js">
-  </script>
-  <!-- <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/jquery.55_utils.js">
-  </script> -->
-  <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/jquery.ui.forminputplaceholdertext.js">
-  </script>
-  <!-- <script type="text/javascript" src="scripts/vendor/fiftyfive-utils/jquery.ui.unsupportedbrowserwarning.js">
-  </script> -->
-  <script type="text/javascript" src="scripts/common.js">
-  </script>
-
-  <!-- page- or feature-specific javascript -->
-  <script type="text/javascript" src="scripts/login.js">
+  <script type="text/javascript" src="scripts-compiled/application.js">
   </script>
 
   <!-- onload javascript -->

@@ -8,6 +8,7 @@
 .sass-cache/
 images/icon-*.png
 styles-compiled/
+scripts-compiled/
 
 # Pow/RVM
 .powenv

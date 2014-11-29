@@ -17,5 +17,10 @@ gem 'rack-livereload'
 # Pow
 gem 'powder'
 
+# sprockets
+gem 'guard-sprockets'
+gem 'uglifier'
+gem 'therubyracer'
+
 # vendored assets
 gem 'vendorer'
