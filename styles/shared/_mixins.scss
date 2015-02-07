@@ -218,3 +218,75 @@
   width: $img-width;
   height: $img-height;
 }
+
+/*----------[ parallax ]--------------------------------------------------------
+| Mixin to do pure-CSS parallax scrolling effects.
+| From http://keithclark.co.uk/articles/pure-css-parallax-websites/
+*/
+@function parallax-scale-correction($translate-z, $perspective)
+{
+  @return (1 + ($translate-z * -1) / $perspective);
+}
+
+@mixin parallax
+{
+  $parallax-perspective: 300px;
+
+  @include perspective(300px);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .parallax-group
+  {
+    position: relative;
+    height: 100vh;
+    @include transform-style(preserve-3d);
+
+    // See what's really going on…
+    &.debug
+    {
+      @include transition(transform 0.5s);
+      @include transform(translate3d(700px, 0, -800px) rotateY(30deg));
+
+      .parallax-layer
+      {
+        @include box-shadow(0 0 0 2px #000);
+        @include opacity(0.9);
+      }
+    }
+  }
+
+  .parallax-layer
+  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &.fore
+    {
+      @include transform(translateZ(90px)  scale(parallax-scale-correction(90px, $parallax-perspective)));
+      z-index: 1;
+    }
+
+    &.base
+    {
+      @include translateZ(0);
+      z-index: 4;
+    }
+
+    &.back
+    {
+      @include transform(translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective)));
+      z-index: 3;
+    }
+
+    &.deep
+    {
+      @include transform(translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective)));
+      z-index: 2;
+    }
+  }
+}

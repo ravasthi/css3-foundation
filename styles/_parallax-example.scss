@@ -1,0 +1,90 @@
+/*-----[ parallax example ]-----------------------------------------------------
+*/
+/*----------[ colors ]----------------------------------------------------------
+*/
+$gg-deep-aqua   : #2f9aaf;
+$gg-turquoise   : #69d2e7;
+$gg-aqua        : #a7dbdb;
+$gg-ghost-green : #e0e4cc;
+$gg-pale-orange : #eaab79;
+$gg-orange      : #f38630;
+$gg-deep-orange : #fa6900;
+
+/*----------[ parallax groups ]-------------------------------------------------
+*/
+#parallax
+{
+  background-color: $gg-ghost-green;
+}
+
+.parallax
+{
+  @include parallax;
+}
+
+.parallax-group
+{
+  &.group-1
+  {
+    z-index: 5;
+
+    .deep
+    {
+      background-color: rgba($gg-deep-aqua, 0.6);
+    }
+
+    .back
+    {
+      background-color: rgba($gg-turquoise, 0.6);
+    }
+
+    .base
+    {
+      background-color: rgba($gg-aqua, 0.6);
+    }
+  }
+
+  &.group-3
+  {
+    z-index: 4;
+
+    .fore
+    {
+      background-color: rgba($gg-deep-orange, 0.6);
+    }
+    .base
+    {
+      background-color: rgba($gg-orange, 0.6);
+    }
+
+    .back
+    {
+      background-color: rgba($gg-pale-orange, 0.6);
+    }
+  }
+
+  &.group-2, &.group-4
+  {
+    z-index: 3;
+
+    .base
+    {
+      background-color: $gg-ghost-green;
+
+      p
+      {
+        margin: $body-text-line-height auto;
+        max-width: 45em;
+      }
+    }
+  }
+}
+
+.parallax-layer .title
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include translate(-50%, -50%);
+  color: white;
+}
