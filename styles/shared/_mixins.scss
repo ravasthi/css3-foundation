@@ -242,11 +242,11 @@
     position: relative;
     height: 100vh;
     @include transform-style(preserve-3d);
+    @include transition(transform 0.5s);
 
     // See what's really going on…
     &.debug
     {
-      @include transition(transform 0.5s);
       @include transform(translate3d(700px, 0, -800px) rotateY(30deg));
 
       .parallax-layer

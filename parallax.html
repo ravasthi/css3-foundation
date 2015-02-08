@@ -40,6 +40,13 @@
   <title>Pure CSS Parallax scrolling</title>
 </head>
 <body id="parallax">
+  <div class="toggle-debug-container">
+    <label>
+      <input type="checkbox" name="toggle-debug" class="toggle-debug" value=""/>
+      Debug
+    </label>
+  </div> <!-- /.toggle-debug-container -->
+
   <div class="parallax">
     <div class="parallax-group group-1">
       <div class="parallax-layer deep">
@@ -97,7 +104,8 @@
   <script type="text/javascript">
     (function($) {
       $(function() {
-        FiftyfiveExample.commonInit();
+        Css3Foundation.commonInit();
+        Css3Foundation.parallax.init();
       });
     })(jQuery);
   </script>

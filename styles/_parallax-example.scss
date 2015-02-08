@@ -12,9 +12,26 @@ $gg-deep-orange : #fa6900;
 
 /*----------[ parallax groups ]-------------------------------------------------
 */
-#parallax
+.toggle-debug-container
 {
-  background-color: $gg-ghost-green;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 2 * $column-width;
+  z-index: 10;
+  border: 1px solid $stroke;
+  border-top-width: 0;
+  @include border-bottom-radius(5px);
+  padding: $body-text-line-height / 2 $column-width / 2;
+  background-color: $page-bg;
+  font-weight: bold;
+
+  .toggle-debug
+  {
+    margin-right: $horizontal-nudge;
+    width: $body-text-size;
+    height: $body-text-size;
+  }
 }
 
 .parallax
@@ -65,10 +82,13 @@ $gg-deep-orange : #fa6900;
 
   &.group-2, &.group-4
   {
+    // Should slide under groups 1 and 3
     z-index: 3;
 
     .base
     {
+      padding-top: 2 * $body-text-line-height;
+      padding-bottom: 2 * $body-text-line-height;
       background-color: $gg-ghost-green;
 
       p

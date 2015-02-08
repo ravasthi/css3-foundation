@@ -1,20 +1,16 @@
 /*------------------------------------------------------------------------------
-| login.js
+| parallax.js
 |
-| Utilities for the login page.
+| Utilities for the example parallax scrolling page.
 ------------------------------------------------------------------------------*/
 
 // Establish namespace. Change to match the name of your application.
 var Css3Foundation = window.Css3Foundation ? window.Css3Foundation : {};
 
-Css3Foundation.login = {
+Css3Foundation.parallax = {
     init: function() {
-        $("input[placeholder]").forminputplaceholdertextwidget();
+        $(".toggle-debug").on("click", function(event) {
+          $(".parallax-group").toggleClass("debug");
+        });
     }
 };
-
-(function($) {
-    $(function() {
-        Css3Foundation.login.init();
-    });
-})(jQuery);

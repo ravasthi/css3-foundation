@@ -4,4 +4,5 @@
 //= require vendor/fiftyfive-utils/jquery.ui.forminputplaceholdertext
 //= require common
 //= require login
+//= require parallax
 

@@ -48,7 +48,7 @@ $greyish-white   : #f0f0f0;
 $page-bg         : white;
 $accent-bg       : $greyish-white;
 
-$stroke          : black;
+$stroke          : darken($silver, 15);
 $light-stroke    : darken($greyish-white, 10);
 $disabled-stroke : $silver;
 
