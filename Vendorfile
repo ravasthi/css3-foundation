@@ -1,8 +1,8 @@
 # Vendorfile for use with vendorer command. https://github.com/grosser/vendorer
 # Run `vendorer` to install JS library dependencies, style mixins and fonts.
 
-JQUERY_VER = "2.1.1"
-JQUERY_UI_VER = "1.11.0"
+JQUERY_VER = "2.1.3"
+JQUERY_UI_VER = "1.11.3"
 
 folder "scripts/vendor" do
 
