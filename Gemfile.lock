@@ -44,7 +44,7 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     http_parser.rb (0.6.0)
-    json (1.8.1)
+    json (1.8.3)
     libv8 (3.16.14.7)
     listen (2.8.3)
       celluloid (>= 0.15.2)
