@@ -10,7 +10,7 @@ To use this project, the following must be installed on your computer:
 
 ## Feature Highlights ##
 
-* A fluid, responsive layout following the principles of [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design "A Book Apart, Responsive Web Design").
+* A fluid, responsive layout following the principles of [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design "A Book Apart, Responsive Web Design"), with breakpoints at 500, 768, 992 and 1200px.
 * Best practices recommended by various boilerplate projects, as well as our own experience developing web applications.
 * Integration with the [jQuery](http://jquery.com/ "jQuery: The Write Less, Do More, JavaScript Library") and [jQuery UI](http://jqueryui.com/ "jQuery UI - Home") JavaScript libraries, as well as [55 Minutes' own set of JS utilities and conveniences](https://github.com/55minutes/fiftyfive-util-js/).
 * A style guide containing examples of the default styles defined in the project.
