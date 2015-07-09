@@ -20,3 +20,14 @@ $susy: (
 );
 
 @include layout($susy);
+
+/*----------[ responsive breakpoints ]------------------------------------------
+*/
+$screen-xs-max: 499px;
+$screen-sm-min: 500px;
+$screen-sm-max: 767px;
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+$screen-xl-min: 1200px;

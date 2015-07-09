@@ -35,7 +35,7 @@
 ** We've elected to always put media queries inline, so that they're near
 ** the original style definition for easy locating later on.
 */
-@media (min-width: 480px)
+@media (min-width: $screen-sm-min)
 {
   .documentation .page
   {
@@ -43,7 +43,7 @@
   }
 }
 
-@media (min-width: 768px)
+@media (min-width: $screen-md-min)
 {
   .documentation .page
   {
@@ -53,7 +53,7 @@
   }
 }
 
-@media (min-width: 1024px)
+@media (min-width: $screen-lg-min)
 {
   .documentation
   {

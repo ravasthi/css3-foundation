@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 480px)
+@media (min-width: $screen-sm-min)
 {
   #login .page
   {
@@ -40,7 +40,7 @@
   }
 }
 
-@media (min-width: 768px)
+@media (min-width: $screen-md-min)
 {
   #login .page
   {
