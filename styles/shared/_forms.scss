@@ -28,7 +28,12 @@ textarea
   background-color: white;
   font-family:  $body-text-family;
   font-size: $secondary-text-size;
-  line-height: $secondary-text-size;
+  line-height: 1;
+
+  &::-webkit-input-placeholder
+  {
+    line-height: $body-text-line-height - 2;
+  }
 }
 
 input[type=email][disabled],

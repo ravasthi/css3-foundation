@@ -14,6 +14,13 @@ To use this project, the following must be installed on your computer:
 * Best practices recommended by various boilerplate projects, as well as our own experience developing web applications.
 * Integration with the [jQuery](http://jquery.com/ "jQuery: The Write Less, Do More, JavaScript Library") and [jQuery UI](http://jqueryui.com/ "jQuery UI - Home") JavaScript libraries, as well as [55 Minutes' own set of JS utilities and conveniences](https://github.com/55minutes/fiftyfive-util-js/).
 * A style guide containing examples of the default styles defined in the project.
+* A number of convenient Sass mixins for:
+    * Clearfix
+    * Inline lists
+    * Lists with colored bullets
+    * Retina images
+    * Text size/line height combinations
+    * [Pure CSS parallax scrolling](http://keithclark.co.uk/articles/pure-css-parallax-websites/ "Pure CSS Parallax Websites by Keith Clark")
 * Integration with the [Susy layout framework](http://susy.oddbird.net).
 * Integration with [Font Awesome](http://fontawesome.io "Font Awesome, the iconic font and CSS toolkit").
 * Front-end dependency management with [Bower](http://bower.io "Bower").
