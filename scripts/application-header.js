@@ -1,4 +1,4 @@
-//= require vendor/fiftyfive-utils/55_utils
+//= require fiftyfive-util-js/55_utils
 //= require vendor/shivs-custom
 
 document.getElementsByTagName("html")[0].className += fiftyfive.util.getIEClass();

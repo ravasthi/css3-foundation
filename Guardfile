@@ -10,7 +10,7 @@ end
 
 guard :sprockets,
       destination: 'scripts-compiled',
-      asset_paths: ['scripts'],
+      asset_paths: ['scripts', 'bower_components'],
       root_file:   ['scripts/application-header.js', 'scripts/application.js'],
       minify:      true do
   watch %r{scripts/.*\.js}

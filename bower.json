@@ -1,0 +1,32 @@
+{
+  "name": "css3f",
+  "version": "3.0.0",
+  "homepage": "https://github.com/ravasthi/css3-foundation",
+  "authors": [
+    "Richa Avasthi <ravasthi@gmail.com>"
+  ],
+  "description": "A Compass-based CSS3/HTML5 bootstrap for modern, responsive web apps",
+  "main": "index.html",
+  "keywords": [
+    "compass",
+    "html5",
+    "css3",
+    "javascript",
+    "ruby",
+    "guard",
+    "pow"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "fiftyfive-util-js": "git@github.com:55minutes/fiftyfive-util-js.git"
+  }
+}

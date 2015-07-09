@@ -16,16 +16,7 @@
 @import 'susy';
 
 // ----- Icon fonts
-$el-path  : '/fonts/elusive/';
-$fa-path  : '/fonts/font-awesome/';
-$fig-path : '/fonts/foundation-icons/';
-$ion-path : '/fonts/ionicons/';
-@import 'elusive';
 @import 'font-awesome';
-@import 'foundation-general';
-@import 'ionicons';
-@import 'icon-font-mixins';
-@include fa-font-no-version;
 
 // Basics
 @import 'colors';
@@ -34,7 +25,7 @@ $ion-path : '/fonts/ionicons/';
 
 // Shared
 @import 'sassybuttons';
-@import 'mixins';
+@import 'shared/mixins'; // Specify path since FA also has a _mixins.scss file
 @import 'foundation';
 @import 'page';
 @import 'forms';

@@ -88,7 +88,6 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    vendorer (0.1.16)
 
 PLATFORMS
   ruby
@@ -107,4 +106,3 @@ DEPENDENCIES
   susy
   therubyracer
   uglifier
-  vendorer

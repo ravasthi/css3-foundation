@@ -28,7 +28,8 @@
 
       &:before
       {
-        @include fa-icon(check);
+        @include fa-icon();
+        @extend .fa-check;
       }
     }
 
@@ -39,7 +40,8 @@
 
       &:before
       {
-        @include fa-icon(asterisk);
+        @include fa-icon();
+        @extend .fa-asterisk;
       }
     }
 
@@ -50,7 +52,8 @@
 
       &:before
       {
-        @include fa-icon(exclamation-triangle);
+        @include fa-icon();
+        @extend .fa-exclamation-triangle;
       }
     }
   }

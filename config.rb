@@ -7,9 +7,9 @@ http_path               = "/"
 css_dir                 = "styles-compiled"
 sass_dir                = "styles"
 additional_import_paths = [
+  "bower_components/font-awesome/scss",
   "styles/basics",
-  "styles/shared",
-  "styles/vendor/icon-fonts"
+  "styles/shared"
 ]
 
 images_dir              = "images"
