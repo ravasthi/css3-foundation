@@ -228,11 +228,9 @@
   @return (1 + ($translate-z * -1) / $perspective);
 }
 
-@mixin parallax
+@mixin parallax($parallax-perspective: 300px)
 {
-  $parallax-perspective: 300px;
-
-  @include perspective(300px);
+  @include perspective($parallax-perspective);
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -267,7 +265,7 @@
 
     &.fore
     {
-      @include transform(translateZ(90px)  scale(parallax-scale-correction(90px, $parallax-perspective)));
+      @include transform(translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective)));
       z-index: 1;
     }
 
