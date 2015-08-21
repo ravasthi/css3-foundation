@@ -7,6 +7,7 @@ To use this project, the following must be installed on your computer:
 * [Ruby](http://www.ruby-lang.org/en/)
 * [RubyGems](http://rubygems.org/)
 * [Bundler](http://gembundler.com/)
+* [Bower](http://bower.io)
 
 ## Feature Highlights ##
 
@@ -30,7 +31,7 @@ To use this project, the following must be installed on your computer:
 
 ## Getting Started ##
 
-1. Install Ruby, RubyGems and Bundler, or verify that they are already installed.
+1. Install Ruby, RubyGems, Bundler and Bower, or verify that they are already installed.
 2. Change into the <code>css3-foundation/</code> directory in your favorite terminal application and type <code>bundle install</code>.
 3. Install front-end dependencies by typing <code>bower install</code>.
 4. Steps 1–3 are one-time-only setup requirements. Hereafter, all you need to do is run the following command from <code>css3-foundation/</code>:
@@ -76,70 +77,72 @@ Please refer to individual source files for details on what should be included t
 
 A single CSS rule set can quickly grow large and unwieldy, so to promote ease of reading, we recommend following a prescribed order for writing your CSS rules. In general, we work from the outside in, from layout to text:
 
-    selector
-    {
-      /* Display and positioning */
-      display: …;
-      visibility: …;
-      position: …;
-      top: …;
-      right: …;
-      bottom: …;
-      left: …;
-      z-index: …;
-      clear: …;
-      float: …;
+```css
+selector
+{
+  /* Display and positioning */
+  display: …;
+  visibility: …;
+  position: …;
+  top: …;
+  right: …;
+  bottom: …;
+  left: …;
+  z-index: …;
+  clear: …;
+  float: …;
 
-      /* Transforms and animations */
-      transform: …;
-      animation: …;
-      transition: …;
+  /* Transforms and animations */
+  transform: …;
+  animation: …;
+  transition: …;
 
-      /* Box model/layout */
-      box-*: …;
-      margin: …;
-      outline: …;
-      border: …;
-      padding: …;
-      width: …;
-      min-width: …;
-      max-width: …;
-      height: …;
-      min-height: …;
-      max-height: …;
-      overflow: …;
-      clip: …;
-      resize: …;
-      table-layout: …;
+  /* Box model/layout */
+  box-*: …;
+  margin: …;
+  outline: …;
+  border: …;
+  padding: …;
+  width: …;
+  min-width: …;
+  max-width: …;
+  height: …;
+  min-height: …;
+  max-height: …;
+  overflow: …;
+  clip: …;
+  resize: …;
+  table-layout: …;
 
-      /* Alignment */
-      vertical-align: …;
-      text-align: …;
+  /* Alignment */
+  vertical-align: …;
+  text-align: …;
 
-      /* Background/foreground color */
-      background: …;
-      color: …;
-      opacity: …;
+  /* Background/foreground color */
+  background: …;
+  color: …;
+  opacity: …;
 
-      /* Text properties */
-      font-family: …;
-      font-size: …;
-      line-height: …;
-      direction: …;
-      font-style: …;
-      font-variant
-      text-decoration: …;
-      text-indent: …;
-      text-transform: …;
-      letter-spacing: …;
-      word-spacing: …;
-      word-break: …;
-      word-wrap: …;
-      quotes: …;
-      page-break-*: …;
-      list-style: …;
-      white-space: …;
-    }
+  /* Text properties */
+  font-family: …;
+  font-size: …;
+  line-height: …;
+  direction: …;
+  font-style: …;
+  font-variant
+  text-decoration: …;
+  text-indent: …;
+  text-transform: …;
+  letter-spacing: …;
+  word-spacing: …;
+  word-break: …;
+  word-wrap: …;
+  quotes: …;
+  page-breakpointsak-*: …;
+  list-style: …;
+  white-space: …;
+}
+```
 
 This is of course not required; some teams prefer, for example, to alphabetize the rules instead. The important thing is that whatever your team chooses, there is a consistent, documented pattern.
 
