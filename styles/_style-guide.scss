@@ -51,59 +51,16 @@
       padding: 0;
       width: 2 * $column-width;
 
-      &.eggplant-purple
-      {
-        background-color: $eggplant-purple;
-      }
+      $palette-colors: ("eggplant-purple": $eggplant-purple, "teal": $teal,
+                        "leaf-green": $leaf-green, "bright-yellow": $bright-yellow,
+                        "orange": $orange, "blue": $blue, "red": $red, "charcoal": $charcoal,
+                        "grey": $grey, "silver": $silver, "greyish-white": $greyish-white);
 
-      &.teal
-      {
-        background-color: $teal;
-      }
-
-      &.leaf-green
-      {
-        background-color: $leaf-green;
-      }
-
-      &.bright-yellow
-      {
-        background-color: $bright-yellow;
-      }
-
-      &.orange
-      {
-        background-color: $orange;
-      }
-
-      &.blue
-      {
-        background-color: $blue;
-      }
-
-      &.red
-      {
-        background-color: $red;
-      }
-
-      &.charcoal
-      {
-        background-color: $charcoal;
-      }
-
-      &.grey
-      {
-        background-color: $grey;
-      }
-
-      &.silver
-      {
-        background-color: $silver;
-      }
-
-      &.greyish-white
-      {
-        background-color: $greyish-white;
+      @each $swatch-name, $swatch-color in $palette-colors {
+        &.#{$swatch-name}
+        {
+          background-color: #{$swatch-color};
+        }
       }
     }
 
