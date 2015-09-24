@@ -4,21 +4,6 @@ Copyright 2015 55 Minutes
 This product includes software developed at 55 Minutes.
 (http://www.55minutes.com/).
 
-The product contains the Font Awesome icon font, licensed under the SIL Open Font License.
-(http://fortawesome.github.com/Font-Awesome/)
-
-The product contains the Elusive icon font, licensed under the SIL Open Font License.
-(http://aristeides.com/elusive-iconfont/)
-
-The product contains the Ionicons icon font, licensed under the MIT License.
-(http://www.entypo.com)
-
-The product contains the general set of the Foundation Icons icon font, licensed under the MIT License.
-(http://zurb.com/playground/foundation-icons)
-
-The product contains mixins from the Icon Fonts project, licensed under the MIT License.
-(https://github.com/rstacruz/iconfonts)
-
 This product contains the 55 Minutes JavaScript Utilities library
 (https://github.com/55minutes/fiftyfive-util-js/), which also packages
 some third-party libraries. For information on those, please refer to
