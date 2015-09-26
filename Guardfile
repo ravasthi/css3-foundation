@@ -3,7 +3,7 @@
 guard :livereload do
   watch(%r{styles-compiled/.+\.css})
   watch(%r{scripts-compiled/.+\.js})
-  watch(%r{[^/]+/.+\.html})
+  watch(%r{([^/]+/)*.+\.html})
 end
 
 guard :compass, compile_on_start: true do
