@@ -28,6 +28,6 @@
     "jquery": "~2.1.4",
     "jquery-ui": "~1.11.4",
     "fiftyfive-util-js": "git@github.com:55minutes/fiftyfive-util-js.git",
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4.5.0"
   }
 }
