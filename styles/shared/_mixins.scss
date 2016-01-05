@@ -26,73 +26,62 @@
 ** Also offer clearfix as a mixin for greater flexibility.
 ** Clearfix style from <http://nicolasgallagher.com/micro-clearfix-hack/>
 */
-@mixin clearfix
-{
+@mixin clearfix {
   &:before,
-  &:after
-  {
+  &:after {
     content: "";
     display: table;
   }
 
-  &:after
-  {
+  &:after {
     clear: both;
   }
 }
 
-@mixin inline-list($spacing: 0.33em)
-{
+@mixin inline-list($spacing: 0.33em) {
   display: inline;
   margin: 0;
   list-style-type: none;
 
-  li
-  {
+  li {
     display: inline;
     margin-right: $spacing;
 
-    &:last-of-type
-    {
+    &:last-of-type {
       margin-right: 0;
     }
   }
 }
 
-@mixin inline-block-list($spacing: $column-width)
-{
+@mixin inline-block-list($spacing: $column-width) {
   margin: 0;
   list-style-type: none;
 
-  li
-  {
+  li {
     display: inline-block;
     margin-right: $spacing;
 
-    &:last-of-type
-    {
+    &:last-of-type {
       margin-right: 0;
     }
   }
 }
 
 // Put this on a UL to get text and bullets colored differently.
-@mixin colored-bullets($gutter-size: $column-width, $bullet-character: '\2022', $color: $secondary-text-color)
-{
+@mixin colored-bullets($gutter-size: $column-width,
+                       $bullet-character: '\2022',
+                       $color: $secondary-text-color) {
   margin-left: 0;
 
-  &, li
-  {
+  &, li {
     list-style: none;
   }
 
-  li
-  {
+  li {
     padding-left: $gutter-size;
   }
 
-  li:before
-  {
+  li:before {
     display: inline-block;
     margin-left: -$gutter-size;
     width: $gutter-size;
@@ -105,76 +94,63 @@
 /*----------[ typography ]------------------------------------------------------
 | Common font-size/line-height combinations.
 */
-@mixin heading-text
-{
+@mixin heading-text {
   font-size   : $page-heading-text-size;
   line-height : $page-heading-text-line-height;
 }
 
-@mixin subheading-text
-{
+@mixin subheading-text {
   font-size   : $subheading-text-size;
   line-height : $subheading-text-line-height;
 }
 
-@mixin large-text
-{
+@mixin large-text {
   font-size   : $large-text-size;
   line-height : $large-text-line-height;
 }
 
-@mixin body-text
-{
+@mixin body-text {
   font-size   : $body-text-size;
   line-height : $body-text-line-height;
 }
 
-@mixin secondary-text
-{
+@mixin secondary-text {
   font-size   : $secondary-text-size;
   line-height : $secondary-text-line-height;
 }
 
-@mixin small-text
-{
+@mixin small-text {
   font-size   : $small-text-size;
   line-height : $small-text-line-height;
 }
 
 /*----------[ forms ]-----------------------------------------------------------
 */
-@mixin placeholder-text
-{
-  &::-webkit-input-placeholder
-  {
+@mixin placeholder-text {
+  &::-webkit-input-placeholder {
      @content;
   }
 
-  &:-moz-placeholder
-  { /* Firefox 18- */
+  &:-moz-placeholder { /* Firefox 18- */
     @content;
   }
 
-  &::-moz-placeholder
-  { /* Firefox 19+ */
+  &::-moz-placeholder { /* Firefox 19+ */
     @content;
   }
 
-  &:-ms-input-placeholder
-  {
+  &:-ms-input-placeholder {
     @content;
   }
 }
 
 /*----------[ photos/images ]---------------------------------------------------
 */
-@mixin retina
-{
+@mixin retina {
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
          only screen and (-moz-min-device-pixel-ratio: 1.5),
          only screen and (-o-min-device-pixel-ratio: 3/2),
-         only screen and (min-device-pixel-ratio: 1.5)
-  {
+         only screen and (min-device-pixel-ratio: 1.5) {
     @content;
   }
 }
@@ -195,22 +171,19 @@
 */
 @mixin retina-background($image-name, $image-width, $image-height, $type: "png",
                          $bg-color: transparent, $bg-repeat: no-repeat,
-                         $bg-pos-x: center, $bg-pos-y: center)
-{
+                         $bg-pos-x: center, $bg-pos-y: center) {
   $full-image-name   : "#{$image-name}.#{$type}";
   $retina-image-name : "#{$image-name}@2x.#{$type}";
 
   background: $bg-color image-url($full-image-name) $bg-repeat $bg-pos-x $bg-pos-y;
 
-  @include retina
-  {
+  @include retina {
     background-image: image-url($retina-image-name);
     @include background-size($image-width $image-height);
   }
 }
 
-@mixin retina-graphic($image, $type: "png")
-{
+@mixin retina-graphic($image, $type: "png") {
   $img-width  : image-width("#{$image}.#{$type}");
   $img-height : image-height("#{$image}.#{$type}");
 
@@ -223,66 +196,56 @@
 | Mixin to do pure-CSS parallax scrolling effects.
 | From http://keithclark.co.uk/articles/pure-css-parallax-websites/
 */
-@function parallax-scale-correction($translate-z, $perspective)
-{
+@function parallax-scale-correction($translate-z, $perspective) {
   @return (1 + ($translate-z * -1) / $perspective);
 }
 
-@mixin parallax($parallax-perspective: 300px)
-{
+@mixin parallax($parallax-perspective: 300px) {
   @include perspective($parallax-perspective);
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 
-  .parallax-group
-  {
+  .parallax-group {
     position: relative;
     height: 100vh;
     @include transform-style(preserve-3d);
     @include transition(transform 0.5s);
 
     // See what's really going on…
-    &.debug
-    {
+    &.debug {
       @include transform(translate3d(700px, 0, -800px) rotateY(30deg));
 
-      .parallax-layer
-      {
+      .parallax-layer {
         @include box-shadow(0 0 0 2px #000);
         @include opacity(0.9);
       }
     }
   }
 
-  .parallax-layer
-  {
+  .parallax-layer {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 
-    &.fore
-    {
+    &.fore {
       @include transform(translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective)));
       z-index: 1;
     }
 
-    &.base
-    {
+    &.base {
       @include translateZ(0);
       z-index: 4;
     }
 
-    &.back
-    {
+    &.back {
       @include transform(translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective)));
       z-index: 3;
     }
 
-    &.deep
-    {
+    &.deep {
       @include transform(translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective)));
       z-index: 2;
     }

@@ -13,39 +13,43 @@
 
 /*----------[ tags ]------------------------------------------------------------
 */
-a
-{
+a {
   color: $link;
+
   @include transition(color 0.3s ease-in-out 0);
 
-  &:visited
-  {
+  &:visited {
     color: $visited-link;
   }
 
   &:hover,
-  &:active
-  {
+  &:active {
     color: darken($link, 10);
   }
 }
 
-blockquote, dl, ol, p, pre, table, ul
-{
+blockquote,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
   margin: $body-text-line-height 0;
 }
 
-blockquote
-{
+blockquote {
   margin-left: $column-width;
+
   color: $secondary-text-color;
 }
 
-body
-{
-  background-color: $page-bg;
+body {
   color: $body-text-color;
+  background-color: $page-bg;
+
   font-family: $body-text-family;
+
   @include body-text;
 
   /*
@@ -54,55 +58,53 @@ body
   ** size you feel is effective at those screen sizes. REMOVE IT if you want
   ** iPhone to automatically resize the text.
   */
-  @media (max-width: 500px)
-  {
+  @media (max-width: 500px) {
     -webkit-text-size-adjust: 100%;
   }
 }
 
-caption
-{
+caption {
   font-style: italic;
 }
 
-dt
-{
+dt {
   font-style: italic;
 }
 
-dd
-{
+dd {
   margin: 0 0 $body-text-line-height;
 }
 
-em
-{
+em {
   font-style: italic;
 }
 
-h1
-{
+h1 {
   margin-bottom: $body-text-line-height * 3 - $page-heading-text-line-height;
   padding: 0;
-  @include heading-text;
+
   color: $heading-text-color;
+
+  @include heading-text;
 }
 
-h2
-{
+h2 {
   margin: $body-text-line-height 0 $body-text-line-height / 2;
+
   color: $subheading-text-color;
+
   @include subheading-text;
 }
 
-h3
-{
+h3 {
   margin: 0.75 * $body-text-line-height 0 0;
+
   @include large-text;
 }
 
-h1, h2, h3
-{
+h1,
+h2,
+h3 {
   // For large headings, use ligatures if available.
   text-rendering: optimizeLegibility;
 
@@ -110,62 +112,57 @@ h1, h2, h3
   & + dl,
   & + ol,
   & + ul,
-  & + p
-  {
+  & + p {
     margin-top: 0;
   }
 }
 
-hr
-{
-
+hr {
   margin: ($body-text-line-height / 2 - 0.1) auto $body-text-line-height / 2;
   border-style: none;
   height: 1px;
+
   background-color: $stroke;
 }
 
-ol, ul
-{
+ol,
+ul {
   margin-left: $column-width;
 }
 
-ol
-{
+ol {
   list-style-type: decimal;
 
-  ol
-  {
+  ol {
     list-style-type: lower-alpha;
 
-    ol
-    {
+    ol {
       list-style-type: lower-roman;
     }
   }
 }
 
-dl dl, ol ol, ul ul
-{
+dl dl,
+ol ol,
+ul ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-pre
-{
+pre {
+  overflow: auto;
 
   padding: $body-text-line-height / 2 $column-width / 2;
-  overflow: auto;
+
   background-color: $accent-bg;
 }
 
-strong
-{
+strong {
   font-weight: bold;
 }
 
-sub, sup
-{
+sub,
+sup {
   font-size: 80%;
   /*
   ** A non-zero line-height on a sub or sup element will alter the line-height
@@ -175,105 +172,94 @@ sub, sup
   line-height: 0;
 }
 
-sub
-{
+sub {
   vertical-align: sub;
 }
 
-sup
-{
+sup {
   vertical-align: super;
 }
 
-table
-{
+table {
   width: 100%;
 }
 
-table, thead th
-{
+table,
+thead th {
   border-bottom: 2px solid $light-stroke;
 }
 
-td, th
-{
+td,
+th {
   padding: $vertical-nudge 0;
   padding-right: $column-width;
 
-  &:first-of-type
-  {
+  &:first-of-type {
     padding-left: $horizontal-nudge;
   }
 
-  &:last-of-type
-  {
+  &:last-of-type {
     padding-right: $horizontal-nudge;
   }
 }
 
-th
-{
+th {
   text-align: left;
 }
 
-tbody th, td
-{
+tbody th,
+td {
   border-bottom: 1px solid $light-stroke;
 }
 
-ul
-{
+ul {
   list-style-type: disc;
 }
 
 /*----------[ non-semantic styles ]---------------------------------------------
 ** Purely presentational styles with non-semantic names.
 */
-.align-center
-{
+.align-center {
   margin: 0 auto;
 }
 
-.align-left
-{
+.align-left {
   float: left;
 }
 
-.align-right
-{
+.align-right {
   float: right;
 }
 
 /* Clearfix style from <http://nicolasgallagher.com/micro-clearfix-hack/> */
 .group:before,
-.group:after
-{
-  content: "";
+.group:after {
   display: table;
+
+  content: '';
 }
 
-.group:after
-{
+.group:after {
   clear: both;
 }
 
-span.keep-together
-{
+span.keep-together {
   white-space: nowrap;
 }
 
-.reset
-{
+.reset {
   clear: both;
+
   margin: 0;
   padding: 0;
   height: 1px;
+
   font-size: 0;
 }
 
-.spacer
-{
+.spacer {
   padding: 0;
   height: $body-text-line-height / 2;
+
   font-size: 0;
 }

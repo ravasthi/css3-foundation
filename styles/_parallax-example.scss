@@ -12,87 +12,79 @@ $gg-deep-orange : #fa6900;
 
 /*----------[ parallax groups ]-------------------------------------------------
 */
-.toggle-debug-container
-{
+.toggle-debug-container {
   display: inline-block;
+
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 2 * $column-width;
-  z-index: 10;
+
   border: 1px solid $stroke;
   border-top-width: 0;
-  @include border-bottom-radius(5px);
   padding: $body-text-line-height / 2 $column-width / 2;
+
   background-color: $page-bg;
+
   font-weight: bold;
 
-  .toggle-debug
-  {
+  @include border-bottom-radius(5px);
+
+  .toggle-debug {
     margin-right: $horizontal-nudge;
     width: $body-text-size;
     height: $body-text-size;
   }
 }
 
-.parallax
-{
+.parallax {
   @include parallax;
 }
 
-.parallax-group
-{
-  &.group-1
-  {
+.parallax-group {
+  &.group-1 {
     z-index: 5;
 
-    .deep
-    {
+    .deep {
       background-color: rgba($gg-deep-aqua, 0.6);
     }
 
-    .back
-    {
+    .back {
       background-color: rgba($gg-turquoise, 0.6);
     }
 
-    .base
-    {
+    .base {
       background-color: rgba($gg-aqua, 0.6);
     }
   }
 
-  &.group-3
-  {
+  &.group-3 {
     z-index: 4;
 
-    .fore
-    {
+    .fore {
       background-color: rgba($gg-deep-orange, 0.6);
     }
-    .base
-    {
+    .base {
       background-color: rgba($gg-orange, 0.6);
     }
 
-    .back
-    {
+    .back {
       background-color: rgba($gg-pale-orange, 0.6);
     }
   }
 
-  &.group-2, &.group-4
-  {
+  &.group-2,
+  &.group-4 {
     // Should slide under groups 1 and 3
     z-index: 3;
 
-    .base
-    {
+    .base {
       padding-top: 2 * $body-text-line-height;
       padding-bottom: 2 * $body-text-line-height;
+
       background-color: $gg-ghost-green;
 
-      p
-      {
+      p {
         margin: $body-text-line-height auto;
         max-width: 45em;
       }
@@ -100,11 +92,12 @@ $gg-deep-orange : #fa6900;
   }
 }
 
-.parallax-layer .title
-{
+.parallax-layer .title {
   position: absolute;
   top: 50%;
   left: 50%;
-  @include translate(-50%, -50%);
+
   color: white;
+
+  @include translate(-50%, -50%);
 }
