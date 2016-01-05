@@ -2,31 +2,28 @@
 | Styles for the documentation pages. See _feature-1.scss for more details on
 | how feature-specific styles should be organized.
 */
-.documentation .page
-{
+.documentation .page {
   padding: $body-text-line-height $column-width;
 
-  header
-  {
+  header {
     margin-bottom: $body-text-line-height;
   }
 
   p:last-of-type,
   dl:last-of-type,
   ol:last-of-type,
-  ul:last-of-type,
-  {
+  ul:last-of-type, {
     margin-bottom: 0;
   }
 
-  #about, #resources
-  {
+  #about,
+  #resources {
     margin-bottom: $section-spacing;
   }
 
-  footer
-  {
+  footer {
     color: $secondary-text-color;
+
     font-style: italic;
   }
 }
@@ -35,54 +32,45 @@
 ** We've elected to always put media queries inline, so that they're near
 ** the original style definition for easy locating later on.
 */
-@media (min-width: $screen-sm-min)
-{
-  .documentation .page
-  {
+@media (min-width: $screen-sm-min) {
+  .documentation .page {
     max-width: 600px;
   }
 }
 
-@media (min-width: $screen-md-min)
-{
-  .documentation .page
-  {
+@media (min-width: $screen-md-min) {
+  .documentation .page {
     margin: 50px auto;
     border: 2px solid $silver;
+
     @include border-radius(15px);
   }
 }
 
-@media (min-width: $screen-lg-min)
-{
-  .documentation
-  {
-    .page
-    {
+@media (min-width: $screen-lg-min) {
+  .documentation {
+    .page {
       max-width: 900px;
     }
 
-    #about, #resources
-    {
+    #about,
+    #resources {
       float: left;
+
       margin-bottom: 0;
     }
 
-    #about
-    {
+    #about {
       margin-right: 3%;
       width: 67%;
     }
 
-    #resources
-    {
+    #resources {
       width: 30%;
     }
 
-    footer
-    {
+    footer {
       clear: both;
     }
   }
 }
-

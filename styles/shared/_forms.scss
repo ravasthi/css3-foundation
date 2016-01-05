@@ -20,18 +20,18 @@ input[type=tel],
 input[type=text],
 input[type=url],
 select,
-textarea
-{
+textarea {
   margin: 0;
   border: 1px solid $stroke;
   padding: (($body-text-line-height - $secondary-text-size - 2)/2) $horizontal-nudge;
+
   background-color: white;
-  font-family:  $body-text-family;
+
+  font-family: $body-text-family;
   font-size: $secondary-text-size;
   line-height: 1;
 
-  &::-webkit-input-placeholder
-  {
+  &::-webkit-input-placeholder {
     line-height: $body-text-line-height - 2;
   }
 }
@@ -43,30 +43,29 @@ input[type=tel][disabled],
 input[type=text][disabled],
 input[type=url][disabled],
 select[disabled],
-textarea[disabled]
-{
+textarea[disabled] {
   border-color: $disabled-stroke !important;
+
   color: $disabled-text-color !important;
+
   cursor: default !important;
 }
 
-input[type=text].small
-{
-  width: 50px;
+input[type=text].small {
   margin-right: 0.33em;
+  width: 50px;
 }
 
 /*----------[ buttons and checkboxes]-------------------------------------------
 */
 input[type=checkbox],
-input[type=radio]
-{
+input[type=radio] {
   vertical-align: baseline;
 }
 
-input[type=checkbox]
-{
+input[type=checkbox] {
   border: 1px solid $grey;
+
   background-color: white;
 }
 
@@ -85,32 +84,28 @@ input[type=checkbox]
 input[type=submit],
 input[type=button],
 button,
-a.button
-{
-  @include sassy-button();
-  @include transition(background-color 0.3s ease-in-out 0);
-
-  font-family:  $button-text-family;
+a.button {
+  font-family: $button-text-family;
   font-weight: bold;
 
-  &.destructive
-  {
+  @include transition(background-color 0.3s ease-in-out 0);
+  @include sassy-button();
+
+  &.destructive {
     @include sassy-button($first-color : $destructive-button-base-bg,
                           $text-color  : $destructive-button-text-color);
   }
 
-  &[disabled]
-  {
+  &[disabled] {
+    cursor: default !important;
+
     @include sassy-button($first-color : $disabled-button-base-bg,
                           $text-color  : $disabled-button-text-color,
                           $auto-states : false);
-
-    cursor: default !important;
   }
 }
 
-.button-bar
-{
+.button-bar {
   margin: $body-text-line-height 0;
   padding: 0;
 }
@@ -118,102 +113,99 @@ a.button
 .button-bar input[type=submit],
 .button-bar input[type=button],
 .button-bar button,
-.button-bar > a
-{
+.button-bar > a {
   float: left;
+
   margin: 0;
   margin-right: $column-width / 2;
 }
 
-.button-bar > a
-{
+.button-bar > a {
   display: inline-block;
-  vertical-align: middle;
+
   font-size: $secondary-text-size;
   line-height: $secondary-text-line-height + 2 * ($button-vertical-padding + $button-border-width);
+
+  vertical-align: middle;
 }
 
 /*----------[ form layout ]-----------------------------------------------------
 */
 /*---------------[ forms in tables ]--------------------------------------------
 */
-table.form
-{
+table.form {
   margin-top: 0;
 
-  &, th, td
-  {
+  &,
+  th,
+  td {
     border-style: none;
   }
 
-  .section-heading th
-  {
+  .section-heading th {
     color: $subheading-text-color;
   }
 
-  .field-label
-  {
+  .field-label {
     padding-right: $column-width;
-    vertical-align: top;
-    text-align: right;
+
     font-weight: normal;
+
+    text-align: right;
+    vertical-align: top;
   }
 
-  .field, .button-bar
-  {
+  .field,
+  .button-bar {
     padding-left: 0;
   }
 }
 
 .stacked,
 .radio-group,
-.checkbox-group
-{
-  label
-  {
+.checkbox-group {
+  label {
     display: block;
   }
 }
 
 /*---------------[ stacked forms ]----------------------------------------------
 */
-.stacked
-{
+.stacked {
   margin-left: -$horizontal-nudge;
 
-  .section-heading
-  {
-    font-weight: bold;
+  .section-heading {
     color: $subheading-text-color;
+
+    font-weight: bold;
   }
 
-  .field > label:first-of-type
-  {
+  .field > label:first-of-type {
     margin-top: $body-text-line-height / 2;
   }
 
-  .field, .section-heading, .button-bar
-  {
+  .field,
+  .section-heading,
+  .button-bar {
     padding-left: $horizontal-nudge;
   }
 }
 
 /*----------[ validation ]------------------------------------------------------
 */
-.error
-{
-  &, td, th
-  {
+.error {
+  &,
+  td,
+  th {
     background-color: lighten($error-feedback, 55);
   }
 
-  label, .form-help
-  {
+  label,
+  .form-help {
     color: $error-feedback;
   }
 
-  label
-  {
+  label {
     font-weight: bold;
   }
 
@@ -224,29 +216,27 @@ table.form
   input[type=text],
   input[type=url],
   select,
-  textarea
-  {
+  textarea {
     border-color: darken($error-feedback, 5);
   }
 
-  ul.error-explanation
-  {
+  ul.error-explanation {
     margin: $vertical-nudge;
     margin-left: $column-width;
-    @include secondary-text;
+
     color: $error-feedback;
+
+    @include secondary-text;
   }
 }
 
 /*----------[ datepicker ]------------------------------------------------------
 */
 input.date,
-img.ui-datepicker-trigger
-{
+img.ui-datepicker-trigger {
   vertical-align: middle;
 }
 
-.ui-datepicker
-{
+.ui-datepicker {
   font-size: $secondary-text-size !important;
 }

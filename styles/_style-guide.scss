@@ -1,179 +1,154 @@
 /*-----[ style guide ]----------------------------------------------------------
 */
-#style-guide
-{
-  & > .page
-  {
+#style-guide {
+  & > .page {
     padding: $body-text-line-height $column-width;
   }
 
-  #examples
-  {
-    & > section
-    {
+  #examples {
+    & > section {
       margin-top: 2 * $body-text-line-height;
     }
 
-    & > section > h1
-    {
+    & > section > h1 {
       margin-bottom: 3 * $body-text-line-height - ($page-heading-text-size + $vertical-nudge + 1px);
       border-bottom: 1px solid $light-stroke;
       padding-bottom: $vertical-nudge;
+
       color: darken($orange, 5);
     }
 
-    .explanation h2
-    {
+    .explanation h2 {
       margin: 0;
+
       color: darken($bright-yellow, 10);
     }
 
-    .explanation p
-    {
+    .explanation p {
       margin-top: 0;
     }
 
-    .columns h2
-    {
+    .columns h2 {
       margin-top: $body-text-line-height / 2;
     }
   }
 
-  .colors
-  {
-    table
-    {
+  .colors {
+    table {
       margin-top: 0;
     }
 
-    .swatch
-    {
+    .swatch {
       padding: 0;
       width: 2 * $column-width;
 
-      $palette-colors: ("eggplant-purple": $eggplant-purple, "teal": $teal,
-                        "leaf-green": $leaf-green, "bright-yellow": $bright-yellow,
-                        "orange": $orange, "blue": $blue, "red": $red, "charcoal": $charcoal,
-                        "grey": $grey, "silver": $silver, "greyish-white": $greyish-white);
+      $palette-colors: ('eggplant-purple': $eggplant-purple, 'teal': $teal,
+                        'leaf-green': $leaf-green, 'bright-yellow': $bright-yellow,
+                        'orange': $orange, 'blue': $blue, 'red': $red, 'charcoal': $charcoal,
+                        'grey': $grey, 'silver': $silver, 'greyish-white': $greyish-white);
 
       @each $swatch-name, $swatch-color in $palette-colors {
-        &.#{$swatch-name}
-        {
+        &.#{$swatch-name} {
           background-color: #{$swatch-color};
         }
       }
     }
 
-    .hex-code
-    {
+    .hex-code {
       padding-left: $column-width / 2;
     }
   }
 
-  .tables
-  {
-    .quantity, .price
-    {
+  .tables {
+    .quantity,
+    .price {
       text-align: right;
     }
 
-    table
-    {
+    table {
       margin-top: 0;
     }
 
-    tr.total
-    {
+    tr.total {
       font-weight: bold;
     }
   }
 
-  .forms
-  {
+  .forms {
     input[type=email],
     input[type=password],
     input[type=search],
     input[type=tel],
     input[type=text],
     input[type=url],
-    select
-    {
+    select {
       width: 200px;
 
-      &.large
-      {
+      &.large {
         width: 250px;
       }
     }
   }
 
-  footer
-  {
+  footer {
     margin-top: $body-text-line-height;
-    font-style: italic;
+
     color: $secondary-text-color;
+
+    font-style: italic;
   }
 }
 
-@media (min-width: $screen-sm-min)
-{
-  #style-guide
-  {
-    #intro, .explanation, .example
-    {
+@media (min-width: $screen-sm-min) {
+  #style-guide {
+    #intro,
+    .explanation,
+    .example {
       max-width: 600px;
     }
   }
 }
 
-@media (min-width: $screen-md-min)
-{
-  #style-guide
-  {
-    #examples .columns .column
-    {
+@media (min-width: $screen-md-min) {
+  #style-guide {
+    #examples .columns .column {
       float: left;
+
       margin-right: 2%;
       width: 32%;
 
-      &:last-of-type
-      {
+      &:last-of-type {
         margin-right: 0;
       }
     }
   }
 }
 
-@media (min-width: $screen-lg-min)
-{
-  #style-guide #examples
-  {
-    .explanation, .example
-    {
+@media (min-width: $screen-lg-min) {
+  #style-guide #examples {
+    .explanation,
+    .example {
       float: left;
+
       margin-bottom: $body-text-line-height;
     }
 
-    .explanation
-    {
+    .explanation {
       clear: left;
+
       margin-right: 3%;
       width: 32%;
     }
 
-    .example
-    {
+    .example {
       width: 65%;
       max-width: 650px;
     }
   }
 }
 
-@media (min-width: $screen-xl-min)
-{
-  #style-guide .page
-  {
+@media (min-width: $screen-xl-min) {
+  #style-guide .page {
     max-width: 1200px;
   }
 }
-

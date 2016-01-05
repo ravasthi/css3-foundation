@@ -1,60 +1,53 @@
 /*----------[ alerts ]----------------------------------------------------------
 */
-.alerts
-{
+.alerts {
   margin: 0;
+
   list-style-type: none;
 
-  .message
-  {
+  .message {
     margin-bottom: $vertical-nudge;
     padding: $vertical-nudge $column-width / 2;
     padding-left: 2 * $column-width;
 
-    &:before
-    {
+    &:before {
       display: inline-block;
+
       position: relative;
-      margin-left: -(1.5 * $column-width);
+
       margin-right: 0.5 * $column-width;
+      margin-left: -(1.5 * $column-width);
       width: $column-width;
     }
 
-    &.success
-    {
-      background-color: $success-feedback-bg;
+    &.success {
       color: $success-feedback;
+      background-color: $success-feedback-bg;
 
-      &:before
-      {
-        @include fa-icon();
+      &:before {
         @extend .fa-check;
+        @include fa-icon();
       }
     }
 
-    &.warning
-    {
-      background-color: $warning-feedback-bg;
+    &.warning {
       color: $warning-feedback;
+      background-color: $warning-feedback-bg;
 
-      &:before
-      {
-        @include fa-icon();
+      &:before {
         @extend .fa-asterisk;
+        @include fa-icon();
       }
     }
 
-    &.error
-    {
-      background-color: $error-feedback-bg;
+    &.error {
       color: $error-feedback;
+      background-color: $error-feedback-bg;
 
-      &:before
-      {
-        @include fa-icon();
+      &:before {
         @extend .fa-exclamation-triangle;
+        @include fa-icon();
       }
     }
   }
 }
-
