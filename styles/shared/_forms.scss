@@ -92,14 +92,14 @@ a.button {
   @include sassy-button();
 
   &.destructive {
-    @include sassy-button($first-color: $destructive-button-base-bg,
+    @include sassy-button($first-color : $destructive-button-base-bg,
                           $text-color  : $destructive-button-text-color);
   }
 
   &[disabled] {
     cursor: default !important;
 
-    @include sassy-button($first-color: $disabled-button-base-bg,
+    @include sassy-button($first-color : $disabled-button-base-bg,
                           $text-color  : $disabled-button-text-color,
                           $auto-states : false);
   }
