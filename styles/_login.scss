@@ -5,6 +5,10 @@
 #login .page {
   padding: $body-text-line-height $column-width;
 
+  h1 {
+    @include subheading-text;
+  }
+
   p:last-of-type,
   dl:last-of-type,
   ol:last-of-type,
@@ -18,7 +22,7 @@
 
   input[type=email],
   input[type=password] {
-    width: 230px;
+    width: 100%;
   }
 
   footer {
@@ -30,7 +34,11 @@
 
 @media (min-width: $screen-sm-min) {
   #login .page {
-    max-width: 250px;
+    max-width: 400px;
+
+    h1 {
+      @include heading-text;
+    }
   }
 }
 
