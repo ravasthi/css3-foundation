@@ -11,7 +11,7 @@ gem 'sassy-buttons'
 gem 'sass'
 
 # livereload
-gem 'guard-livereload', git: 'git@github.com:guard/guard-livereload.git'
+gem 'guard-livereload', '~> 2.5.1'
 gem 'rack-livereload'
 
 # Pow
