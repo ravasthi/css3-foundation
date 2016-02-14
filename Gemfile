@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rake'
 
@@ -22,3 +22,6 @@ gem 'powder'
 gem 'guard-sprockets'
 gem 'uglifier'
 gem 'therubyracer'
+
+# Work around https://github.com/rspec/rspec-core/issues/2171
+gem 'rb-inotify', '~> 0.9.7'
