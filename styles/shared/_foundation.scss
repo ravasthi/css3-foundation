@@ -241,20 +241,13 @@ ul {
   float: right;
 }
 
-/* Clearfix style from <http://nicolasgallagher.com/micro-clearfix-hack/> */
-.group:before,
-.group:after {
-  display: table;
-
-  content: '';
-}
-
-.group:after {
-  clear: both;
+/* Clearfix style from <https://css-tricks.com/snippets/css/clear-fix/> */
+.group {
+  @include clearfix;
 }
 
 span.keep-together {
-  white-space: nowrap;
+  @include keep-together;
 }
 
 .reset {
