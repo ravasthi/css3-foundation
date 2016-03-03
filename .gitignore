@@ -1,6 +1,9 @@
 # Mac OS
 .DS_Store
 
+# Bower
+bower_components/
+
 # Bundler
 .bundle/
 
