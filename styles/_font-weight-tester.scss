@@ -1,7 +1,9 @@
 /*-----[ font-weight-tester ]---------------------------------------------------
 */
 #font-weight-tester {
-  font-family: 'Open Sans', $body-text-family;
+  $font-family-to-test: 'Open Sans';
+
+  font-family: $font-family-to-test;
 
   .page {
     margin: $section-spacing auto;
@@ -11,16 +13,21 @@
   @each $weight in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
     .w#{$weight} {
       position: relative;
+
       font-weight: $weight;
 
       &:before {
         position: absolute;
         left: -100px;
+
         width: 80px;
-        text-align: right;
+
         color: $secondary-text-color;
+
         font-weight: normal;
+
         content: '#{$weight}';
+        text-align: right;
       }
     }
   }
@@ -28,4 +35,22 @@
   code {
     @include keep-together;
   }
+
+  .instructions {
+    position: relative;
+
+    margin-bottom: 2 * $body-text-line-height + $large-text-line-height;
+
+    &:after {
+      display: block;
+
+      position: absolute;
+      bottom: -($body-text-line-height + $large-text-line-height);
+
+      content: '#{$font-family-to-test}';
+      font-weight: bold;
+      @include large-text;
+    }
+  }
 }
+
