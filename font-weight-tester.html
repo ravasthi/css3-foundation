@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="styles-compiled/application.css"/>
+
+  <!-- conditional comments -->
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" media="all" href="styles-compiled/ie.css" />
+  <![endif]-->
+
+  <!-- print stylesheet -->
+  <link rel="stylesheet" type="text/css" media="print" href="styles-compiled/print.css"/>
+
+  <!-- external styles -->
+  <!-- <link rel="stylesheet" type="text/css" media="all" href="http://code.jquery.com/ui/1.8.23/themes/redmond/jquery-ui.css"/> -->
+
+  <!-- Favicons and touch icons -->
+  <!-- For retina-display iPads -->
+  <link href="images/apple-touch-icon-ipad-retina.png" rel="apple-touch-icon-precomposed" sizes="152x152" type="image/png"/>
+  <!-- For retina-display iPhones -->
+  <link href="images/apple-touch-icon-iphone-retina.png" rel="apple-touch-icon-precomposed" sizes="120x120" type="image/png"/>
+  <!-- For non-retina iPad -->
+  <link href="images/apple-touch-icon-ipad.png" rel="apple-touch-icon-precomposed" sizes="76x76" type="image/png"/>
+  <!-- For non-retina iPhone and Android -->
+  <link href="images/apple-touch-icon-iphone.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+  <!-- For Nokia -->
+  <link href="images/apple-touch-icon-iphone.png" rel="shortcut icon"/>
+  <!-- For everything else -->
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+  <!-- header javascript -->
+  <script type="text/javascript" src="scripts-compiled/application-header.js">
+  </script>
+
+  <title>Font weight tester | CSS3/HTML5 scaffolding</title>
+</head>
+<body id="font-weight-tester">
+  <div class="page">
+    <h1>Font weights: 100–900</h1>
+
+    <p>Ever wondered how weights of a font map to CSS font weights? Here’s a little utility to help you out. Just change the name of the font family in line 4 of <code>styles/_font-weight-tester.scss</code>, recompile the styles, <em>et voilà</em>.</p>
+
+    <p class="w100">
+      Deserunt scenester fingerstache, kogi slow-carb 3 wolf moon id exercitation sartorial sriracha.
+    </p> <!-- /.w100 -->
+    <p class="w200">
+      Fashion axe nihil non irony sunt food truck forage, bicycle rights disrupt messenger bag wolf brunch vegan.
+    </p> <!-- /.w200 -->
+    <p class="w300">
+      Anim nesciunt yuccie, iPhone non vinyl distillery cliche blue bottle fugiat irony cardigan bicycle rights odio.
+    </p> <!-- /.w300 -->
+    <p class="w400">
+      DIY placeat accusamus, single-origin coffee vinyl sapiente fingerstache nostrud elit intelligentsia.
+    </p> <!-- /.w400 -->
+    <p class="w500">
+      Man bun meditation laborum typewriter aliqua green juice.
+    </p> <!-- /.w500 -->
+    <p class="w600">
+      Knausgaard mlkshk reprehenderit, nesciunt ugh craft beer eu sint health goth lomo. Est affogato polaroid selfies truffaut next level.
+    </p> <!-- /.w600 -->
+    <p class="w700">
+      Culpa nisi consequat nesciunt kale chips, jean shorts kogi.
+    </p> <!-- /.w700 -->
+    <p class="w800">
+      Yuccie non minim, taxidermy cronut before they sold out ullamco tousled reprehenderit occupy pabst.
+    </p> <!-- /.w800 -->
+    <p class="w900">
+      Tousled stumptown tempor celiac cornhole chillwave.
+    </p> <!-- /.w900 -->
+  </div> <!-- /.page -->
+
+  <!-- all other javascript goes at the end of the body -->
+  <script type="text/javascript" src="scripts-compiled/application.js">
+  </script>
+
+  <!-- onload javascript -->
+  <script type="text/javascript">
+    (function($) {
+      $(function() {
+        Css3Foundation.commonInit();
+        Css3Foundation.scratch.init();
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>
