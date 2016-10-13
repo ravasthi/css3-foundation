@@ -14,9 +14,8 @@ gem 'sass'
 gem 'guard-livereload', '~> 2.5.1'
 gem 'rack-livereload'
 
-# Pow
-gem 'guard-pow'
-gem 'powder'
+# Puma
+gem 'guard-puma'
 
 # sprockets
 gem 'guard-sprockets'
