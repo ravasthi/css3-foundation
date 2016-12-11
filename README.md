@@ -27,7 +27,7 @@ To use this project, the following must be installed on your computer:
 * Front-end dependency management with [Bower](http://bower.io "Bower").
 * Ruby version management: if you have either RVM or rbenv installed, this project comes bundled with a `.ruby-version` file to make your environment setup easier.
 * Integration with [Sprockets](https://github.com/sstephenson/sprockets) to compile and minify JavaScript dependencies; this has the benefit of reducing the number of requests to the server, and lightening each download.
-* Integration with [Pow](http://pow.cx "Pow: Zero-configuration Rack server for Mac OS X"), [Guard](http://guardgem.org ""), and [LiveReload](http://livereload.com "LiveReload"), for *really* painless development.
+* Integration with [Puma](https://github.com/puma/puma), [Guard](http://guardgem.org ""), and [LiveReload](http://livereload.com "LiveReload"), for *really* painless development.
 
 ## Getting Started ##
 
