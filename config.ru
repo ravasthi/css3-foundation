@@ -1,3 +1,5 @@
+#\ -s puma
+
 require "bundler/setup"
 require "rack-livereload"
 
@@ -5,7 +7,6 @@ use Rack::LiveReload
 
 # A simple Rack app that serves the site, so we can use POW against it.
 # Taken from http://stackoverflow.com/a/3930606
-# TODO: consolidate with the version in spec_helper.rb
 #
 run Proc.new { |env|
   # Root directory of the site
