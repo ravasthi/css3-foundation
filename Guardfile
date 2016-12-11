@@ -18,10 +18,10 @@ guard :sprockets,
   watch %r{scripts/.+\.js}
 end
 
-guard :pow, restart_on_start: true, restart_on_reload: false do
-   watch('.powrc')
-   watch('.powenv')
-   watch('Gemfile')
-   watch('Gemfile.lock')
-   watch(%r{config\.(rb|ru)})
+guard 'puma' do
+  watch('.powrc')
+  watch('.powenv')
+  watch('Gemfile')
+  watch('Gemfile.lock')
+  watch(%r{^config|lib|api/.*})
 end

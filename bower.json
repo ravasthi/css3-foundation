@@ -1,6 +1,6 @@
 {
   "name": "css3f",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "homepage": "https://github.com/ravasthi/css3-foundation",
   "authors": [
     "Richa Avasthi <ravasthi@gmail.com>"
@@ -14,7 +14,7 @@
     "javascript",
     "ruby",
     "guard",
-    "pow"
+    "puma"
   ],
   "license": "Apache-2.0",
   "ignore": [
@@ -25,12 +25,12 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.2.1",
-    "jquery-ui": "~1.11.4",
+    "jquery": "~3.1.1",
+    "jquery-ui": "~1.12.1",
     "fiftyfive-util-js": "git@github.com:55minutes/fiftyfive-util-js.git",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.7.0"
   },
   "resolutions": {
-    "jquery": "~2.2.1"
+    "jquery": "~3.1.1"
   }
 }
