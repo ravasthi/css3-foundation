@@ -2,7 +2,7 @@
 */
 #style-guide {
   & > .page {
-    padding: $body-text-line-height $column-width;
+    padding: $body-text-line-height $horizontal-spacing;
   }
 
   #examples {
@@ -11,7 +11,7 @@
     }
 
     & > section > h1 {
-      margin-bottom: 3 * $body-text-line-height - ($page-heading-text-size + $vertical-nudge + 1px);
+      margin-bottom: 2 * $vertical-spacing;
       border-bottom: 1px solid $light-stroke;
       padding-bottom: $vertical-nudge;
 
@@ -40,7 +40,7 @@
 
     .swatch {
       padding: 0;
-      width: 2 * $column-width;
+      width: 2 * $horizontal-spacing;
 
       $palette-colors: ('eggplant-purple': $eggplant-purple, 'teal': $teal,
                         'leaf-green': $leaf-green, 'bright-yellow': $bright-yellow,
@@ -55,7 +55,7 @@
     }
 
     .hex-code {
-      padding-left: $column-width / 2;
+      padding-left: $horizontal-spacing / 2;
     }
   }
 

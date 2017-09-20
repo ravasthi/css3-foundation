@@ -13,9 +13,9 @@
 | for details.
 ------------------------------------------------------------------------------*/
 
-@import 'susy';
-@import 'typography';
-@import 'grid';
+@import 'susy/sass/susy';
+@import 'basics/typography';
+@import 'basics/grid';
 
 /*-----[ general ]--------------------------------------------------------------
 */
@@ -43,7 +43,7 @@
     &,
     &.destructive,
     &[disabled] {
-      padding: 3px $column-width;
+      padding: 3px $horizontal-spacing;
     }
   }
 }

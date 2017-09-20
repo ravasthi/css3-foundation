@@ -7,17 +7,17 @@
 
   .message {
     margin-bottom: $vertical-nudge;
-    padding: $vertical-nudge $column-width / 2;
-    padding-left: 2 * $column-width;
+    padding: $vertical-nudge $horizontal-spacing / 2;
+    padding-left: 2 * $horizontal-spacing;
 
     &:before {
       display: inline-block;
 
       position: relative;
 
-      margin-right: 0.5 * $column-width;
-      margin-left: -(1.5 * $column-width);
-      width: $column-width;
+      margin-right: 0.5 * $horizontal-spacing;
+      margin-left: -(1.5 * $horizontal-spacing);
+      width: $horizontal-spacing;
     }
 
     &.success {

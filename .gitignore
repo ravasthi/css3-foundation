@@ -14,6 +14,10 @@ images/icon-*.png
 distribution/scripts/*.js
 distribution/styles/*.css
 distribution/*.hot-update.json
+distribution/*.eot
+distribution/*.svg
+distribution/*.ttf
+distribution/*.woff*
 
 # Pow/RVM
 .powenv

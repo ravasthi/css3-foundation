@@ -16,19 +16,19 @@
 | transparently.
 */
 // Main palette
-$eggplant-purple : #4a1a2b;
-$teal            : #207861;
-$leaf-green      : #9fad00;
-$bright-yellow   : #ffcc00;
-$orange          : #ff8400;
-$blue            : #1673a1;
-$red             : #e53b19;
+$eggplant-purple: #4a1a2b;
+$teal: #207861;
+$leaf-green: #9fad00;
+$bright-yellow: #ffcc00;
+$orange: #ff8400;
+$blue: #1673a1;
+$red: #e53b19;
 
 // Greys
-$charcoal        : #444444;
-$grey            : #808080;
-$silver          : #c0c0c0;
-$greyish-white   : #f0f0f0;
+$charcoal: #444444;
+$grey: #808080;
+$silver: #c0c0c0;
+$greyish-white: #f0f0f0;
 
 /*----------[ backgrounds and borders ]-----------------------------------------
 | From this point on, we create semantic variables and assign our color values
@@ -45,43 +45,46 @@ $greyish-white   : #f0f0f0;
 | page background or link color—or change the palette entirely—in just one
 | place without a lot of tedious search-and-replace.
 */
-$page-bg         : white;
-$accent-bg       : $greyish-white;
+$page-bg: white;
+$accent-bg: $greyish-white;
 
-$stroke          : darken($silver, 15);
-$light-stroke    : darken($greyish-white, 10);
-$disabled-stroke : $silver;
+$stroke: darken($silver, 15);
+$light-stroke: darken($greyish-white, 10);
+$disabled-stroke: $silver;
 
 /*----------[ text ]------------------------------------------------------------
 */
-$body-text-color        : $charcoal;
-$secondary-text-color   : $grey;
-$light-text-color       : lighten($grey, 15);
-$disabled-text-color    : $silver;
+$body-text-color: $charcoal;
+$secondary-text-color: $grey;
+$light-text-color: lighten($grey, 15);
+$disabled-text-color: $silver;
 
-$link                   : $blue;
-$visited-link           : $eggplant-purple;
+$link: $blue;
+$visited-link: $eggplant-purple;
 
-$highlighted-text-color : white;
-$heading-text-color     : $leaf-green;
-$subheading-text-color  : $orange;
+$highlighted-text-color: white;
+$heading-text-color: $leaf-green;
+$subheading-text-color: $orange;
 
-$success-feedback       : darken($leaf-green, 3);
-$success-feedback-bg    : desaturate(lighten($success-feedback, 55), 20);
-$warning-feedback       : darken($bright-yellow, 10);
-$warning-feedback-bg    : lighten($warning-feedback, 48);
-$error-feedback         : darken($red, 10);
-$error-feedback-bg      : lighten($error-feedback, 55);
+$success-feedback: darken($leaf-green, 3);
+$success-feedback-bg: desaturate(lighten($success-feedback, 55), 20);
+$warning-feedback: darken($bright-yellow, 10);
+$warning-feedback-bg: lighten($warning-feedback, 48);
+$error-feedback: darken($red, 10);
+$error-feedback-bg: lighten($error-feedback, 55);
 
 /*----------[ forms ]-----------------------------------------------------------
 */
-$button-base-bg                : darken($orange, 3);
-$button-text-color             : white;
+$button-base-bg: darken($orange, 3);
+$button-hover-bg: darken($orange, 10);
+$button-text-color: white;
 
-$destructive-button-base-bg    : $red;
-$destructive-button-text-color : white;
+$secondary-button-base-bg: white;
+$secondary-button-hover-bg: lighten($orange, 45);
+$secondary-button-border-color: darken($orange, 3);
+$secondary-button-text-color: darken($orange, 3);
 
-$disabled-button-base-bg       : lighten($silver, 3);
-$disabled-button-text-color    : lighten($grey, 5);
+$disabled-button-base-bg: lighten($silver, 3);
+$disabled-button-text-color: lighten($grey, 5);
 
 

@@ -3,7 +3,7 @@
 | feature-specific styles should be organized.
 */
 #login .page {
-  padding: $body-text-line-height $column-width;
+  padding: $body-text-line-height $horizontal-spacing;
 
   h1 {
     @include subheading-text;
@@ -47,6 +47,6 @@
     margin: 50px auto;
     border: 2px solid $silver;
 
-    @include border-radius(15px);
+    border-radius: 15px;
   }
 }

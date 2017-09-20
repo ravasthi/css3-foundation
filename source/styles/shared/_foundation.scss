@@ -17,6 +17,8 @@
 */
 html {
   box-sizing: border-box;
+
+  @include body-text;
 }
 
 *,
@@ -28,7 +30,7 @@ html {
 a {
   color: $link;
 
-  @include transition(color 0.3s ease-in-out 0);
+  transition: color 0.3s ease-in-out 0;
 
   &:visited {
     color: $visited-link;
@@ -51,7 +53,7 @@ ul {
 }
 
 blockquote {
-  margin-left: $column-width;
+  margin-left: $horizontal-spacing;
 
   color: $secondary-text-color;
 }
@@ -139,7 +141,7 @@ hr {
 
 ol,
 ul {
-  margin-left: $column-width;
+  margin-left: $horizontal-spacing;
 }
 
 ol {
@@ -174,7 +176,7 @@ code {
 pre {
   overflow: auto;
 
-  padding: $body-text-line-height / 2 $column-width / 2;
+  padding: $body-text-line-height / 2 $horizontal-spacing / 2;
 
   background-color: $accent-bg;
 }
@@ -214,7 +216,7 @@ thead th {
 td,
 th {
   padding: $vertical-nudge 0;
-  padding-right: $column-width;
+  padding-right: $horizontal-spacing;
 
   &:first-of-type {
     padding-left: $horizontal-nudge;

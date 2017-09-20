@@ -35,6 +35,14 @@ module.exports = {
                         }
                     ]
                 })
+            },
+            {
+                // Capture eot, ttf, woff, and woff2
+                test: /\.(eot|svg|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+                include: /node_modules/,
+                use: {
+                    loader: 'file-loader',
+                },
             }
         ]
     },

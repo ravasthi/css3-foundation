@@ -2,7 +2,7 @@
 | Styles for Flickr-style pagination.
 */
 .pagination {
-  margin-top: $body-text-line-height - (2 * $vertical-nudge);
+  margin-top: $body-text-line-height / 2;
 
   white-space-collapse: discard;
 
@@ -13,11 +13,10 @@
   .last {
     display: inline-block;
 
-    margin-right: $column-width / 2;
+    margin-right: $horizontal-spacing / 2;
+    border-radius: $default-border-radius;
 
     background-color: darken($greyish-white, 3);
-
-    @include border-radius(6px);
 
     a {
       display: block;
@@ -28,7 +27,7 @@
     a,
     &.current,
     &.gap {
-      padding: $vertical-nudge $column-width / 2;
+      padding: $vertical-nudge $horizontal-spacing / 2;
 
       background-color: transparent;
     }

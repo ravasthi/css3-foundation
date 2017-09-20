@@ -8,31 +8,35 @@
 | of the directory organization.
 ------------------------------------------------------------------------------*/
 
-// Reset - use Compass' reset mixins
-@import 'compass/reset';
+/*
+** Reset
+** Explicitly need an underscore because there's another file named reset in this directory.
+*/
+@import 'reset-css/_reset';
 
-// Third-party mixins
-@import 'compass/css3';
-@import 'susy';
+// Grid math FTW
+@import 'susy/sass/susy';
 
 // ----- Icon fonts
-@import 'font-awesome';
+$fa-font-path: '../../node_modules/font-awesome/fonts';
+
+@import 'font-awesome/scss/font-awesome';
 
 // Basics
-@import 'colors';
-@import 'typography';
-@import 'grid';
+@import 'basics/colors';
+@import 'basics/typography';
+@import 'basics/grid';
 
 // Shared
-@import 'sassybuttons';
-@import 'shared/mixins'; // Specify path since FA also has a _mixins.scss file
-@import 'foundation';
-@import 'page';
-@import 'forms';
-@import 'alerts';
-@import 'pagination';
-@import 'header';
-@import 'footer';
+@import 'shared/animations';
+@import 'shared/mixins';
+@import 'shared/foundation';
+@import 'shared/page';
+@import 'shared/forms';
+@import 'shared/alerts';
+@import 'shared/pagination';
+@import 'shared/header';
+@import 'shared/footer';
 
 // Feature-/page-specific
 @import 'documentation';

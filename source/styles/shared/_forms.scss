@@ -23,17 +23,13 @@ select,
 textarea {
   margin: 0;
   border: 1px solid $stroke;
-  padding: (($body-text-line-height - $secondary-text-size - 2)/2) $horizontal-nudge;
+  border-radius: $form-input-border-radius;
+  padding: 0 2 * $horizontal-nudge;
 
   background-color: white;
 
   font-family: $body-text-family;
-  font-size: $secondary-text-size;
-  line-height: 1;
-
-  &::-webkit-input-placeholder {
-    line-height: $body-text-line-height - 2;
-  }
+  font-size: $body-text-size;
 }
 
 input[type=email][disabled],
@@ -44,11 +40,13 @@ input[type=text][disabled],
 input[type=url][disabled],
 select[disabled],
 textarea[disabled] {
+  /* stylelint-disable declaration-no-important */
   border-color: $disabled-stroke !important;
 
   color: $disabled-text-color !important;
 
-  cursor: default !important;
+  cursor: not-allowed !important;
+  /* stylelint-enable declaration-no-important */
 }
 
 input[type=text].small {
@@ -69,39 +67,55 @@ input[type=checkbox] {
   background-color: white;
 }
 
-/*
-** Use the sassy-buttons gem to generate matte rounded-rectangle buttons with
-** gradients and hover styles, in the following colors:
-**    main buttons: orange,
-**    disabled buttons: grey,
-**    buttons for destructive actions: red
-**
-** See
-**    http://jaredhardy.com/sassy-buttons/ and
-**    https://github.com/jhardy/Sassy-Buttons
-** for more details.
-*/
 input[type=submit],
 input[type=button],
 button,
 a.button {
+  display: inline-block;
+
+  border-style: none;
+  border-radius: $button-border-radius;
+  padding: 0 $horizontal-spacing;
+
+  color: $button-text-color;
+  background-color: $button-base-bg;
+
   font-family: $button-text-family;
-  font-weight: bold;
+  font-size: $button-text-size;
+  line-height: $button-text-line-height;
+  font-weight: 500;
 
-  @include transition(background-color 0.3s ease-in-out 0);
-  @include sassy-button();
+  transition: background-color $default-transition-duration $default-transition-timing-function;
+  text-transform: uppercase;
 
-  &.destructive {
-    @include sassy-button($first-color : $destructive-button-base-bg,
-                          $text-color  : $destructive-button-text-color);
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+
+  &.secondary {
+    border: 1px solid $secondary-button-border-color;
+
+    color: $secondary-button-text-color;
+    background-color: $secondary-button-base-bg;
+
+    $secondary-button-line-height: rem-to-px($button-height) - 2 * $secondary-button-border-width;
+    line-height: $secondary-button-line-height;
+
+    &:hover {
+      background-color: $secondary-button-hover-bg;
+    }
   }
 
   &[disabled] {
-    cursor: default !important;
+    color: $disabled-button-text-color;
+    background-color: $disabled-button-base-bg;
 
-    @include sassy-button($first-color : $disabled-button-base-bg,
-                          $text-color  : $disabled-button-text-color,
-                          $auto-states : false);
+    &:hover {
+      background-color: $disabled-button-base-bg;
+    }
+
+    /* stylelint-disable-next-line declaration-no-important */
+    cursor: not-allowed !important;
   }
 }
 
@@ -114,17 +128,17 @@ a.button {
 .button-bar input[type=button],
 .button-bar button,
 .button-bar > a {
-  float: left;
+  display: inline-block;
 
   margin: 0;
-  margin-right: $column-width / 2;
+  margin-right: $horizontal-spacing / 2;
 }
 
 .button-bar > a {
   display: inline-block;
 
-  font-size: $secondary-text-size;
-  line-height: $secondary-text-line-height + 2 * ($button-vertical-padding + $button-border-width);
+  font-size: $button-text-size;
+  line-height: $button-text-line-height;
 
   vertical-align: middle;
 }
@@ -147,7 +161,7 @@ table.form {
   }
 
   .field-label {
-    padding-right: $column-width;
+    padding-right: $horizontal-spacing;
 
     font-weight: normal;
 
@@ -222,7 +236,7 @@ table.form {
 
   ul.error-explanation {
     margin: $vertical-nudge;
-    margin-left: $column-width;
+    margin-left: $horizontal-spacing;
 
     color: $error-feedback;
 

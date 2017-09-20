@@ -18,17 +18,17 @@ $gg-deep-orange : #fa6900;
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 2 * $column-width;
+  left: 2 * $horizontal-spacing;
 
   border: 1px solid $stroke;
   border-top-width: 0;
-  padding: $body-text-line-height / 2 $column-width / 2;
+  padding: $body-text-line-height / 2 $horizontal-spacing / 2;
 
   background-color: $page-bg;
 
   font-weight: bold;
 
-  @include border-bottom-radius(5px);
+  border-bottom-radius: 5px;
 
   .toggle-debug {
     margin-right: $horizontal-nudge;
@@ -99,5 +99,5 @@ $gg-deep-orange : #fa6900;
 
   color: white;
 
-  @include translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }

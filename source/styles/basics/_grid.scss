@@ -2,32 +2,52 @@
 | Style specifying the dimensions of the basic page grid and other common
 | measures.
 */
-$column-width     : 20px;
-$horizontal-nudge : $column-width / 4;
+$horizontal-spacing: 20px;
+$horizontal-nudge: $horizontal-spacing / 4;
 
-$gutter-width     : 1.5 * $column-width;
+$gutter-width: 1.5 * $horizontal-spacing;
 
-$vertical-nudge   : $body-text-line-height / 4;
-$section-spacing  : 2 * $body-text-line-height;
+$vertical-spacing: 20px;
+$vertical-nudge: $vertical-spacing / 4;
+$section-spacing: 2 * $vertical-spacing;
 
 /*----------[ susy grid setup ]-------------------------------------------------
 | Use this for responsive grid layouts. Tweak as necessary for your needs.
 | cf Susy documentation: http://susydocs.oddbird.net/en/latest/
 */
-$susy: (
-  columns: 12,
-  gutters: .25
-);
+$page-content-width: 1200px;
 
-@include layout($susy);
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': $horizontal-spacing,
+  'container-position': center,
+  'global-box-sizing': border-box
+);
 
 /*----------[ responsive breakpoints ]------------------------------------------
 */
-$screen-xs-max: 499px;
-$screen-sm-min: 500px;
-$screen-sm-max: 767px;
-$screen-md-min: 768px;
-$screen-md-max: 991px;
-$screen-lg-min: 992px;
-$screen-lg-max: 1199px;
-$screen-xl-min: 1200px;
+$screen-xs-min: 600px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xl-min: 1500px;
+$screen-2xl-min: 1800px;
+
+$screen-2xs-max: $screen-xs-min - 1px;
+$screen-xs-max: $screen-sm-min - 1px;
+$screen-sm-max: $screen-md-min - 1px;
+$screen-md-max: $screen-lg-min - 1px;
+$screen-lg-max: $screen-xl-min - 1px;
+$screen-xl-max: $screen-2xl-min - 1px;
+
+/*----------[ buttons ]---------------------------------------------------------
+*/
+$default-border-radius: 3px;
+
+$button-border-radius: $default-border-radius;
+$button-height: 2rem;
+$button-vertical-padding: ($button-height - $button-text-size) / 2;
+
+$form-input-border-radius: $default-border-radius;
+
+$secondary-button-border-width: 1px;

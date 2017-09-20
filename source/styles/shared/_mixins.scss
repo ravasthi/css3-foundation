@@ -6,12 +6,12 @@
 |
 |   @mixin content-inner-border
 |   {
-|     @include border-radius(5px);
+|     border-radius: 5px;
 |   }
 |
 |   @mixin content-shadow
 |   {
-|     @include single-box-shadow($silver-sand, 0, 3px, 5px);
+|     box-shadow: $silver-sand 0 3px 5px;
 |   }
 |
 |   @mixin content-inner-box
@@ -53,7 +53,7 @@
   }
 }
 
-@mixin inline-block-list($spacing: $column-width) {
+@mixin inline-block-list($spacing: $horizontal-spacing) {
   margin: 0;
   list-style-type: none;
 
@@ -68,7 +68,7 @@
 }
 
 // Put this on a UL to get text and bullets colored differently.
-@mixin colored-bullets($gutter-size: $column-width,
+@mixin colored-bullets($gutter-size: $horizontal-spacing,
                        $bullet-character: '\2022',
                        $color: $secondary-text-color) {
   margin-left: 0;
@@ -201,7 +201,7 @@
 }
 
 @mixin parallax($parallax-perspective: 300px) {
-  @include perspective($parallax-perspective);
+  perspective: $parallax-perspective;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -209,16 +209,16 @@
   .parallax-group {
     position: relative;
     height: 100vh;
-    @include transform-style(preserve-3d);
-    @include transition(transform 0.5s);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 
     // See what's really going on…
     &.debug {
-      @include transform(translate3d(700px, 0, -800px) rotateY(30deg));
+     transform: translate3d(700px, 0, -800px) rotateY(30deg);
 
       .parallax-layer {
-        @include box-shadow(0 0 0 2px #000);
-        @include opacity(0.9);
+        box-shadow: 0 0 0 2px #000;
+        opacity: 0.9;
       }
     }
   }
@@ -231,22 +231,22 @@
     left: 0;
 
     &.fore {
-      @include transform(translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective)));
+      transform: translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective));
       z-index: 1;
     }
 
     &.base {
-      @include translateZ(0);
+      transform: translateZ(0);
       z-index: 4;
     }
 
     &.back {
-      @include transform(translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective)));
+      transform: translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective));
       z-index: 3;
     }
 
     &.deep {
-      @include transform(translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective)));
+      transform: translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective));
       z-index: 2;
     }
   }
