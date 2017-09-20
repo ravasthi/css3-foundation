@@ -32,6 +32,16 @@ textarea {
   font-size: $body-text-size;
 }
 
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+select {
+  height: $button-height;
+}
+
 input[type=email][disabled],
 input[type=password][disabled],
 input[type=search][disabled],
@@ -139,6 +149,7 @@ a.button {
 
   font-size: $button-text-size;
   line-height: $button-text-line-height;
+  text-decoration: none;
 
   vertical-align: middle;
 }
@@ -164,6 +175,7 @@ table.form {
     padding-right: $horizontal-spacing;
 
     font-weight: normal;
+    line-height: $button-height;
 
     text-align: right;
     vertical-align: top;
@@ -180,6 +192,12 @@ table.form {
 .checkbox-group {
   label {
     display: block;
+  }
+}
+
+.field {
+  input + .form-help {
+    margin-left: $horizontal-spacing / 2;
   }
 }
 

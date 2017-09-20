@@ -4,6 +4,8 @@
 | Application-wide utilities.
 ------------------------------------------------------------------------------*/
 
+import $ from 'jquery/dist/jquery';
+
 // Establish namespace. Change to match the name of your application.
 var Css3Foundation = window.Css3Foundation ? window.Css3Foundation : {};
 
@@ -41,4 +43,8 @@ $.extend(Css3Foundation, {
 
         // Other stuff to do as soon as the DOM is ready
     }
+});
+
+$(function() {
+    Css3Foundation.commonInit();
 });
