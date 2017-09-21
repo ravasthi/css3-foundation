@@ -14,6 +14,7 @@
 | makes it easier for you to tweak the exact shade of "light-blue" you're using
 | transparently.
 */
+// Main palette
 $cafe-au-lait: #eed7bb;
 $kraft-paper: #b89261;
 $saddle-brown: #926e3b;
@@ -35,15 +36,6 @@ $stone: #a49f99;
 $blush: #fadccf;
 $salmon: #eea68d;
 $flamingo: #e98a66;
-
-// Main palette
-$eggplant-purple: #4a1a2b;
-$teal: #207861;
-$leaf-green: #9fad00;
-$bright-yellow: #fc0;
-$orange: #ff8400;
-$blue: #1673a1;
-$red: #e53b19;
 
 // Greys
 $charcoal: #444;
@@ -80,30 +72,36 @@ $secondary-text-color: $grey;
 $light-text-color: lighten($grey, 15);
 $disabled-text-color: $silver;
 
-$link: $blue;
-$visited-link: $eggplant-purple;
+$link: darken($chambray, 5);
+$visited-link: $stone;
 
 $highlighted-text-color: white;
-$heading-text-color: $leaf-green;
-$subheading-text-color: $orange;
+$heading-text-color: $flamingo;
+$subheading-text-color: $salmon;
 
-$success-feedback: darken($leaf-green, 3);
-$success-feedback-bg: desaturate(lighten($success-feedback, 55), 20);
-$warning-feedback: darken($bright-yellow, 10);
-$warning-feedback-bg: lighten($warning-feedback, 48);
-$error-feedback: darken($red, 10);
-$error-feedback-bg: lighten($error-feedback, 55);
+$success-feedback: darken($jade, 18);
+$success-feedback-bg: desaturate(lighten($success-feedback, 35), 15);
+$warning-feedback: desaturate(darken($cornmeal, 25), 15);
+$warning-feedback-bg: desaturate(lighten($warning-feedback, 45), 15);
+$error-feedback: desaturate(darken($flamingo, 10), 12);
+$error-feedback-bg: desaturate(lighten($error-feedback, 37), 10);
 
 /*----------[ forms ]-----------------------------------------------------------
 */
-$button-base-bg: darken($orange, 3);
-$button-hover-bg: darken($orange, 10);
+$button-base-bg: $kraft-paper;
+$button-hover-bg: darken($kraft-paper, 10);
 $button-text-color: white;
 
 $secondary-button-base-bg: white;
-$secondary-button-hover-bg: lighten($orange, 45);
-$secondary-button-border-color: darken($orange, 3);
-$secondary-button-text-color: darken($orange, 3);
+$secondary-button-hover-bg: lighten($kraft-paper, 35);
+$secondary-button-border-color: $kraft-paper;
+$secondary-button-text-color: $kraft-paper;
 
 $disabled-button-base-bg: lighten($silver, 3);
 $disabled-button-text-color: lighten($grey, 5);
+
+$form-section-heading-text-color: $verdigris;
+
+/*----------[ pagination ]------------------------------------------------------
+*/
+$pagination-bg: lighten($coffee-cream, 5);

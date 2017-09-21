@@ -170,7 +170,9 @@ table.form {
   }
 
   .section-heading th {
-    color: $subheading-text-color;
+    color: $form-section-heading-text-color;
+
+    font-weight: $form-section-heading-text-weight;
   }
 
   .field-label {
@@ -209,9 +211,9 @@ table.form {
   margin-left: -$horizontal-nudge;
 
   .section-heading {
-    color: $subheading-text-color;
+    color: $form-section-heading-text-color;
 
-    font-weight: bold;
+    font-weight: $form-section-heading-text-weight;
   }
 
   .field > label:first-of-type {

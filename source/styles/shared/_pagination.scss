@@ -16,7 +16,7 @@
     margin-right: $horizontal-spacing / 2;
     border-radius: $default-border-radius;
 
-    background-color: darken($greyish-white, 3);
+    background-color: $pagination-bg;
 
     font-size: 1rem;
 

@@ -96,7 +96,7 @@ em {
 }
 
 h1 {
-  margin-bottom: $body-text-line-height * 3 - $page-heading-text-line-height;
+  margin-bottom: $section-spacing;
   padding: 0;
 
   color: $heading-text-color;
@@ -113,7 +113,7 @@ h2 {
 }
 
 h3 {
-  margin: 0.75 * $body-text-line-height 0 0;
+  margin: $vertical-spacing 0 $vertical-spacing / 2;
 
   @include large-text;
 }

@@ -15,13 +15,13 @@
       border-bottom: 1px solid $light-stroke;
       padding-bottom: $vertical-nudge;
 
-      color: darken($orange, 5);
+      color: $heading-text-color;
     }
 
     .explanation h2 {
       margin: 0;
 
-      color: darken($bright-yellow, 10);
+      color: $subheading-text-color;
     }
 
     .explanation p {
@@ -43,10 +43,31 @@
       width: 2 * $horizontal-spacing;
 
       $palette-colors: (
-        'eggplant-purple': $eggplant-purple, 'teal': $teal,
-        'leaf-green': $leaf-green, 'bright-yellow': $bright-yellow,
-        'orange': $orange, 'blue': $blue, 'red': $red, 'charcoal': $charcoal,
-        'grey': $grey, 'silver': $silver, 'greyish-white': $greyish-white
+        'cafe-au-lait': $cafe-au-lait,
+        'kraft-paper': $kraft-paper,
+        'saddle-brown': $saddle-brown,
+        'pale-blue': $pale-blue,
+        'chambray': $chambray,
+        'slate-blue': $slate-blue,
+        'flour': $flour,
+        'clay': $clay,
+        'pebble-brown': $pebble-brown,
+        'mint': $mint,
+        'jade': $jade,
+        'verdigris': $verdigris,
+        'semolina': $semolina,
+        'polenta': $polenta,
+        'cornmeal': $cornmeal,
+        'coffee-cream': $coffee-cream,
+        'taupe': $taupe,
+        'stone': $stone,
+        'blush': $blush,
+        'salmon': $salmon,
+        'flamingo': $flamingo,
+        'charcoal': $charcoal,
+        'grey': $grey,
+        'silver': $silver,
+        'greyish-white': $greyish-white
       );
 
       @each $swatch-name, $swatch-color in $palette-colors {
@@ -58,6 +79,10 @@
 
     .hex-code {
       padding-left: $horizontal-spacing / 2;
+    }
+
+    td.hex-code {
+      font-family: $monospace-text-family;
     }
   }
 
@@ -151,6 +176,8 @@
 
 @media (min-width: $screen-xl-min) {
   #style-guide .page {
-    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $page-content-width;
   }
 }
