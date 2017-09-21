@@ -1,14 +1,15 @@
 /*-----[ parallax example ]-----------------------------------------------------
 */
+
 /*----------[ colors ]----------------------------------------------------------
 */
-$gg-deep-aqua   : #2f9aaf;
-$gg-turquoise   : #69d2e7;
-$gg-aqua        : #a7dbdb;
-$gg-ghost-green : #e0e4cc;
-$gg-pale-orange : #eaab79;
-$gg-orange      : #f38630;
-$gg-deep-orange : #fa6900;
+$gg-deep-aqua: #2f9aaf;
+$gg-turquoise: #69d2e7;
+$gg-aqua: #a7dbdb;
+$gg-ghost-green: #e0e4cc;
+$gg-pale-orange: #eaab79;
+$gg-orange: #f38630;
+$gg-deep-orange: #fa6900;
 
 /*----------[ parallax groups ]-------------------------------------------------
 */
@@ -22,13 +23,13 @@ $gg-deep-orange : #fa6900;
 
   border: 1px solid $stroke;
   border-top-width: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   padding: $body-text-line-height / 2 $horizontal-spacing / 2;
 
   background-color: $page-bg;
 
   font-weight: bold;
-
-  border-bottom-radius: 5px;
 
   .toggle-debug {
     margin-right: $horizontal-nudge;
@@ -64,6 +65,7 @@ $gg-deep-orange : #fa6900;
     .fore {
       background-color: rgba($gg-deep-orange, 0.6);
     }
+
     .base {
       background-color: rgba($gg-orange, 0.6);
     }

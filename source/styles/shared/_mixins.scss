@@ -27,10 +27,11 @@
 ** Clearfix style from <https://css-tricks.com/snippets/css/clear-fix/>
 */
 @mixin clearfix {
-  &:after {
-    content: '';
+  &::after {
     display: table;
     clear: both;
+
+    content: '';
   }
 }
 
@@ -40,11 +41,14 @@
 
 @mixin inline-list($spacing: 0.33em) {
   display: inline;
+
   margin: 0;
+
   list-style-type: none;
 
   li {
     display: inline;
+
     margin-right: $spacing;
 
     &:last-of-type {
@@ -55,10 +59,12 @@
 
 @mixin inline-block-list($spacing: $horizontal-spacing) {
   margin: 0;
+
   list-style-type: none;
 
   li {
     display: inline-block;
+
     margin-right: $spacing;
 
     &:last-of-type {
@@ -68,12 +74,15 @@
 }
 
 // Put this on a UL to get text and bullets colored differently.
-@mixin colored-bullets($gutter-size: $horizontal-spacing,
-                       $bullet-character: '\2022',
-                       $color: $secondary-text-color) {
+@mixin colored-bullets(
+  $gutter-size: $horizontal-spacing,
+  $bullet-character: '\2022',
+  $color: $secondary-text-color
+) {
   margin-left: 0;
 
-  &, li {
+  &,
+  li {
     list-style: none;
   }
 
@@ -81,12 +90,16 @@
     padding-left: $gutter-size;
   }
 
-  li:before {
+  li::before {
     display: inline-block;
+
     margin-left: -$gutter-size;
     width: $gutter-size;
-    font-size: 1.2em;
+
     color: $color;
+
+    font-size: 1.2em;
+
     content: $bullet-character;
   }
 }
@@ -95,40 +108,40 @@
 | Common font-size/line-height combinations.
 */
 @mixin heading-text {
-  font-size   : $page-heading-text-size;
-  line-height : $page-heading-text-line-height;
+  font-size: $page-heading-text-size;
+  line-height: $page-heading-text-line-height;
 }
 
 @mixin subheading-text {
-  font-size   : $subheading-text-size;
-  line-height : $subheading-text-line-height;
+  font-size: $subheading-text-size;
+  line-height: $subheading-text-line-height;
 }
 
 @mixin large-text {
-  font-size   : $large-text-size;
-  line-height : $large-text-line-height;
+  font-size: $large-text-size;
+  line-height: $large-text-line-height;
 }
 
 @mixin body-text {
-  font-size   : $body-text-size;
-  line-height : $body-text-line-height;
+  font-size: $body-text-size;
+  line-height: $body-text-line-height;
 }
 
 @mixin secondary-text {
-  font-size   : $secondary-text-size;
-  line-height : $secondary-text-line-height;
+  font-size: $secondary-text-size;
+  line-height: $secondary-text-line-height;
 }
 
 @mixin small-text {
-  font-size   : $small-text-size;
-  line-height : $small-text-line-height;
+  font-size: $small-text-size;
+  line-height: $small-text-line-height;
 }
 
 /*----------[ forms ]-----------------------------------------------------------
 */
 @mixin placeholder-text {
   &::-webkit-input-placeholder {
-     @content;
+    @content;
   }
 
   &:-moz-placeholder { /* Firefox 18- */
@@ -146,11 +159,18 @@
 
 /*----------[ photos/images ]---------------------------------------------------
 */
+
+/*
+** Detect high DPI devices/browsers. Courtesy of
+** https://gist.github.com/marcedwards/3446599 and
+** https://medium.com/@micjamking/hd-retina-display-media-queries-b5562b5430d6
+*/
 @mixin retina {
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-         only screen and (-moz-min-device-pixel-ratio: 1.5),
-         only screen and (-o-min-device-pixel-ratio: 3/2),
-         only screen and (min-device-pixel-ratio: 1.5) {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (-o-min-device-pixel-ratio: 1.25/1),
+    only screen and (min-resolution: 200dpi),
+    only screen and (min-resolution: 1.25dppx) {
     @content;
   }
 }
@@ -159,33 +179,35 @@
 ** Mixin for including a retina image as a background.
 **
 ** Parameters:
-**  $image-name   : The filename of the image without the extension.
-**  $image-width  : The width of the 1x image.
-**  $image-height : The height of the 1x image.
-**  $type         : The extension of the image file. Defaults to 'png.'
-**  $bg-color     : The background color. Defaults to 'transparent.'
-**  $bg-repeat    : The background-repeat setting. Defaults to 'no-repeat.'
-**  $bg-pos-x     : The horizontal position of the background. Defaults to 'center.'
-**  $bg-pos-y     : The vertical position of the background. Defaults to 'center.'
+**  $image-name: The filename of the image without the extension.
+**  $image-width: The width of the 1x image.
+**  $image-height: The height of the 1x image.
+**  $type: The extension of the image file. Defaults to 'png.'
+**  $bg-color: The background color. Defaults to 'transparent.'
+**  $bg-repeat: The background-repeat setting. Defaults to 'no-repeat.'
+**  $bg-pos-x: The horizontal position of the background. Defaults to 'center.'
+**  $bg-pos-y: The vertical position of the background. Defaults to 'center.'
 **
 */
-@mixin retina-background($image-name, $image-width, $image-height, $type: "png",
-                         $bg-color: transparent, $bg-repeat: no-repeat,
-                         $bg-pos-x: center, $bg-pos-y: center) {
-  $full-image-name   : "#{$image-name}.#{$type}";
-  $retina-image-name : "#{$image-name}@2x.#{$type}";
+@mixin retina-background(
+  $image-name, $image-width, $image-height, $type: 'png',
+  $bg-color: transparent, $bg-repeat: no-repeat,
+  $bg-pos-x: center, $bg-pos-y: center
+) {
+  $full-image-name: '#{$image-name}.#{$type}';
+  $retina-image-name: '#{$image-name}@2x.#{$type}';
 
   background: $bg-color image-url($full-image-name) $bg-repeat $bg-pos-x $bg-pos-y;
 
   @include retina {
     background-image: image-url($retina-image-name);
-    @include background-size($image-width $image-height);
+    background-size: $image-width $image-height;
   }
 }
 
-@mixin retina-graphic($image, $type: "png") {
-  $img-width  : image-width("#{$image}.#{$type}");
-  $img-height : image-height("#{$image}.#{$type}");
+@mixin retina-graphic($image, $type: 'png') {
+  $img-width: image-width('#{$image}.#{$type}');
+  $img-height: image-height('#{$image}.#{$type}');
 
   @include retina-background($image, $img-width, $img-height, $type);
   width: $img-width;
@@ -202,23 +224,27 @@
 
 @mixin parallax($parallax-perspective: 300px) {
   perspective: $parallax-perspective;
-  height: 100vh;
+
   overflow-x: hidden;
   overflow-y: auto;
 
+  height: 100vh;
+
   .parallax-group {
     position: relative;
+
     height: 100vh;
     transform-style: preserve-3d;
+
     transition: transform 0.5s;
 
     // See what's really going on…
     &.debug {
-     transform: translate3d(700px, 0, -800px) rotateY(30deg);
+      transform: translate3d(700px, 0, -800px) rotateY(30deg);
 
       .parallax-layer {
-        box-shadow: 0 0 0 2px #000;
         opacity: 0.9;
+        box-shadow: 0 0 0 2px #000;
       }
     }
   }
@@ -231,23 +257,27 @@
     left: 0;
 
     &.fore {
-      transform: translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective));
       z-index: 1;
+
+      transform: translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective));
     }
 
     &.base {
-      transform: translateZ(0);
       z-index: 4;
+
+      transform: translateZ(0);
     }
 
     &.back {
-      transform: translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective));
       z-index: 3;
+
+      transform: translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective));
     }
 
     &.deep {
-      transform: translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective));
       z-index: 2;
+
+      transform: translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective));
     }
   }
 }

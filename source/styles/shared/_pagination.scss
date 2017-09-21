@@ -4,7 +4,7 @@
 .pagination {
   margin-top: $body-text-line-height / 2;
 
-  white-space-collapse: discard;
+  font-size: 0;
 
   .first,
   .prev,
@@ -17,6 +17,8 @@
     border-radius: $default-border-radius;
 
     background-color: darken($greyish-white, 3);
+
+    font-size: 1rem;
 
     a {
       display: block;

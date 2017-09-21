@@ -16,7 +16,7 @@
 
       font-weight: $weight;
 
-      &:before {
+      &::before {
         position: absolute;
         left: -100px;
 
@@ -41,14 +41,16 @@
 
     margin-bottom: 2 * $body-text-line-height + $large-text-line-height;
 
-    &:after {
+    &::after {
       display: block;
 
       position: absolute;
       bottom: -($body-text-line-height + $large-text-line-height);
 
-      content: '#{$font-family-to-test}';
       font-weight: bold;
+
+      content: '#{$font-family-to-test}';
+
       @include large-text;
     }
   }

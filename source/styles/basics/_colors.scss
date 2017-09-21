@@ -9,7 +9,6 @@
 | forms
 */
 
-
 /*----------[ palette ]---------------------------------------------------------
 | Use color names you can easily remember here, like "light-blue". Doing this
 | makes it easier for you to tweak the exact shade of "light-blue" you're using
@@ -19,13 +18,13 @@
 $eggplant-purple: #4a1a2b;
 $teal: #207861;
 $leaf-green: #9fad00;
-$bright-yellow: #ffcc00;
+$bright-yellow: #fc0;
 $orange: #ff8400;
 $blue: #1673a1;
 $red: #e53b19;
 
 // Greys
-$charcoal: #444444;
+$charcoal: #444;
 $grey: #808080;
 $silver: #c0c0c0;
 $greyish-white: #f0f0f0;
@@ -86,5 +85,3 @@ $secondary-button-text-color: darken($orange, 3);
 
 $disabled-button-base-bg: lighten($silver, 3);
 $disabled-button-text-color: lighten($grey, 5);
-
-

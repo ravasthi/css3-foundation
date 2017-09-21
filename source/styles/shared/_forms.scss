@@ -149,13 +149,15 @@ a.button {
 
   font-size: $button-text-size;
   line-height: $button-text-line-height;
-  text-decoration: none;
 
   vertical-align: middle;
+
+  text-decoration: none;
 }
 
 /*----------[ form layout ]-----------------------------------------------------
 */
+
 /*---------------[ forms in tables ]--------------------------------------------
 */
 table.form {
@@ -174,8 +176,8 @@ table.form {
   .field-label {
     padding-right: $horizontal-spacing;
 
-    font-weight: normal;
     line-height: $button-height;
+    font-weight: normal;
 
     text-align: right;
     vertical-align: top;
@@ -270,5 +272,6 @@ img.ui-datepicker-trigger {
 }
 
 .ui-datepicker {
+  // stylelint-disable-next-line declaration-no-important
   font-size: $secondary-text-size !important;
 }
