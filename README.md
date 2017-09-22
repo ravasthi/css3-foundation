@@ -8,7 +8,6 @@ To use this project, you should have a recent (>= 8.0) version of [node.js](http
 
 * A fluid, responsive layout following the principles of [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design "A Book Apart, Responsive Web Design").
 * Best practices recommended by various boilerplate projects, as well as our own experience developing web applications.
-* Integration with .
 * A style guide containing examples of the default styles defined in the project.
 * A number of convenient Sass mixins for:
     * Clearfix
