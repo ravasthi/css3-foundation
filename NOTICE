@@ -3,9 +3,3 @@ Copyright 2017 55 Minutes
 
 This product includes software developed at 55 Minutes.
 (http://www.55minutes.com/).
-
-This product contains the 55 Minutes JavaScript Utilities library
-(https://github.com/55minutes/fiftyfive-util-js/), which also packages
-some third-party libraries. For information on those, please refer to
-its own NOTICE
-(https://github.com/55minutes/fiftyfive-util-js/blob/master/NOTICE).
