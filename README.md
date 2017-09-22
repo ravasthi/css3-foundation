@@ -142,4 +142,3 @@ selector
 ```
 
 This is of course not required; some teams prefer, for example, to alphabetize the rules instead. The important thing is that whatever your team chooses, there is a consistent, documented pattern. We define our preferred order in this repository's `stylelint.config.js` and enforce it through stylelint and the [stylelint-order plugin](https://www.npmjs.com/package/stylelint-order).
-
