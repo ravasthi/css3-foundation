@@ -11,13 +11,13 @@ node_modules/
 # Compass
 .sass-cache/
 images/icon-*.png
+distribution/fonts/*.eot
+distribution/fonts/*.svg
+distribution/fonts/*.ttf
+distribution/fonts/*.woff*
 distribution/scripts/*.js
 distribution/styles/*.css
 distribution/*.hot-update.json
-distribution/*.eot
-distribution/*.svg
-distribution/*.ttf
-distribution/*.woff*
 
 # Pow/RVM
 .powenv

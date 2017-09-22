@@ -13,6 +13,7 @@
   .last {
     display: inline-block;
 
+    margin-top: 0;
     margin-right: $horizontal-spacing / 2;
     border-radius: $default-border-radius;
 
@@ -32,6 +33,10 @@
       padding: $vertical-nudge $horizontal-spacing / 2;
 
       background-color: transparent;
+    }
+
+    &.current {
+      font-weight: 500;
     }
   }
 }

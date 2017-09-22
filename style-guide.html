@@ -534,8 +534,8 @@
               </div> <!-- /.field -->
               <div class="button-bar group">
                 <input type="submit" class="save" value="Save"/>
-                <input type="submit" disabled="disabled" class="save-and-new" value="Save + new"/>
-                <input type="submit" class="destructive delete" value="Delete"/>
+                <input type="submit" class="save-and-new secondary" value="Save + new"/>
+                <input type="submit" disabled="disabled" class="delete" value="Delete"/>
                 <a class="cancel" href="javascript:;">Cancel</a>
               </div>
             </fieldset>
@@ -591,13 +591,28 @@
       <section class="alerts group">
         <h1>Alerts</h1>
         <div class="explanation">
-          <p>Styles for alerts and messages. The icons are from <a href="http://fortawesome.github.com/Font-Awesome/" title="Font Awesome, the iconic font designed for use with Twitter Bootstrap">Font Awesome</a>.</p>
+          <p>Styles for alerts and messages. The icons are from <a href="http://fontawesome.io" title="">Font Awesome</a>.</p>
         </div> <!-- /.explanation -->
         <div class="example">
           <ul class="alerts">
-            <li class="message success">Your profile was successfully saved.</li>
-            <li class="message warning">You have only 5MB of remaining free space.</li>
-            <li class="message error">Please correct the errors below.</li>
+            <li class="message success">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                Your profile was successfully saved.
+              </div> <!-- /.message-content -->
+            </li>
+            <li class="message warning">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                You have only 5MB of remaining free space.
+              </div> <!-- /.message-content -->
+            </li>
+            <li class="message error">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                Please correct the errors below.
+              </div> <!-- /.message-content -->
+            </li>
           </ul> <!-- /.alerts -->
         </div> <!-- /.example -->
       </section> <!-- /.alerts -->

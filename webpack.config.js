@@ -25,23 +25,38 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
-                        { loader: 'css-loader' },
-                        { loader: 'postcss-loader' },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
                         {
                             loader: 'sass-loader',
                             options: {
-                                includePaths: [ 'node_modules' ]
+                                includePaths: [ 'node_modules' ],
+                                sourceMap: true
                             }
                         }
                     ]
                 })
             },
             {
-                // Capture eot, ttf, woff, and woff2
+                // Capture eot, svg, ttf, woff, and woff2
                 test: /\.(eot|svg|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-                include: /node_modules/,
                 use: {
-                    loader: 'file-loader',
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                        name: 'fonts/[name].[ext]',
+                        publicPath: '../'
+                    }
                 },
             }
         ]
@@ -56,8 +71,10 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin([
+            'distribution/*.*',
             'distribution/scripts/*.*',
-            'distribution/styles/*.*'
+            'distribution/styles/*.*',
+            'distribution/fonts/*.*'
         ]),
         new ExtractTextPlugin({
             filename: 'styles/[name].css',

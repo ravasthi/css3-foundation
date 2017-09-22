@@ -33,7 +33,8 @@
   },
   "scripts": {
     "lint:scss": "stylelint 'source/**/*.scss' --syntax scss --config stylelint.config.js",
-    "build": "run-s lint:scss webpack",
+    "compile": "webpack",
+    "build": "run-s lint:scss compile",
     "start": "webpack --watch"
   }
 }

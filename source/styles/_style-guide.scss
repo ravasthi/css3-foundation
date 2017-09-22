@@ -12,14 +12,14 @@
 
     & > section > h1 {
       margin-bottom: 2 * $vertical-spacing;
-      border-bottom: 1px solid $light-stroke;
+      border-bottom: 2px solid $light-stroke;
       padding-bottom: $vertical-nudge;
 
       color: $heading-text-color;
     }
 
     .explanation h2 {
-      margin: 0;
+      margin: 0 0 $vertical-spacing;
 
       color: $subheading-text-color;
     }

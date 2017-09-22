@@ -200,8 +200,13 @@ table.form {
 }
 
 .field {
-  input + .form-help {
+  input + span.form-help {
     margin-left: $horizontal-spacing / 2;
+  }
+
+  input + p.form-help {
+    margin-top: $vertical-nudge;
+    margin-left: $horizontal-nudge;
   }
 }
 
