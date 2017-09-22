@@ -1,0 +1,9 @@
+/*-----[ animations ]-----------------------------------------------------------
+*/
+$default-transition-property: all;
+$default-transition-duration: 0.3s;
+$default-transition-timing-function: ease-in-out;
+
+$default-transition:
+  $default-transition-property $default-transition-duration
+  $default-transition-timing-function;

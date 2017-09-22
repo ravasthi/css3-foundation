@@ -1,0 +1,123 @@
+/*----------[ alerts ]----------------------------------------------------------
+*/
+.alerts {
+  margin: 0;
+
+  list-style-type: none;
+
+  .message {
+    display: flex;
+
+    margin-bottom: $vertical-nudge;
+    border: 1px solid transparent;
+    border-radius: $default-border-radius;
+
+    .icon,
+    .message-content {
+      display: inline-block;
+    }
+
+    .icon {
+      padding-top: $vertical-nudge;
+      width: 2 * $horizontal-spacing;
+
+      font-size: 0;
+
+      text-align: center;
+
+      &::before {
+        display: inline-block;
+
+        position: relative;
+
+        margin-right: 0.5 * $horizontal-spacing;
+        margin-left: 0.5 * $horizontal-spacing;
+        width: $horizontal-spacing;
+      }
+    }
+
+    .message-content {
+      padding: $vertical-nudge $horizontal-spacing / 2;
+    }
+
+    &.success {
+      border-color: $success-feedback;
+
+      .icon {
+        background-color: $success-feedback-bg;
+
+        @extend .fa-check;
+
+        &::before {
+          @include fa-icon();
+
+          top: 1px;
+
+          color: $success-feedback;
+
+          font-size: $large-text-size;
+        }
+      }
+    }
+
+    &.warning {
+      border-color: $warning-feedback;
+
+      .icon {
+        @extend .fa-asterisk;
+
+        background-color: $warning-feedback-bg;
+
+        &::before {
+          @include fa-icon();
+
+          top: 2px;
+
+          color: $warning-feedback;
+
+          font-size: $large-text-size;
+        }
+      }
+    }
+
+    &.error {
+      border-color: $error-feedback;
+
+      .icon {
+        @extend .fa-exclamation-triangle;
+
+        background-color: $error-feedback-bg;
+
+        &::before {
+          @include fa-icon();
+
+          top: 2px;
+
+          color: $error-feedback;
+
+          font-size: $large-text-size;
+        }
+      }
+    }
+
+    &.info {
+      border-color: $info-feedback;
+
+      .icon {
+        @extend .fa-info-circle;
+
+        background-color: $info-feedback-bg;
+
+        &::before {
+          @include fa-icon();
+
+          top: 3px;
+
+          color: $info-feedback;
+
+          font-size: $large-text-size;
+        }
+      }
+    }
+  }
+}

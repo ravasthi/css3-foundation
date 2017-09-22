@@ -1,0 +1,183 @@
+/*-----[ style guide ]----------------------------------------------------------
+*/
+#style-guide {
+  & > .page {
+    padding: $body-text-line-height $horizontal-spacing;
+  }
+
+  #examples {
+    & > section {
+      margin-top: 2 * $body-text-line-height;
+    }
+
+    & > section > h1 {
+      margin-bottom: 2 * $vertical-spacing;
+      border-bottom: 2px solid $light-stroke;
+      padding-bottom: $vertical-nudge;
+
+      color: $heading-text-color;
+    }
+
+    .explanation h2 {
+      margin: 0 0 $vertical-spacing;
+
+      color: $subheading-text-color;
+    }
+
+    .explanation p {
+      margin-top: 0;
+    }
+
+    .columns h2 {
+      margin-top: $body-text-line-height / 2;
+    }
+  }
+
+  .colors {
+    table {
+      margin-top: 0;
+    }
+
+    .swatch {
+      padding: 0;
+      width: 2 * $horizontal-spacing;
+
+      $palette-colors: (
+        'cafe-au-lait': $cafe-au-lait,
+        'kraft-paper': $kraft-paper,
+        'saddle-brown': $saddle-brown,
+        'pale-blue': $pale-blue,
+        'chambray': $chambray,
+        'slate-blue': $slate-blue,
+        'flour': $flour,
+        'clay': $clay,
+        'pebble-brown': $pebble-brown,
+        'mint': $mint,
+        'jade': $jade,
+        'verdigris': $verdigris,
+        'semolina': $semolina,
+        'polenta': $polenta,
+        'cornmeal': $cornmeal,
+        'coffee-cream': $coffee-cream,
+        'taupe': $taupe,
+        'stone': $stone,
+        'blush': $blush,
+        'salmon': $salmon,
+        'flamingo': $flamingo,
+        'charcoal': $charcoal,
+        'grey': $grey,
+        'silver': $silver,
+        'greyish-white': $greyish-white
+      );
+
+      @each $swatch-name, $swatch-color in $palette-colors {
+        &.#{$swatch-name} {
+          background-color: #{$swatch-color};
+        }
+      }
+    }
+
+    .hex-code {
+      padding-left: $horizontal-spacing / 2;
+    }
+
+    td.hex-code {
+      font-family: $monospace-text-family;
+    }
+  }
+
+  .tables {
+    .quantity,
+    .price {
+      text-align: right;
+    }
+
+    table {
+      margin-top: 0;
+    }
+
+    tr.total {
+      font-weight: bold;
+    }
+  }
+
+  .forms {
+    input[type=email],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=url],
+    select {
+      width: 200px;
+
+      &.large {
+        width: 250px;
+      }
+    }
+  }
+
+  footer {
+    margin-top: $body-text-line-height;
+
+    color: $secondary-text-color;
+
+    font-style: italic;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  #style-guide {
+    #intro,
+    .explanation,
+    .example {
+      max-width: 600px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  #style-guide {
+    #examples .columns .column {
+      float: left;
+
+      margin-right: 2%;
+      width: 32%;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  #style-guide #examples {
+    .explanation,
+    .example {
+      float: left;
+
+      margin-bottom: $body-text-line-height;
+    }
+
+    .explanation {
+      clear: left;
+
+      margin-right: 3%;
+      width: 32%;
+    }
+
+    .example {
+      width: 65%;
+      max-width: 650px;
+    }
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  #style-guide .page {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $page-content-width;
+  }
+}

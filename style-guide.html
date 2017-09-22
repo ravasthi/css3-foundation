@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- stylesheets -->
-  <link rel="stylesheet" type="text/css" media="all" href="styles-compiled/application.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="distribution/styles/styles.css"/>
 
   <!-- conditional comments -->
   <!--[if IE]>
-    <link rel="stylesheet" type="text/css" media="all" href="styles-compiled/ie.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="distribution/styles/ie.css" />
   <![endif]-->
 
   <!-- print stylesheet -->
-  <link rel="stylesheet" type="text/css" media="print" href="styles-compiled/print.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="distribution/styles/print.css"/>
 
   <!-- external styles -->
   <!-- <link rel="stylesheet" type="text/css" media="all" href="http://code.jquery.com/ui/1.8.23/themes/redmond/jquery-ui.css"/> -->
@@ -34,16 +34,26 @@
   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
   <!-- header javascript -->
-  <script type="text/javascript" src="scripts-compiled/application-header.js">
+  <script type="text/javascript" src="distribution/scripts/application-header.js">
   </script>
 
-  <title>CSS3/HTML5 scaffolding style guide</title>
+  <title>HTML/CSS scaffolding style guide</title>
 </head>
 <body id="style-guide">
+  <header class="page-header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="current" href="style-guide.html">Style guide</a>
+      <a href="login.html">Sample login page</a>
+      <a href="font-weight-tester.html">Font weight tester</a>
+      <a href="parallax.html">Parallax scrolling example</a>
+    </nav>
+  </header>
+
   <div class="page">
     <header id="intro">
-      <h1>CSS3/HTML5 scaffolding style guide</h1>
-      <p>This page contains the style guide for your application: the colors, typography, and common widget styles. The guide's structure and organization borrows heavily from the <a href="http://twitter.github.com/bootstrap/" title="Bootstrap, from Twitter">Twitter bootstrap</a>.</p>
+      <h1>HTML/CSS scaffolding style guide</h1>
+      <p>This page contains the style guide for your application: the colors, typography, and common widget styles. The guide's structure and organization borrows heavily from (a very old version of) the <a href="http://getbootstrap.com/" title="Bootstrap &middot; The most popular HTML, CSS, and JS library in the world.">Twitter bootstrap</a>.</p>
     </header> <!-- /#intro -->
 
     <section id="examples">
@@ -64,60 +74,130 @@
             </thead>
             <tbody>
               <tr>
-                <td class="color-name">Eggplant purple</td>
-                <td class="swatch eggplant-purple">&nbsp;</td>
-                <td class="hex-code">#4a1a2b</td>
-                <td class="usage">
-                  Visited link
-                </td>
+                <td class="color-name">Cafe au lait</td>
+                <td class="swatch cafe-au-lait">&nbsp;</td>
+                <td class="hex-code">#eed7bb</td>
+                <td class="usage"></td>
               </tr>
               <tr>
-                <td class="color-name">Teal</td>
-                <td class="swatch teal">&nbsp;</td>
-                <td class="hex-code">#207861</td>
-                <td class="usage">
-                  Subheading
-                </td>
+                <td class="color-name">Kraft paper</td>
+                <td class="swatch kraft-paper">&nbsp;</td>
+                <td class="hex-code">#b89261</td>
+                <td class="usage">Primary, secondary buttons</td>
               </tr>
               <tr>
-                <td class="color-name">Leaf green</td>
-                <td class="swatch leaf-green">&nbsp;</td>
-                <td class="hex-code">#9fad00</td>
-                <td class="usage">
-                  Success feedback
-                </td>
+                <td class="color-name">Saddle brown</td>
+                <td class="swatch saddle-brown">&nbsp;</td>
+                <td class="hex-code">#926e3b</td>
+                <td class="usage"></td>
               </tr>
               <tr>
-                <td class="color-name">Bright yellow</td>
-                <td class="swatch bright-yellow">&nbsp;</td>
-                <td class="hex-code">#ffcc00</td>
-                <td class="usage">
-                  Warning feedback
-                </td>
+                <td class="color-name">Pale blue</td>
+                <td class="swatch pale-blue">&nbsp;</td>
+                <td class="hex-code">#c7e1e9</td>
+                <td class="usage">Info feedback background</td>
               </tr>
               <tr>
-                <td class="color-name">Orange</td>
-                <td class="swatch orange">&nbsp;</td>
-                <td class="hex-code">#ff8400</td>
-                <td class="usage">
-                  Buttons
-                </td>
+                <td class="color-name">Chambray</td>
+                <td class="swatch chambray">&nbsp;</td>
+                <td class="hex-code">#8aabb6</td>
+                <td class="usage">Link</td>
               </tr>
               <tr>
-                <td class="color-name">Blue</td>
-                <td class="swatch blue">&nbsp;</td>
-                <td class="hex-code">#1673a1</td>
-                <td class="usage">
-                  Link
-                </td>
+                <td class="color-name">Slate blue</td>
+                <td class="swatch slate-blue">&nbsp;</td>
+                <td class="hex-code">#52666e</td>
+                <td class="usage">Info feedback</td>
               </tr>
               <tr>
-                <td class="color-name">Red</td>
-                <td class="swatch red">&nbsp;</td>
-                <td class="hex-code">#e53b19</td>
-                <td class="usage">
-                  Error feedback
-                </td>
+                <td class="color-name">Flour</td>
+                <td class="swatch flour">&nbsp;</td>
+                <td class="hex-code">#faf8e9</td>
+                <td class="usage"></td>
+              </tr>
+              <tr>
+                <td class="color-name">Clay</td>
+                <td class="swatch clay">&nbsp;</td>
+                <td class="hex-code">#d9d7c7</td>
+                <td class="usage"></td>
+              </tr>
+              <tr>
+                <td class="color-name">Pebble brown</td>
+                <td class="swatch pebble-brown">&nbsp;</td>
+                <td class="hex-code">#c0bdae</td>
+                <td class="usage"></td>
+              </tr>
+              <tr>
+                <td class="color-name">Mint</td>
+                <td class="swatch mint">&nbsp;</td>
+                <td class="hex-code">#d9f5e3</td>
+                <td class="usage">Success feedback background</td>
+              </tr>
+              <tr>
+                <td class="color-name">Jade</td>
+                <td class="swatch jade">&nbsp;</td>
+                <td class="hex-code">#aedebd</td>
+                <td class="usage">Success feedback</td>
+              </tr>
+              <tr>
+                <td class="color-name">Verdigris</td>
+                <td class="swatch verdigris">&nbsp;</td>
+                <td class="hex-code">#6c977b</td>
+                <td class="usage">Form section subheadings</td>
+              </tr>
+              <tr>
+                <td class="color-name">Semolina</td>
+                <td class="swatch semolina">&nbsp;</td>
+                <td class="hex-code">#f5eec7</td>
+                <td class="usage">Warning feedback background</td>
+              </tr>
+              <tr>
+                <td class="color-name">Polenta</td>
+                <td class="swatch polenta">&nbsp;</td>
+                <td class="hex-code">#f8e9a4</td>
+                <td class="usage"></td>
+              </tr>
+              <tr>
+                <td class="color-name">Cornmeal</td>
+                <td class="swatch cornmeal">&nbsp;</td>
+                <td class="hex-code">#f5e17d</td>
+                <td class="usage">Warning feedback</td>
+              </tr>
+              <tr>
+                <td class="color-name">Coffee cream</td>
+                <td class="swatch coffee-cream">&nbsp;</td>
+                <td class="hex-code">#e9e3dc</td>
+                <td class="usage">Pagination button background</td>
+              </tr>
+              <tr>
+                <td class="color-name">Taupe</td>
+                <td class="swatch taupe">&nbsp;</td>
+                <td class="hex-code">#cac5bd</td>
+                <td class="usage"></td>
+              </tr>
+              <tr>
+                <td class="color-name">Stone</td>
+                <td class="swatch stone">&nbsp;</td>
+                <td class="hex-code">#a49f99</td>
+                <td class="usage">Visited link</td>
+              </tr>
+              <tr>
+                <td class="color-name">Blush</td>
+                <td class="swatch blush">&nbsp;</td>
+                <td class="hex-code">#fadccf</td>
+                <td class="usage">Error feedback background</td>
+              </tr>
+              <tr>
+                <td class="color-name">Salmon</td>
+                <td class="swatch salmon">&nbsp;</td>
+                <td class="hex-code">#eea68d</td>
+                <td class="usage">Secondary headings</td>
+              </tr>
+              <tr>
+                <td class="color-name">Flamingo</td>
+                <td class="swatch flamingo">&nbsp;</td>
+                <td class="hex-code">#e98a66</td>
+                <td class="usage">Primary headings, warning feedback</td>
               </tr>
               <tr>
                 <td class="color-name">Charcoal</td>
@@ -261,7 +341,7 @@
         <div class="explanation">
           <h2>Forms in tables</h2>
           <p>We commonly use tables to lay out forms with left- or right-aligned labels. This is the recommended method for desktop applications.</p>
-          <p>Note how destructive actions like deletion are marked with a class of <code>"destructive"</code> and highlighted visually.</p>
+          <p>Styles for secondary and disabled buttons are included.</p>
         </div> <!-- /.explanation -->
         <div class="example">
           <form action="." method="get" accept-charset="utf-8">
@@ -270,9 +350,9 @@
                 <tr>
                   <th class="field-label">&nbsp;</th>
                   <td class="button-bar">
-                    <input type="submit" class="save" value="Save"/>
-                    <input type="submit" disabled="disabled" class="save-and-new" value="Save + new"/>
-                    <input type="submit" class="destructive delete" value="Delete"/>
+                    <input type="submit" class="save" value="Save" />
+                    <input type="submit" class="save-and-new secondary" value="Save + new" />
+                    <input type="submit" class="delete" value="Delete" disabled />
                     <a class="cancel" href="javascript:;">Cancel</a>
                   </td>
                 </tr>
@@ -454,8 +534,8 @@
               </div> <!-- /.field -->
               <div class="button-bar group">
                 <input type="submit" class="save" value="Save"/>
-                <input type="submit" disabled="disabled" class="save-and-new" value="Save + new"/>
-                <input type="submit" class="destructive delete" value="Delete"/>
+                <input type="submit" class="save-and-new secondary" value="Save + new"/>
+                <input type="submit" disabled="disabled" class="delete" value="Delete"/>
                 <a class="cancel" href="javascript:;">Cancel</a>
               </div>
             </fieldset>
@@ -511,13 +591,34 @@
       <section class="alerts group">
         <h1>Alerts</h1>
         <div class="explanation">
-          <p>Styles for alerts and messages. The icons are from <a href="http://fortawesome.github.com/Font-Awesome/" title="Font Awesome, the iconic font designed for use with Twitter Bootstrap">Font Awesome</a>.</p>
+          <p>Styles for alerts and messages. The icons are from <a href="http://fontawesome.io" title="">Font Awesome</a>.</p>
         </div> <!-- /.explanation -->
         <div class="example">
           <ul class="alerts">
-            <li class="message success">Your profile was successfully saved.</li>
-            <li class="message warning">You have only 5MB of remaining free space.</li>
-            <li class="message error">Please correct the errors below.</li>
+            <li class="message success">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                Your profile was successfully saved.
+              </div> <!-- /.message-content -->
+            </li>
+            <li class="message warning">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                You have only 5MB of remaining free space.
+              </div> <!-- /.message-content -->
+            </li>
+            <li class="message error">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                Please correct the errors below.
+              </div> <!-- /.message-content -->
+            </li>
+            <li class="message info">
+              <div class="icon">&nbsp;</div>
+              <div class="message-content">
+                See our <a href="javascript;">knowledge base</a> for more details.
+              </div> <!-- /.message-content -->
+            </li>
           </ul> <!-- /.alerts -->
         </div> <!-- /.example -->
       </section> <!-- /.alerts -->
@@ -527,16 +628,7 @@
   <!-- all other javascript goes at the end of the body -->
 
   <!-- all other javascript goes at the end of the body -->
-  <script type="text/javascript" src="scripts-compiled/application.js">
-  </script>
-
-  <!-- onload javascript -->
-  <script type="text/javascript">
-  (function($) {
-    $(function() {
-      Css3Foundation.commonInit();
-    });
-  })(jQuery);
+  <script type="text/javascript" src="distribution/scripts/application.js">
   </script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------------------
+| application.css
+| application name v1.0
+|
+| This file rolls up the main styles for the entire application. You'll need to
+| include the IE-specific and print stylesheets, as well as the display-size-
+| specific styles separately in your markup. See the readme for an explanation
+| of the directory organization.
+------------------------------------------------------------------------------*/
+
+/*
+** Reset
+** Explicitly need an underscore because there's another file named reset in this directory.
+*/
+@import 'reset-css/_reset';
+
+// Grid math FTW
+@import 'susy/sass/susy';
+
+// ----- Icon fonts
+$fa-font-path: '~font-awesome/fonts';
+
+@import 'font-awesome/scss/font-awesome';
+
+// Basics
+@import 'basics/colors';
+@import 'basics/functions';
+@import 'basics/typography';
+@import 'basics/grid';
+
+// Shared
+@import 'shared/animations';
+@import 'shared/mixins';
+@import 'shared/foundation';
+@import 'shared/page';
+@import 'shared/forms';
+@import 'shared/alerts';
+@import 'shared/pagination';
+@import 'shared/header';
+@import 'shared/footer';
+
+// Feature-/page-specific
+@import 'documentation';
+@import 'login';
+@import 'parallax-example';
+@import 'style-guide';
+@import 'font-weight-tester';
+@import 'feature-1';

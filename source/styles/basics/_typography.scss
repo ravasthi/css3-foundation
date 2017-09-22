@@ -1,0 +1,35 @@
+/*-----[ typography ]-----------------------------------------------------------
+*/
+
+/*----------[ text families ]---------------------------------------------------
+*/
+$body-text-family: 'Avenir Next', Avenir, 'DejaVu Sans', 'Bitstream Vera Sans', Tahoma, Verdana, sans-serif;
+$monospace-text-family: Consolas, Menlo, 'Lucida Console', monospace;
+$button-text-family: $body-text-family;
+
+/*----------[ text sizes ]------------------------------------------------------
+*/
+$body-text-size: 18px;
+$body-text-line-height: 1.5rem; // 27px
+
+$secondary-text-size: 0.833333333rem; // 15px
+$secondary-text-line-height: 1.166666667rem; // 21px
+
+$small-text-size: 0.666666667rem; // 12px
+$small-text-line-height: $secondary-text-line-height;
+
+$large-text-size: 1.166666667rem; // 21px
+$large-text-line-height: 1.5rem; // 27px
+
+$page-heading-text-size: 2.333333333rem; // 42px
+$page-heading-text-line-height: 2.777777778rem; // 50px
+
+$subheading-text-size: 1.666666667rem; // 30px
+$subheading-text-line-height: 2rem; // 36px
+
+/*----------[ other text properties ]-------------------------------------------
+*/
+$button-text-size: 1rem;
+$button-text-line-height: 2rem;
+
+$form-section-heading-text-weight: 600;

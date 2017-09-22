@@ -1,0 +1,114 @@
+/*-----[ colors ]---------------------------------------------------------------
+| Variables defining the colors to be used throughout the application.
+*/
+
+/*----------[ table of contents ]-----------------------------------------------
+| palette
+| backgrounds and borders
+| text
+| forms
+*/
+
+/*----------[ palette ]---------------------------------------------------------
+| Use color names you can easily remember here, like "light-blue". Doing this
+| makes it easier for you to tweak the exact shade of "light-blue" you're using
+| transparently.
+*/
+// Main palette
+$cafe-au-lait: #eed7bb;
+$kraft-paper: #b89261;
+$saddle-brown: #926e3b;
+$pale-blue: #c7e1e9;
+$chambray: #8aabb6;
+$slate-blue: #52666e;
+$flour: #faf8e9;
+$clay: #d9d7c7;
+$pebble-brown: #c0bdae;
+$mint: #d9f5e3;
+$jade: #aedebd;
+$verdigris: #6c977b;
+$semolina: #f5eec7;
+$polenta: #f8e9a4;
+$cornmeal: #f5e17d;
+$coffee-cream: #e9e3dc;
+$taupe: #cac5bd;
+$stone: #a49f99;
+$blush: #fadccf;
+$salmon: #eea68d;
+$flamingo: #e98a66;
+
+// Greys
+$charcoal: #444;
+$grey: #808080;
+$silver: #c0c0c0;
+$greyish-white: #f0f0f0;
+
+/*----------[ backgrounds and borders ]-----------------------------------------
+| From this point on, we create semantic variables and assign our color values
+| to them. Then in the rest of our styles, we refer to these semantic color
+| values like so:
+|
+|   body
+|   {
+|      background-color: $page-bg;
+|      color: $body-text-color;
+|   }
+|
+| By adding this extra layer of abstraction, we can swap out our
+| page background or link color—or change the palette entirely—in just one
+| place without a lot of tedious search-and-replace.
+*/
+$page-bg: white;
+$accent-bg: $greyish-white;
+
+$stroke: darken($silver, 15);
+$light-stroke: darken($greyish-white, 10);
+$disabled-stroke: $silver;
+
+/*----------[ text ]------------------------------------------------------------
+*/
+$body-text-color: $charcoal;
+$secondary-text-color: $grey;
+$light-text-color: lighten($grey, 15);
+$disabled-text-color: $silver;
+
+$link: darken($chambray, 5);
+$visited-link: $stone;
+
+$highlighted-text-color: white;
+$heading-text-color: $flamingo;
+$subheading-text-color: $salmon;
+
+$success-feedback: darken($jade, 18);
+$success-feedback-bg: $mint;
+$warning-feedback: desaturate(darken($cornmeal, 25), 15);
+$warning-feedback-bg: $semolina;
+$error-feedback: desaturate(darken($flamingo, 10), 12);
+$error-feedback-bg: $blush;
+$info-feedback: $slate-blue;
+$info-feedback-bg: $pale-blue;
+
+/*----------[ header ]----------------------------------------------------------
+*/
+$header-bg: white;
+$header-border-color: $light-stroke;
+
+/*----------[ forms ]-----------------------------------------------------------
+*/
+$button-base-bg: $kraft-paper;
+$button-hover-bg: darken($kraft-paper, 10);
+$button-text-color: white;
+
+$secondary-button-base-bg: white;
+$secondary-button-hover-bg: lighten($kraft-paper, 35);
+$secondary-button-border-color: $kraft-paper;
+$secondary-button-text-color: $kraft-paper;
+
+$disabled-button-base-bg: lighten($silver, 3);
+$disabled-button-text-color: lighten($grey, 5);
+
+$form-section-heading-text-color: $verdigris;
+
+/*----------[ pagination ]------------------------------------------------------
+*/
+$pagination-bg: lighten($coffee-cream, 5);

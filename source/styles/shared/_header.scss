@@ -1,0 +1,50 @@
+/*-----[ header ]---------------------------------------------------------------
+| Common page header styles.
+*/
+.page-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  border-bottom: $header-border-width solid $header-border-color;
+  padding: $vertical-spacing / 2 $horizontal-spacing;
+
+  height: $header-height;
+
+  background-color: $header-bg;
+
+  text-align: center;
+
+  &,
+  nav {
+    font-size: 0;
+  }
+
+  nav a {
+    display: inline-block;
+
+    margin-right: $horizontal-spacing;
+
+    @include body-text;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.current {
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $body-text-color;
+
+        font-weight: 500;
+
+        transition: none;
+        pointer-events: none;
+      }
+    }
+  }
+}

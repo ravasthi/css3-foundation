@@ -1,0 +1,42 @@
+/*----------[ pagination ]------------------------------------------------------
+| Styles for Flickr-style pagination.
+*/
+.pagination {
+  margin-top: $body-text-line-height / 2;
+
+  font-size: 0;
+
+  .first,
+  .prev,
+  .page,
+  .next,
+  .last {
+    display: inline-block;
+
+    margin-top: 0;
+    margin-right: $horizontal-spacing / 2;
+    border-radius: $default-border-radius;
+
+    background-color: $pagination-bg;
+
+    font-size: 1rem;
+
+    a {
+      display: block;
+
+      text-decoration: none;
+    }
+
+    a,
+    &.current,
+    &.gap {
+      padding: $vertical-nudge $horizontal-spacing / 2;
+
+      background-color: transparent;
+    }
+
+    &.current {
+      font-weight: 500;
+    }
+  }
+}

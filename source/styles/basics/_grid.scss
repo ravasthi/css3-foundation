@@ -1,0 +1,58 @@
+/*-----[ grid ]-----------------------------------------------------------------
+| Style specifying the dimensions of the basic page grid and other common
+| measures.
+*/
+$horizontal-spacing: 20px;
+$horizontal-nudge: $horizontal-spacing / 4;
+
+$gutter-width: 1.5 * $horizontal-spacing;
+
+$vertical-spacing: 20px;
+$vertical-nudge: $vertical-spacing / 4;
+$section-spacing: 2 * $vertical-spacing;
+
+/*----------[ susy grid setup ]-------------------------------------------------
+| Use this for responsive grid layouts. Tweak as necessary for your needs.
+| cf Susy documentation: http://susydocs.oddbird.net/en/latest/
+*/
+$page-content-width: 1200px;
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': $horizontal-spacing,
+  'container-position': center,
+  'global-box-sizing': border-box
+);
+
+/*----------[ responsive breakpoints ]------------------------------------------
+*/
+$screen-xs-min: 600px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xl-min: 1500px;
+$screen-2xl-min: 1800px;
+
+$screen-2xs-max: $screen-xs-min - 1px;
+$screen-xs-max: $screen-sm-min - 1px;
+$screen-sm-max: $screen-md-min - 1px;
+$screen-md-max: $screen-lg-min - 1px;
+$screen-lg-max: $screen-xl-min - 1px;
+$screen-xl-max: $screen-2xl-min - 1px;
+
+/*----------[ buttons ]---------------------------------------------------------
+*/
+$default-border-radius: 3px;
+
+$button-border-radius: $default-border-radius;
+$button-height: 2rem;
+$button-vertical-padding: ($button-height - $button-text-size) / 2;
+
+$form-input-border-radius: $default-border-radius;
+
+$secondary-button-border-width: 1px;
+
+/*----------[ header ]----------------------------------------------------------
+*/
+$header-border-width: 1px;
+$header-height: $vertical-spacing + rem-to-px($body-text-line-height) + $header-border-width;

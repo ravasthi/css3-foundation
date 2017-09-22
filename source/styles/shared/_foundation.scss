@@ -1,0 +1,286 @@
+/*-----[ foundation ]-----------------------------------------------------------
+| Reusable content styles. Define your application-wide styles, like links,
+| headers, body text, clearfix, etc. here. See the readme for information on
+| recommended rule order.
+*/
+
+/*----------[ table of contents ]-----------------------------------------------
+| tags
+| non-semantic styles
+*/
+
+/*----------[ tags ]------------------------------------------------------------
+*/
+
+/*
+** * { box-sizing: border-box; } FTW: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+
+  @include body-text;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $link;
+
+  transition: color 0.3s ease-in-out 0;
+
+  text-decoration: none;
+
+  &:visited {
+    color: $visited-link;
+  }
+
+  &:hover,
+  &:active {
+    color: darken($link, 10);
+  }
+}
+
+blockquote,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+  margin: $body-text-line-height 0;
+}
+
+blockquote {
+  margin-left: $horizontal-spacing;
+
+  color: $secondary-text-color;
+}
+
+body {
+  color: $body-text-color;
+  background-color: $page-bg;
+
+  font-family: $body-text-family;
+
+  @include body-text;
+
+  /*
+  ** Turn off automatic text resizing in MobileSafari for iPhone. This assumes
+  ** that you've been mindful of readability and have already chosen the text
+  ** size you feel is effective at those screen sizes. REMOVE IT if you want
+  ** iPhone to automatically resize the text.
+  */
+  @media (max-width: 500px) {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+caption {
+  font-style: italic;
+}
+
+dt {
+  font-style: italic;
+}
+
+dd {
+  margin: 0 0 $body-text-line-height;
+}
+
+em {
+  font-style: italic;
+}
+
+h1 {
+  margin-bottom: $section-spacing;
+  padding: 0;
+
+  color: $heading-text-color;
+
+  @include heading-text;
+}
+
+h2 {
+  margin: $body-text-line-height 0 $body-text-line-height / 2;
+
+  color: $subheading-text-color;
+
+  @include subheading-text;
+}
+
+h3 {
+  margin: $vertical-spacing 0 $vertical-spacing / 2;
+
+  @include large-text;
+}
+
+h1,
+h2,
+h3 {
+  // For large headings, use ligatures if available.
+  text-rendering: optimizeLegibility;
+
+  & + blockquote,
+  & + dl,
+  & + ol,
+  & + ul,
+  & + p {
+    margin-top: 0;
+  }
+}
+
+hr {
+  margin: ($body-text-line-height / 2 - 0.1) auto $body-text-line-height / 2;
+  border-style: none;
+  height: 1px;
+
+  background-color: $stroke;
+}
+
+ol,
+ul {
+  margin-left: $horizontal-spacing;
+}
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+dl dl,
+ol ol,
+ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+code,
+pre {
+  font-family: $monospace-text-family;
+}
+
+code {
+  padding: 2px 3px;
+
+  background-color: $accent-bg;
+}
+
+pre {
+  overflow: auto;
+
+  padding: $body-text-line-height / 2 $horizontal-spacing / 2;
+
+  background-color: $accent-bg;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 80%;
+
+  /*
+  ** A non-zero line-height on a sub or sup element will alter the line-height
+  ** of your paragraph text. To keep your vertical rhythm nice and smooth, set
+  ** the line-height on your subs and sups to 0.
+  */
+  line-height: 0;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+thead th {
+  border-bottom: 2px solid $light-stroke;
+}
+
+td,
+th {
+  padding: $vertical-nudge 0;
+  padding-right: $horizontal-spacing;
+
+  &:first-of-type {
+    padding-left: $horizontal-nudge;
+  }
+
+  &:last-of-type {
+    padding-right: $horizontal-nudge;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+tbody th,
+td {
+  border-bottom: 1px solid $light-stroke;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+/*----------[ non-semantic styles ]---------------------------------------------
+** Purely presentational styles with non-semantic names.
+*/
+.align-center {
+  margin: 0 auto;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+/* Clearfix style from <https://css-tricks.com/snippets/css/clear-fix/> */
+.group {
+  @include clearfix;
+}
+
+span.keep-together {
+  @include keep-together;
+}
+
+.reset {
+  clear: both;
+
+  margin: 0;
+  padding: 0;
+  height: 1px;
+
+  font-size: 0;
+}
+
+.spacer {
+  padding: 0;
+  height: $body-text-line-height / 2;
+
+  font-size: 0;
+}

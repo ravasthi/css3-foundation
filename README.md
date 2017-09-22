@@ -1,19 +1,13 @@
-# 55 Minutes CSS3/HTML5 Foundation #
+# 55 Minutes CSS3/HTML5 Foundation
 
-This project is a [Compass](http://compass-style.org/ "Compass Home | Compass Documentation")-based CSS3/HTML5 template for crafting modern web applications. We're particularly focused on establishing patterns that work well with server-side frameworks like Rails, Django and Wicket.
+This project is a CSS3/HTML5 template for crafting modern web applications. This latest iteration of the template is well-suited for building simple static websites, or serving as the foundation for web applications. For a React/Redux-based application, see my [create-react-app-based starter project](https://github.com/ravasthi/yaras).
 
-To use this project, the following must be installed on your computer:
+To use this project, you should have a recent (>= 8.0) version of [node.js](https://nodejs.org/) installed.
 
-* [Ruby](http://www.ruby-lang.org/en/)
-* [RubyGems](http://rubygems.org/)
-* [Bundler](http://gembundler.com/)
-* [Bower](http://bower.io)
+## Feature Highlights
 
-## Feature Highlights ##
-
-* A fluid, responsive layout following the principles of [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design "A Book Apart, Responsive Web Design"), with breakpoints at 500, 768, 992 and 1200px.
+* A fluid, responsive layout following the principles of [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design "A Book Apart, Responsive Web Design").
 * Best practices recommended by various boilerplate projects, as well as our own experience developing web applications.
-* Integration with the [jQuery](http://jquery.com/ "jQuery: The Write Less, Do More, JavaScript Library") and [jQuery UI](http://jqueryui.com/ "jQuery UI - Home") JavaScript libraries, as well as [55 Minutes' own set of JS utilities and conveniences](https://github.com/55minutes/fiftyfive-util-js/).
 * A style guide containing examples of the default styles defined in the project.
 * A number of convenient Sass mixins for:
     * Clearfix
@@ -24,56 +18,59 @@ To use this project, the following must be installed on your computer:
     * [Pure CSS parallax scrolling](http://keithclark.co.uk/articles/pure-css-parallax-websites/ "Pure CSS Parallax Websites by Keith Clark")
 * Integration with the [Susy layout framework](http://susy.oddbird.net).
 * Integration with [Font Awesome](http://fontawesome.io "Font Awesome, the iconic font and CSS toolkit").
-* Front-end dependency management with [Bower](http://bower.io "Bower").
-* Ruby version management: if you have either RVM or rbenv installed, this project comes bundled with a `.ruby-version` file to make your environment setup easier.
-* Integration with [Sprockets](https://github.com/sstephenson/sprockets) to compile and minify JavaScript dependencies; this has the benefit of reducing the number of requests to the server, and lightening each download.
-* Integration with [Puma](https://github.com/puma/puma), [Guard](http://guardgem.org ""), and [LiveReload](http://livereload.com "LiveReload"), for *really* painless development.
+* Sass linting with [stylelint](https://stylelint.io).
+* Dependency management with [npm](https://www.npmjs.com)/[yarn](https://yarnpkg.com/).
+* Asset bundling with [webpack](https://webpack.js.org).
+* Integration with [Browsersync](https://www.browsersync.io) for *really* painless development.
 
-## Getting Started ##
+## Getting Started
 
-1. Install Ruby, RubyGems, Bundler and Bower, or verify that they are already installed.
-2. Change into the <code>css3-foundation/</code> directory in your favorite terminal application and type <code>bundle install</code>.
-3. Install front-end dependencies by typing <code>bower install</code>.
-4. Steps 1–3 are one-time-only setup requirements. Hereafter, all you need to do is run the following command from <code>css3-foundation/</code>:
+1. Install node.js, or verify that it is already installed.
+2. Change into the <code>css3-foundation/</code> directory in your favorite terminal application and type <code>npm install</code>.
+3. Steps 1–2 are one-time-only setup requirements. Hereafter, all you need to do is run the following command from <code>css3-foundation/</code>:
 
-        bundle exec guard
+        npm run start
 
-    This will monitor changes to your source files, recompile the Sass, and reload your browser. To compile the Sass files one time only, type:
+    This will monitor changes to your source files, recompile the Sass and JavaScript, and (re)load your browser. To compile the scripts and styles one time only, type:
 
-        bundle exec compass compile
+        npm run build
 
-    More details can be found in the [Compass](http://compass-style.org/reference/compass/ "Compass Core Framework | Compass Documentation") and [Guard](http://guardgem.org "") documentation.
+    See all available npm scripts:
 
-    If you're interested in using this foundation with the [Apache Wicket](http://wicket.apache.org/) framework, you'll want to check out our [fiftyfive-wicket](https://github.com/55minutes/fiftyfive-wicket) project, which includes a Maven archetype that bundles all of these CSS3 and HTML5 practices and integrates them nicely with Wicket.
+        npm run
 
-    If you plan to use it with Ruby on Rails, read our [recent blog post](http://blog.55minutes.com/2012/01/getting-compass-to-work-with-rails-31-and-32/) on integrating Compass and Rails 3.1/3.2.
-
-## File organization ##
+## File organization
 
 Files in this project are organized into directories like so:
 
     css3-foundation/
+    ├── distribution
+    │   ├── fonts
+    │   ├── scripts
+    │   └── styles
     ├── images
-    ├── scripts
-    │   └── vendor
-    └── scripts-compiled
-    ├── styles
-    │   ├── vendor
-    │   ├── basics
-    │   └── shared
-    └── styles-compiled
+    │   ├── app-icons
+    │   └── originals
+    └── source
+        ├── scripts
+        │   └── vendor
+        └── styles
+            ├── basics
+            └── shared
 
 Please refer to individual source files for details on what should be included there, but here are some general guidelines for file organization:
 
-* **styles/** contains the Sass source files. We use the SCSS syntax for this project.
-    * **styles/basics/** contains the building blocks of our styles: the colors, the typography, the grid, and the reset stylesheet.
-    * **styles/shared/** contains application-wide styles like header, footer and form styles. Default styles for the basic HTML tags should also be included here.
-* **styles-compiled/** contains the compiled stylesheets, the CSS files that we will include in our markup. This directory is not checked into source control, but will be generated by Compass when you run `compass watch`.
-* **scripts/** contains all of the project's JavaScript files. Put custom JavaScript at the top level of this directory.
-    * **scripts/vendor/** contains custom-built libraries like Modernizr. Bower-installed libraries are, of course, in **bower_components/**.
-* **scripts-compiled/** contains the compiled and minified JavaScript files, the JS files that we will include in our markup. This directory is not checked into source control, but will be generated by Sprockets when you run `guard`.
+* **source/** contains the Sass and JavaScript source files that Webpack will combine/compile
+    * **source/styles/** contains the Sass source files. We use the SCSS syntax for this project.
+        * **source/styles/basics/** contains the building blocks of our styles: the colors, the typography, the grid.
+        * **source/styles/shared/** contains application-wide styles like header, footer and form styles. Default styles for the basic HTML tags should also be included here.
+    * **source/scripts/** contains all of the project's JavaScript files. Put custom JavaScript at the top level of this directory.
+        * **source/scripts/vendor/** contains custom-built libraries like Modernizr. npm/yarn-installed libraries are, of course, in **node_modules/**.
+* **distribution/** will contain the processed asset files that are included by the HTML files
+    * **distribution/styles/** contains the compiled stylesheets, the CSS files that we will include in our markup. The contents of this directory are not checked into source control, but will be generated by Webpack when you run `npm run build`.
+    * **distribution/scripts/** contains the compiled JavaScript files, the JS files that we will include in our markup. The contents of this directory are not checked into source control, but will be generated by Webpack when you run `npm run build`.
 
-## CSS rule organization ##
+## CSS rule organization &amp; linting
 
 A single CSS rule set can quickly grow large and unwieldy, so to promote ease of reading, we recommend following a prescribed order for writing your CSS rules. In general, we work from the outside in, from layout to text:
 
@@ -144,5 +141,4 @@ selector
 }
 ```
 
-This is of course not required; some teams prefer, for example, to alphabetize the rules instead. The important thing is that whatever your team chooses, there is a consistent, documented pattern.
-
+This is of course not required; some teams prefer, for example, to alphabetize the rules instead. The important thing is that whatever your team chooses, there is a consistent, documented pattern. We define our preferred order in this repository's `stylelint.config.js` and enforce it through stylelint and the [stylelint-order plugin](https://www.npmjs.com/package/stylelint-order).

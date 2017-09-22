@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- stylesheets -->
-  <link rel="stylesheet" type="text/css" media="all" href="styles-compiled/application.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="distribution/styles/styles.css"/>
 
   <!-- conditional comments -->
   <!--[if IE]>
-    <link rel="stylesheet" type="text/css" media="all" href="styles-compiled/ie.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="distribution/styles/ie.css" />
   <![endif]-->
 
   <!-- print stylesheet -->
-  <link rel="stylesheet" type="text/css" media="print" href="styles-compiled/print.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="distribution/styles/print.css"/>
 
   <!-- external styles -->
   <!-- <link rel="stylesheet" type="text/css" media="all" href="http://code.jquery.com/ui/1.8.23/themes/redmond/jquery-ui.css"/> -->
@@ -34,12 +34,22 @@
   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
   <!-- header javascript -->
-  <script type="text/javascript" src="scripts-compiled/application-header.js">
+  <script type="text/javascript" src="distribution/scripts/application-header.js">
   </script>
 
   <title>You know the drill.</title>
 </head>
 <body id="login">
+  <header class="page-header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="style-guide.html">Style guide</a>
+      <a class="current" href="login.html">Sample login page</a>
+      <a href="font-weight-tester.html">Font weight tester</a>
+      <a href="parallax.html">Parallax scrolling example</a>
+    </nav>
+  </header>
+
   <div class="page">
     <h1>You know the drill.</h1>
 
@@ -66,12 +76,12 @@
     </form>
 
     <footer>
-      &copy; 2016 55 Minutes.
+      &copy; 2017 55 Minutes.
     </footer>
   </div> <!-- /.page -->
 
   <!-- all other javascript goes at the end of the body -->
-  <script type="text/javascript" src="scripts-compiled/application.js">
+  <script type="text/javascript" src="distribution/scripts/application.js">
   </script>
 
   <!-- onload javascript -->

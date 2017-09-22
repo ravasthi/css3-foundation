@@ -3,6 +3,7 @@
 
 # Bower
 bower_components/
+node_modules/
 
 # Bundler
 .bundle/
@@ -10,8 +11,13 @@ bower_components/
 # Compass
 .sass-cache/
 images/icon-*.png
-styles-compiled/
-scripts-compiled/
+distribution/fonts/*.eot
+distribution/fonts/*.svg
+distribution/fonts/*.ttf
+distribution/fonts/*.woff*
+distribution/scripts/*.js
+distribution/styles/*.css
+distribution/*.hot-update.json
 
 # Pow/RVM
 .powenv

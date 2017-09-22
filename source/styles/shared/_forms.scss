@@ -1,0 +1,284 @@
+/*-----[ forms ]----------------------------------------------------------------
+| Global form and form element styles. Feature-specific form styles should be
+| co-located with other feature-specific styles.
+*/
+
+/*----------[ table of contents ]-----------------------------------------------
+| text and password fields, textareas
+| buttons and checkboxes
+| form layout
+| validation
+| datepicker
+*/
+
+/*----------[ text and password fields, textareas ]-----------------------------
+*/
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+select,
+textarea {
+  margin: 0;
+  border: 1px solid $stroke;
+  border-radius: $form-input-border-radius;
+  padding: 0 2 * $horizontal-nudge;
+
+  background-color: white;
+
+  font-family: $body-text-family;
+  font-size: $body-text-size;
+}
+
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+select {
+  height: $button-height;
+}
+
+input[type=email][disabled],
+input[type=password][disabled],
+input[type=search][disabled],
+input[type=tel][disabled],
+input[type=text][disabled],
+input[type=url][disabled],
+select[disabled],
+textarea[disabled] {
+  /* stylelint-disable declaration-no-important */
+  border-color: $disabled-stroke !important;
+
+  color: $disabled-text-color !important;
+
+  cursor: not-allowed !important;
+  /* stylelint-enable declaration-no-important */
+}
+
+input[type=text].small {
+  margin-right: 0.33em;
+  width: 50px;
+}
+
+/*----------[ buttons and checkboxes]-------------------------------------------
+*/
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: baseline;
+}
+
+input[type=checkbox] {
+  border: 1px solid $grey;
+
+  background-color: white;
+}
+
+input[type=submit],
+input[type=button],
+button,
+a.button {
+  display: inline-block;
+
+  border-style: none;
+  border-radius: $button-border-radius;
+  padding: 0 $horizontal-spacing;
+
+  color: $button-text-color;
+  background-color: $button-base-bg;
+
+  font-family: $button-text-family;
+  font-size: $button-text-size;
+  line-height: $button-text-line-height;
+  font-weight: 500;
+
+  transition: background-color $default-transition-duration $default-transition-timing-function;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+
+  &.secondary {
+    border: 1px solid $secondary-button-border-color;
+
+    color: $secondary-button-text-color;
+    background-color: $secondary-button-base-bg;
+
+    $secondary-button-line-height: rem-to-px($button-height) - 2 * $secondary-button-border-width;
+    line-height: $secondary-button-line-height;
+
+    &:hover {
+      background-color: $secondary-button-hover-bg;
+    }
+  }
+
+  &[disabled] {
+    color: $disabled-button-text-color;
+    background-color: $disabled-button-base-bg;
+
+    &:hover {
+      background-color: $disabled-button-base-bg;
+    }
+
+    /* stylelint-disable-next-line declaration-no-important */
+    cursor: not-allowed !important;
+  }
+}
+
+.button-bar {
+  margin: $body-text-line-height 0;
+  padding: 0;
+}
+
+.button-bar input[type=submit],
+.button-bar input[type=button],
+.button-bar button,
+.button-bar > a {
+  display: inline-block;
+
+  margin: 0;
+  margin-right: $horizontal-spacing / 2;
+}
+
+.button-bar > a {
+  display: inline-block;
+
+  font-size: $button-text-size;
+  line-height: $button-text-line-height;
+
+  vertical-align: middle;
+
+  text-decoration: none;
+}
+
+/*----------[ form layout ]-----------------------------------------------------
+*/
+
+/*---------------[ forms in tables ]--------------------------------------------
+*/
+table.form {
+  margin-top: 0;
+
+  &,
+  th,
+  td {
+    border-style: none;
+  }
+
+  .section-heading th {
+    color: $form-section-heading-text-color;
+
+    font-weight: $form-section-heading-text-weight;
+  }
+
+  .field-label {
+    padding-right: $horizontal-spacing;
+
+    line-height: $button-height;
+    font-weight: normal;
+
+    text-align: right;
+    vertical-align: top;
+  }
+
+  .field,
+  .button-bar {
+    padding-left: 0;
+  }
+}
+
+.stacked,
+.radio-group,
+.checkbox-group {
+  label {
+    display: block;
+  }
+}
+
+.field {
+  input + span.form-help {
+    margin-left: $horizontal-spacing / 2;
+  }
+
+  input + p.form-help {
+    margin-top: $vertical-nudge;
+    margin-left: $horizontal-nudge;
+  }
+}
+
+/*---------------[ stacked forms ]----------------------------------------------
+*/
+.stacked {
+  margin-left: -$horizontal-nudge;
+
+  .section-heading {
+    color: $form-section-heading-text-color;
+
+    font-weight: $form-section-heading-text-weight;
+  }
+
+  .field > label:first-of-type {
+    margin-top: $body-text-line-height / 2;
+  }
+
+  .field,
+  .section-heading,
+  .button-bar {
+    padding-left: $horizontal-nudge;
+  }
+}
+
+/*----------[ validation ]------------------------------------------------------
+*/
+.error {
+  &,
+  td,
+  th {
+    background-color: lighten($error-feedback, 55);
+  }
+
+  label,
+  .form-help {
+    color: $error-feedback;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type=email],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  input[type=url],
+  select,
+  textarea {
+    border-color: darken($error-feedback, 5);
+  }
+
+  ul.error-explanation {
+    margin: $vertical-nudge;
+    margin-left: $horizontal-spacing;
+
+    color: $error-feedback;
+
+    @include secondary-text;
+  }
+}
+
+/*----------[ datepicker ]------------------------------------------------------
+*/
+input.date,
+img.ui-datepicker-trigger {
+  vertical-align: middle;
+}
+
+.ui-datepicker {
+  // stylelint-disable-next-line declaration-no-important
+  font-size: $secondary-text-size !important;
+}
