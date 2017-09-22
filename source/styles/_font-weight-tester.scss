@@ -6,7 +6,9 @@
   font-family: $font-family-to-test;
 
   .page {
-    margin: $section-spacing auto;
+    margin-right: auto;
+    margin-bottom: $section-spacing;
+    margin-left: auto;
     max-width: 40em;
   }
 

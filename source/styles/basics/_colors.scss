@@ -86,6 +86,11 @@ $warning-feedback-bg: desaturate(lighten($warning-feedback, 45), 15);
 $error-feedback: desaturate(darken($flamingo, 10), 12);
 $error-feedback-bg: desaturate(lighten($error-feedback, 37), 10);
 
+/*----------[ header ]----------------------------------------------------------
+*/
+$header-bg: white;
+$header-border-color: $light-stroke;
+
 /*----------[ forms ]-----------------------------------------------------------
 */
 $button-base-bg: $kraft-paper;

@@ -17,7 +17,7 @@ $gg-deep-orange: #fa6900;
   display: inline-block;
 
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   left: 2 * $horizontal-spacing;
 
@@ -25,11 +25,11 @@ $gg-deep-orange: #fa6900;
   border-top-width: 0;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  padding: $body-text-line-height / 2 $horizontal-spacing / 2;
+  padding: $vertical-spacing / 2 $horizontal-spacing / 2;
 
-  background-color: $page-bg;
+  background-color: $accent-bg;
 
-  font-weight: bold;
+  font-weight: 600;
 
   .toggle-debug {
     margin-right: $horizontal-nudge;

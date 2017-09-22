@@ -2,6 +2,8 @@
 | Top-level styles for content. Otherwise unqualified styles should go here.
 */
 .page {
+  margin-top: $header-height + $vertical-spacing;
+
   @include clearfix;
 
   .annotation,

@@ -3,7 +3,7 @@
 | how feature-specific styles should be organized.
 */
 .documentation .page {
-  padding: $body-text-line-height $horizontal-spacing;
+  padding: $vertical-spacing $horizontal-spacing;
 
   header {
     margin-bottom: $body-text-line-height;
@@ -40,8 +40,9 @@
 
 @media (min-width: $screen-md-min) {
   .documentation .page {
-    margin: 50px auto;
-    border: 2px solid $silver;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid $light-stroke;
 
     border-radius: 15px;
   }

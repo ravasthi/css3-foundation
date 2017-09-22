@@ -44,8 +44,9 @@
 
 @media (min-width: $screen-md-min) {
   #login .page {
-    margin: 50px auto;
-    border: 2px solid $silver;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid $light-stroke;
 
     border-radius: 15px;
   }

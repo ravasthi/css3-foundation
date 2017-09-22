@@ -51,3 +51,8 @@ $button-vertical-padding: ($button-height - $button-text-size) / 2;
 $form-input-border-radius: $default-border-radius;
 
 $secondary-button-border-width: 1px;
+
+/*----------[ header ]----------------------------------------------------------
+*/
+$header-border-width: 1px;
+$header-height: $vertical-spacing + rem-to-px($body-text-line-height) + $header-border-width;
