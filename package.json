@@ -7,6 +7,9 @@
   "author": "Richa Avasthi <ravasthi@gmail.com>",
   "license": "Apache-2.0",
   "private": false,
+  "engines": {
+    "node": ">=8.5.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",

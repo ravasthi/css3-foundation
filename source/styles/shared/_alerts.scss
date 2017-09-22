@@ -21,6 +21,8 @@
       padding-top: $vertical-nudge;
       width: 2 * $horizontal-spacing;
 
+      text-align: center;
+
       font-size: 0;
 
       &::before {
@@ -92,6 +94,26 @@
           top: 2px;
 
           color: $error-feedback;
+
+          font-size: $large-text-size;
+        }
+      }
+    }
+
+    &.info {
+      border-color: $info-feedback;
+
+      .icon {
+        @extend .fa-info-circle;
+
+        background-color: $info-feedback-bg;
+
+        &::before {
+          @include fa-icon();
+
+          top: 3px;
+
+          color: $info-feedback;
 
           font-size: $large-text-size;
         }
