@@ -8,9 +8,9 @@
   .message {
     display: flex;
 
+    margin-bottom: $vertical-nudge;
     border: 1px solid transparent;
     border-radius: $default-border-radius;
-    margin-bottom: $vertical-nudge;
 
     .icon,
     .message-content {
@@ -21,9 +21,9 @@
       padding-top: $vertical-nudge;
       width: 2 * $horizontal-spacing;
 
-      text-align: center;
-
       font-size: 0;
+
+      text-align: center;
 
       &::before {
         display: inline-block;
