@@ -63,10 +63,10 @@ module.exports = {
     },
     resolve: {
         extensions: [
-            ".js",
-            ".json",
-            ".css",
-            ".scss"
+            '.js',
+            '.json',
+            '.css',
+            '.scss'
         ]
     },
     plugins: [
