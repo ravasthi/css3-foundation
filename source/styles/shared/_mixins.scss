@@ -144,11 +144,11 @@
     @content;
   }
 
-  &:-moz-placeholder { /* Firefox 18- */
+  &::-moz-placeholder { /* Firefox 19+ */
     @content;
   }
 
-  &::-moz-placeholder { /* Firefox 19+ */
+  &:-moz-placeholder { /* Firefox 18- */
     @content;
   }
 
@@ -249,6 +249,7 @@
     }
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   .parallax-layer {
     position: absolute;
     top: 0;

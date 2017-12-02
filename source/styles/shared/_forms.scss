@@ -155,50 +155,6 @@ a.button {
   text-decoration: none;
 }
 
-/*----------[ form layout ]-----------------------------------------------------
-*/
-
-/*---------------[ forms in tables ]--------------------------------------------
-*/
-table.form {
-  margin-top: 0;
-
-  &,
-  th,
-  td {
-    border-style: none;
-  }
-
-  .section-heading th {
-    color: $form-section-heading-text-color;
-
-    font-weight: $form-section-heading-text-weight;
-  }
-
-  .field-label {
-    padding-right: $horizontal-spacing;
-
-    line-height: $button-height;
-    font-weight: normal;
-
-    text-align: right;
-    vertical-align: top;
-  }
-
-  .field,
-  .button-bar {
-    padding-left: 0;
-  }
-}
-
-.stacked,
-.radio-group,
-.checkbox-group {
-  label {
-    display: block;
-  }
-}
-
 .field {
   input + span.form-help {
     margin-left: $horizontal-spacing / 2;
@@ -207,28 +163,6 @@ table.form {
   input + p.form-help {
     margin-top: $vertical-nudge;
     margin-left: $horizontal-nudge;
-  }
-}
-
-/*---------------[ stacked forms ]----------------------------------------------
-*/
-.stacked {
-  margin-left: -$horizontal-nudge;
-
-  .section-heading {
-    color: $form-section-heading-text-color;
-
-    font-weight: $form-section-heading-text-weight;
-  }
-
-  .field > label:first-of-type {
-    margin-top: $body-text-line-height / 2;
-  }
-
-  .field,
-  .section-heading,
-  .button-bar {
-    padding-left: $horizontal-nudge;
   }
 }
 
@@ -268,6 +202,72 @@ table.form {
     color: $error-feedback;
 
     @include secondary-text;
+  }
+}
+
+/*----------[ form layout ]-----------------------------------------------------
+*/
+
+/*---------------[ stacked forms ]----------------------------------------------
+*/
+.stacked,
+.radio-group,
+.checkbox-group {
+  label {
+    display: block;
+  }
+}
+
+.stacked {
+  margin-left: -$horizontal-nudge;
+
+  .section-heading {
+    color: $form-section-heading-text-color;
+
+    font-weight: $form-section-heading-text-weight;
+  }
+
+  .field > label:first-of-type {
+    margin-top: $body-text-line-height / 2;
+  }
+
+  .field,
+  .section-heading,
+  .button-bar {
+    padding-left: $horizontal-nudge;
+  }
+}
+
+/*---------------[ forms in tables ]--------------------------------------------
+*/
+table.form {
+  margin-top: 0;
+
+  &,
+  th,
+  td {
+    border-style: none;
+  }
+
+  .section-heading th {
+    color: $form-section-heading-text-color;
+
+    font-weight: $form-section-heading-text-weight;
+  }
+
+  .field-label {
+    padding-right: $horizontal-spacing;
+
+    line-height: $button-height;
+    font-weight: normal;
+
+    text-align: right;
+    vertical-align: top;
+  }
+
+  .field,
+  .button-bar {
+    padding-left: 0;
   }
 }
 
