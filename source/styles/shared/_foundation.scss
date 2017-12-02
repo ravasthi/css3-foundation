@@ -95,6 +95,11 @@ em {
   font-style: italic;
 }
 
+ol,
+ul {
+  margin-left: $horizontal-spacing;
+}
+
 h1 {
   margin-bottom: $section-spacing;
   padding: 0;
@@ -141,11 +146,7 @@ hr {
   background-color: $stroke;
 }
 
-ol,
-ul {
-  margin-left: $horizontal-spacing;
-}
-
+/* stylelint-disable-next-line no-descending-specificity */
 ol {
   list-style-type: decimal;
 
@@ -158,12 +159,19 @@ ol {
   }
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
+ul {
+  list-style-type: disc;
+}
+
+/* stylelint-disable no-descending-specificity */
 dl dl,
 ol ol,
 ul ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+/* stylelint-enable no-descending-specificity */
 
 code,
 pre {
@@ -212,9 +220,8 @@ table {
   width: 100%;
 }
 
-table,
-thead th {
-  border-bottom: 2px solid $light-stroke;
+th {
+  text-align: left;
 }
 
 td,
@@ -231,18 +238,17 @@ th {
   }
 }
 
-th {
-  text-align: left;
+/* stylelint-disable no-descending-specificity */
+table,
+thead th {
+  border-bottom: 2px solid $light-stroke;
 }
 
 tbody th,
 td {
   border-bottom: 1px solid $light-stroke;
 }
-
-ul {
-  list-style-type: disc;
-}
+/* stylelint-enable no-descending-specificity */
 
 /*----------[ non-semantic styles ]---------------------------------------------
 ** Purely presentational styles with non-semantic names.
