@@ -40,8 +40,8 @@
   "scripts": {
     "clean-extra": "rimraf distribution/scripts/ie.js distribution/scripts/print.js distribution/scripts/styles.js",
     "lint:scss": "stylelint 'source/**/*.scss' --syntax scss --config stylelint.config.js",
-    "compile": "webpack",
+    "compile": "webpack --mode production",
     "build": "run-s lint:scss compile clean-extra",
-    "start": "webpack --watch"
+    "start": "webpack --mode development --watch"
   }
 }
