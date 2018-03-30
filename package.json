@@ -34,7 +34,7 @@
     "webpack-cli": "^2.0.13"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.5",
     "jquery": "^3.2.1"
   },
   "scripts": {

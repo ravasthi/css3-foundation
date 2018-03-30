@@ -18,9 +18,10 @@
 @import 'susy/sass/susy';
 
 // ----- Icon fonts
-$fa-font-path: '~font-awesome/fonts';
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts';
 
-@import 'font-awesome/scss/font-awesome';
+@import '@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
 
 // Basics
 @import 'basics/colors';
