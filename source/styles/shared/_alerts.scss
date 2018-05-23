@@ -18,6 +18,11 @@
     }
 
     .icon {
+      @include fa-icon;
+
+      @extend .fas;
+      @extend .fa-fw;
+
       padding-top: $vertical-nudge;
       width: 2 * $horizontal-spacing;
 
@@ -32,7 +37,6 @@
 
         margin-right: 0.5 * $horizontal-spacing;
         margin-left: 0.5 * $horizontal-spacing;
-        width: $horizontal-spacing;
       }
     }
 
@@ -44,14 +48,12 @@
       border-color: $success-feedback;
 
       .icon {
-        background-color: $success-feedback-bg;
-
         @extend .fa-check;
 
-        &::before {
-          @include fa-icon();
+        background-color: $success-feedback-bg;
 
-          top: 1px;
+        &::before {
+          top: 2px;
 
           color: $success-feedback;
 
@@ -69,9 +71,7 @@
         background-color: $warning-feedback-bg;
 
         &::before {
-          @include fa-icon();
-
-          top: 2px;
+          top: 3px;
 
           color: $warning-feedback;
 
@@ -89,8 +89,6 @@
         background-color: $error-feedback-bg;
 
         &::before {
-          @include fa-icon();
-
           top: 2px;
 
           color: $error-feedback;
@@ -109,8 +107,6 @@
         background-color: $info-feedback-bg;
 
         &::before {
-          @include fa-icon();
-
           top: 3px;
 
           color: $info-feedback;

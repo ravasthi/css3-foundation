@@ -1,4 +1,4 @@
-# 55 Minutes CSS3/HTML5 Foundation
+# CSS3/HTML5 Foundation
 
 This project is a CSS3/HTML5 template for crafting modern web applications. This latest iteration of the template is well-suited for building simple static websites, or serving as the foundation for web applications. For a React/Redux-based application, see my [create-react-app-based starter project](https://github.com/ravasthi/yaras).
 

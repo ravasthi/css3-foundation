@@ -175,7 +175,7 @@
 }
 
 @media (min-width: $screen-xl-min) {
-  #style-guide .page {
+  #style-guide > .page {
     margin-right: auto;
     margin-left: auto;
     max-width: $page-content-width;
