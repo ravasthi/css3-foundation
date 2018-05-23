@@ -1,7 +1,7 @@
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
@@ -22,30 +22,31 @@ module.exports = {
             {
                 test: /\.scss$/,
                 // include: /node_modules/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                includePaths: [ 'node_modules' ],
-                                sourceMap: true
-                            }
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
                         }
-                    ]
-                })
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [
+                                require('autoprefixer')
+                            ],
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: [ 'node_modules' ],
+                            sourceMap: true
+                        }
+                    }
+                ],
             },
             {
                 // Capture eot, svg, ttf, woff, and woff2
@@ -76,9 +77,9 @@ module.exports = {
             'distribution/styles/*.*',
             'distribution/fonts/*.*'
         ]),
-        new ExtractTextPlugin({
-            filename: 'styles/[name].css',
-            allChunks: true,
+        new MiniCssExtractPlugin({
+            filename: "styles/[name].css",
+            chunkFilename: "styles/[id].css",
         }),
         new BrowserSyncPlugin({
             files: [
