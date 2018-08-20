@@ -23,6 +23,8 @@
       @extend .fas;
       @extend .fa-fw;
 
+      border-top-left-radius: $default-border-radius;
+      border-bottom-left-radius: $default-border-radius;
       padding-top: $vertical-nudge;
       width: 2 * $horizontal-spacing;
 
