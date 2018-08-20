@@ -498,18 +498,7 @@ atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
 
-autoprefixer@^8.2.0:
-  version "8.6.5"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-8.6.5.tgz#343f3d193ed568b3208e00117a1b96eb691d4ee9"
-  dependencies:
-    browserslist "^3.2.8"
-    caniuse-lite "^1.0.30000864"
-    normalize-range "^0.1.2"
-    num2fraction "^1.2.2"
-    postcss "^6.0.23"
-    postcss-value-parser "^3.2.3"
-
-autoprefixer@^9.0.0:
+autoprefixer@^9.0.0, autoprefixer@^9.1.2:
   version "9.1.2"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.1.2.tgz#73672614e3ee43a433b84c1c2a4b1ca392d2f6a1"
   dependencies:
@@ -757,13 +746,6 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-browserslist@^3.2.8:
-  version "3.2.8"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-3.2.8.tgz#b0005361d6471f0f5952797a76fc985f1f978fc6"
-  dependencies:
-    caniuse-lite "^1.0.30000844"
-    electron-to-chromium "^1.3.47"
-
 browserslist@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.0.2.tgz#294388f5844bb3ab15ef7394ca17f49bf7a4e6f1"
@@ -871,7 +853,7 @@ camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
-caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864, caniuse-lite@^1.0.30000876, caniuse-lite@^1.0.30000877:
+caniuse-lite@^1.0.30000876, caniuse-lite@^1.0.30000877:
   version "1.0.30000877"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000877.tgz#f189673b86ecc06436520e3e391de6a13ca923b4"
 
@@ -1500,7 +1482,7 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-electron-to-chromium@^1.3.47, electron-to-chromium@^1.3.57:
+electron-to-chromium@^1.3.57:
   version "1.3.58"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.58.tgz#8267a4000014e93986d9d18c65a8b4022ca75188"
 
@@ -3951,12 +3933,12 @@ postcss-selector-parser@^3.1.0:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-sorting@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-3.1.0.tgz#af7c90ee73ad12569a57664eaf06735c2e25bec0"
+postcss-sorting@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-4.0.0.tgz#abfdf41ff8f7710f66f5dc7e78a3a3cce3983c21"
   dependencies:
     lodash "^4.17.4"
-    postcss "^6.0.13"
+    postcss "^7.0.0"
 
 postcss-styled@>=0.33.0, postcss-styled@^0.33.0:
   version "0.33.0"
@@ -3987,7 +3969,7 @@ postcss@^5.2.16:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.1, postcss@^6.0.13, postcss@^6.0.14, postcss@^6.0.23, postcss@^6.0.8:
+postcss@^6.0.1, postcss@^6.0.23, postcss@^6.0.8:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   dependencies:
@@ -4372,9 +4354,9 @@ requires-port@1.x.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
-reset-css@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/reset-css/-/reset-css-3.0.0.tgz#9b421d34fefc6e5d5b915ee7bfd72b1bc19cfbb0"
+reset-css@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/reset-css/-/reset-css-4.0.1.tgz#1f8456a8be478bc435ce9775b7878ec82cca6b05"
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -5010,13 +4992,13 @@ stylelint-config-standard@^18.0.0:
   dependencies:
     stylelint-config-recommended "^2.1.0"
 
-stylelint-order@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-0.8.1.tgz#35f71af3a15954154e0e99e5646ba3d6fbe34f8d"
+stylelint-order@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-1.0.0.tgz#089fc3d5cdf7e7d4ac1882f65b60b25db750413c"
   dependencies:
-    lodash "^4.17.4"
-    postcss "^6.0.14"
-    postcss-sorting "^3.1.0"
+    lodash "^4.17.10"
+    postcss "^7.0.2"
+    postcss-sorting "^4.0.0"
 
 stylelint@^9.1.3:
   version "9.5.0"

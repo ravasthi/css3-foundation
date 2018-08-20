@@ -8,11 +8,7 @@
 | of the directory organization.
 ------------------------------------------------------------------------------*/
 
-/*
-** Reset
-** Explicitly need an underscore because there's another file named reset in this directory.
-*/
-@import 'reset-css/_reset';
+@import 'reset-css/reset';
 
 // Grid math FTW
 @import 'susy/sass/susy';
