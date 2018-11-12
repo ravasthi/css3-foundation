@@ -1,6 +1,6 @@
 {
   "name": "css3-foundation",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "A simple CSS3/HTML5 bootstrap for static sites and web apps",
   "main": "index.html",
   "repository": "git@github.com:ravasthi/css3-foundation.git",
@@ -14,7 +14,7 @@
     "autoprefixer": "^9.1.5",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "clean-webpack-plugin": "^0.1.16",
+    "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
     "mini-css-extract-plugin": "^0.4.4",
