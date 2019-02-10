@@ -37,9 +37,6 @@
     "@fortawesome/fontawesome-free": "^5.4.1",
     "jquery": "^3.2.1"
   },
-  "resolutions": {
-    "ajv": "6.8.1"
-  },
   "scripts": {
     "clean-extra": "rimraf distribution/scripts/ie.js distribution/scripts/print.js distribution/scripts/styles.js",
     "lint:scss": "stylelint 'source/**/*.scss' --syntax scss --config stylelint.config.js",
