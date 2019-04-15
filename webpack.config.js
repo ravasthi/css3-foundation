@@ -71,12 +71,14 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin([
-            'distribution/*.*',
-            'distribution/scripts/*.*',
-            'distribution/styles/*.*',
-            'distribution/fonts/*.*'
-        ]),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: [
+                'distribution/*.*',
+                'distribution/scripts/*.*',
+                'distribution/styles/*.*',
+                'distribution/fonts/*.*'
+            ]
+        }),
         new MiniCssExtractPlugin({
             filename: "styles/[name].css",
             chunkFilename: "styles/[id].css",
