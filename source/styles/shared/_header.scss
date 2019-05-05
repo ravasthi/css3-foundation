@@ -38,12 +38,12 @@
       &:hover,
       &:active,
       &:visited {
+        pointer-events: none;
         color: $body-text-color;
 
         font-weight: 500;
 
         transition: none;
-        pointer-events: none;
       }
     }
   }
