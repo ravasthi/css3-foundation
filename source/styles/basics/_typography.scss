@@ -3,9 +3,12 @@
 
 /*----------[ text families ]---------------------------------------------------
 */
-$body-text-family: 'Avenir Next', Avenir, 'DejaVu Sans', 'Bitstream Vera Sans', Tahoma, Verdana, sans-serif;
+/* stylelint-disable value-keyword-case */
+$body-text-family: 'Avenir Next', Avenir, 'DejaVu Sans', 'Bitstream Vera Sans',
+  Tahoma, Verdana, sans-serif;
 $monospace-text-family: Consolas, Menlo, 'Lucida Console', monospace;
 $button-text-family: $body-text-family;
+/* stylelint-enable value-keyword-case */
 
 /*----------[ text sizes ]------------------------------------------------------
 */

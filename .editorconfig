@@ -10,13 +10,16 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{js,jsx,py}]
+[*.{py}]
 indent_size = 4
 
 [Makefile]
 indent_style = tab
 
 [*.{css,less,scss}]
+indent_size = 2
+
+[*.{js,jsx}]
 indent_size = 2
 
 [*.{html,dust}]
