@@ -1,22 +1,23 @@
-var selectorRegex = /^[a-z#][a-z0-9\-\${}]*$/;
-var selectorErrorMessage = 'Selectors need to be in lower spine case (e.g. foo-bar).';
-var selectorClassOption = [
-  selectorRegex, {
+const selectorRegex = /^[a-z#][a-z0-9\-${}]*$/;
+const selectorErrorMessage =
+  'Selectors need to be in lower spine case (e.g. foo-bar).';
+const selectorClassOption = [
+  selectorRegex,
+  {
     resolveNestedSelectors: true,
-    message: selectorErrorMessage
-  }
+    message: selectorErrorMessage,
+  },
 ];
-var selectorIDOption = [
-  selectorRegex, {
-    message: selectorErrorMessage
-  }
+const selectorIDOption = [
+  selectorRegex,
+  {
+    message: selectorErrorMessage,
+  },
 ];
 
-var styleLintOptions = {
+const styleLintOptions = {
   extends: 'stylelint-config-standard',
-  plugins: [
-    'stylelint-order'
-  ],
+  plugins: ['stylelint-order'],
   rules: {
     // Temporarily disabling as it seems to be giving false negatives for legal scss at-rules.
     'at-rule-no-unknown': null,
@@ -25,10 +26,13 @@ var styleLintOptions = {
     'block-opening-brace-newline-after': 'always',
     'block-closing-brace-newline-before': 'always',
     'declaration-empty-line-before': null,
-    'rule-empty-line-before': ['always', {
-      except: ['first-nested', 'after-single-line-comment'],
-      ignore: ['after-comment']
-    }],
+    'rule-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested', 'after-single-line-comment'],
+        ignore: ['after-comment'],
+      },
+    ],
     'selector-class-pattern': selectorClassOption,
     'selector-id-pattern': selectorIDOption,
     'string-quotes': 'single',
@@ -96,19 +100,12 @@ var styleLintOptions = {
           'column-rule-style',
           'column-rule-width',
           'column-span',
-          'column-width'
+          'column-width',
         ],
       },
       {
         emptyLineBefore: 'always',
-        properties: [
-          'position',
-          'z-index',
-          'top',
-          'right',
-          'bottom',
-          'left'
-        ]
+        properties: ['position', 'z-index', 'top', 'right', 'bottom', 'left'],
       },
       {
         emptyLineBefore: 'always',
@@ -204,8 +201,8 @@ var styleLintOptions = {
           'max-width',
           'height',
           'min-height',
-          'max-height'
-        ]
+          'max-height',
+        ],
       },
       {
         emptyLineBefore: 'always',
@@ -217,8 +214,8 @@ var styleLintOptions = {
           'page-break-before',
           'page-break-inside',
           'orphans',
-          'widows'
-        ]
+          'widows',
+        ],
       },
       {
         emptyLineBefore: 'always',
@@ -231,8 +228,8 @@ var styleLintOptions = {
           'list-style',
           'list-style-position',
           'list-style-type',
-          'list-style-image'
-        ]
+          'list-style-image',
+        ],
       },
       {
         emptyLineBefore: 'always',
@@ -247,7 +244,7 @@ var styleLintOptions = {
           'background',
           'filter',
           'filter:progid:DXImageTransform.Microsoft.Alpha(Opacity)',
-          '-ms-filter:\'progid:DXImageTransform.Microsoft.Alpha\'',
+          "-ms-filter:'progid:DXImageTransform.Microsoft.Alpha'",
           '-ms-interpolation-mode',
           'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader',
           'background-color',
@@ -272,9 +269,9 @@ var styleLintOptions = {
           '-moz-box-shadow',
           'box-shadow',
           'filter:progid:DXImageTransform.Microsoft.gradient',
-          '-ms-filter:\'progid:DXImageTransform.Microsoft.gradient\'',
-          'text-shadow'
-        ]
+          "-ms-filter:'progid:DXImageTransform.Microsoft.gradient'",
+          'text-shadow',
+        ],
       },
       {
         emptyLineBefore: 'always',
@@ -293,8 +290,8 @@ var styleLintOptions = {
           'font-emphasize',
           'font-emphasize-position',
           'font-emphasize-style',
-          'font-smooth'
-        ]
+          'font-smooth',
+        ],
       },
       {
         emptyLineBefore: 'always',
@@ -428,11 +425,11 @@ var styleLintOptions = {
           'tab-size',
           '-webkit-hyphens',
           '-moz-hyphens',
-          'hyphens'
-        ]
-      }
-    ]
-  }
+          'hyphens',
+        ],
+      },
+    ],
+  },
 };
 
 module.exports = styleLintOptions;

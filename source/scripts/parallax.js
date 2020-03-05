@@ -7,16 +7,14 @@
 import $ from 'jquery/dist/jquery';
 
 // Establish namespace. Change to match the name of your application.
-var Css3Foundation = window.Css3Foundation ? window.Css3Foundation : {};
+const Css3Foundation = window.Css3Foundation ? window.Css3Foundation : {};
 
 Css3Foundation.parallax = {
-    init: function() {
-        $(".toggle-debug").on("click", function(event) {
-            $(".parallax-group").toggleClass("debug");
-        });
-    }
+  init: () => {
+    $('.toggle-debug').on('click', () => {
+      $('.parallax-group').toggleClass('debug');
+    });
+  },
 };
 
-$(function() {
-    Css3Foundation.parallax.init();
-});
+$(() => Css3Foundation.parallax.init());
