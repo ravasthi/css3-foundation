@@ -1,8 +1,10 @@
 const path = require('path');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const DIST_SLUG = 'distribution';
+const DIST = path.resolve(__dirname, DIST_SLUG);
 
 module.exports = {
   entry: {
@@ -14,10 +16,9 @@ module.exports = {
   },
   output: {
     filename: 'scripts/[name].js',
-    path: path.resolve(__dirname, 'distribution'),
-    publicPath: '/',
+    path: DIST,
+    publicPath: `/${DIST_SLUG}/`,
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -70,28 +71,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
-        'distribution/*.*',
-        'distribution/scripts/*.*',
-        'distribution/styles/*.*',
-        'distribution/fonts/*.*',
+        `${DIST_SLUG}/*.*`,
+        `${DIST_SLUG}/scripts/*.*`,
+        `${DIST_SLUG}/styles/*.*`,
+        `${DIST_SLUG}/fonts/*.*`,
       ],
+      cleanAfterEveryBuildPatterns: [`!${DIST_SLUG}/fonts/*.*`],
     }),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
       chunkFilename: 'styles/[id].css',
-    }),
-    new BrowserSyncPlugin({
-      files: [
-        '*.html',
-        'images/**/*',
-        'distribution/**/*.js',
-        'distribution/**/*.css',
-      ],
-      host: 'localhost',
-      port: 4649,
-      server: {
-        baseDir: ['.'],
-      },
     }),
   ],
 };

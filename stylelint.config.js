@@ -16,7 +16,7 @@ const selectorIDOption = [
 ];
 
 const styleLintOptions = {
-  extends: 'stylelint-config-standard',
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   plugins: ['stylelint-order'],
   rules: {
     // Temporarily disabling as it seems to be giving false negatives for legal scss at-rules.

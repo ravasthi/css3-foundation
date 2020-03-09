@@ -55,7 +55,7 @@
         background-color: $success-feedback-bg;
 
         &::before {
-          top: 2px;
+          top: 3px;
 
           color: $success-feedback;
 
@@ -91,7 +91,7 @@
         background-color: $error-feedback-bg;
 
         &::before {
-          top: 2px;
+          top: 3px;
 
           color: $error-feedback;
 

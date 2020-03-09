@@ -12,7 +12,7 @@
   p:last-of-type,
   dl:last-of-type,
   ol:last-of-type,
-  ul:last-of-type, {
+  ul:last-of-type {
     margin-bottom: 0;
   }
 
@@ -20,8 +20,8 @@
     margin-bottom: $section-spacing;
   }
 
-  input[type=email],
-  input[type=password] {
+  input[type='email'],
+  input[type='password'] {
     width: 100%;
   }
 

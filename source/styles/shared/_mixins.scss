@@ -144,11 +144,13 @@
     @content;
   }
 
-  &::-moz-placeholder { /* Firefox 19+ */
+  &::-moz-placeholder {
+    /* Firefox 19+ */
     @content;
   }
 
-  &:-moz-placeholder { /* Firefox 18- */
+  &:-moz-placeholder {
+    /* Firefox 18- */
     @content;
   }
 
@@ -166,8 +168,7 @@
 ** https://medium.com/@micjamking/hd-retina-display-media-queries-b5562b5430d6
 */
 @mixin retina {
-  @media
-    only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
     only screen and (-o-min-device-pixel-ratio: 1.25/1),
     only screen and (min-resolution: 200dpi),
     only screen and (min-resolution: 1.25dppx) {
@@ -190,14 +191,20 @@
 **
 */
 @mixin retina-background(
-  $image-name, $image-width, $image-height, $type: 'png',
-  $bg-color: transparent, $bg-repeat: no-repeat,
-  $bg-pos-x: center, $bg-pos-y: center
+  $image-name,
+  $image-width,
+  $image-height,
+  $type: 'png',
+  $bg-color: transparent,
+  $bg-repeat: no-repeat,
+  $bg-pos-x: center,
+  $bg-pos-y: center
 ) {
   $full-image-name: '#{$image-name}.#{$type}';
   $retina-image-name: '#{$image-name}@2x.#{$type}';
 
-  background: $bg-color image-url($full-image-name) $bg-repeat $bg-pos-x $bg-pos-y;
+  background: $bg-color image-url($full-image-name) $bg-repeat $bg-pos-x
+    $bg-pos-y;
 
   @include retina {
     background-image: image-url($retina-image-name);
@@ -260,7 +267,8 @@
     &.fore {
       z-index: 1;
 
-      transform: translateZ(90px) scale(parallax-scale-correction(90px, $parallax-perspective));
+      transform: translateZ(90px)
+        scale(parallax-scale-correction(90px, $parallax-perspective));
     }
 
     &.base {
@@ -272,13 +280,15 @@
     &.back {
       z-index: 3;
 
-      transform: translateZ(-300px) scale(parallax-scale-correction(-300px, $parallax-perspective));
+      transform: translateZ(-300px)
+        scale(parallax-scale-correction(-300px, $parallax-perspective));
     }
 
     &.deep {
       z-index: 2;
 
-      transform: translateZ(-600px) scale(parallax-scale-correction(-600px, $parallax-perspective));
+      transform: translateZ(-600px)
+        scale(parallax-scale-correction(-600px, $parallax-perspective));
     }
   }
 }

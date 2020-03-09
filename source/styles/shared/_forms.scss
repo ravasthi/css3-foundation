@@ -13,12 +13,12 @@
 
 /*----------[ text and password fields, textareas ]-----------------------------
 */
-input[type=email],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=url],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
 select,
 textarea {
   margin: 0;
@@ -32,22 +32,22 @@ textarea {
   font-size: $body-text-size;
 }
 
-input[type=email],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=url],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
 select {
   height: $button-height;
 }
 
-input[type=email][disabled],
-input[type=password][disabled],
-input[type=search][disabled],
-input[type=tel][disabled],
-input[type=text][disabled],
-input[type=url][disabled],
+input[type='email'][disabled],
+input[type='password'][disabled],
+input[type='search'][disabled],
+input[type='tel'][disabled],
+input[type='text'][disabled],
+input[type='url'][disabled],
 select[disabled],
 textarea[disabled] {
   /* stylelint-disable declaration-no-important */
@@ -59,26 +59,26 @@ textarea[disabled] {
   /* stylelint-enable declaration-no-important */
 }
 
-input[type=text].small {
+input[type='text'].small {
   margin-right: 0.33em;
   width: 50px;
 }
 
 /*----------[ buttons and checkboxes]-------------------------------------------
 */
-input[type=checkbox],
-input[type=radio] {
+input[type='checkbox'],
+input[type='radio'] {
   vertical-align: baseline;
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
   border: 1px solid $grey;
 
   background-color: white;
 }
 
-input[type=submit],
-input[type=button],
+input[type='submit'],
+input[type='button'],
 button,
 a.button {
   display: inline-block;
@@ -95,7 +95,8 @@ a.button {
   line-height: $button-text-line-height;
   font-weight: 500;
 
-  transition: background-color $default-transition-duration $default-transition-timing-function;
+  transition: background-color $default-transition-duration
+    $default-transition-timing-function $default-transition-delay;
   text-transform: uppercase;
 
   &:hover {
@@ -108,7 +109,8 @@ a.button {
     color: $secondary-button-text-color;
     background-color: $secondary-button-base-bg;
 
-    $secondary-button-line-height: rem-to-px($button-height) - 2 * $secondary-button-border-width;
+    $secondary-button-line-height: rem-to-px($button-height) - 2 *
+      $secondary-button-border-width;
     line-height: $secondary-button-line-height;
 
     &:hover {
@@ -134,8 +136,8 @@ a.button {
   padding: 0;
 }
 
-.button-bar input[type=submit],
-.button-bar input[type=button],
+.button-bar input[type='submit'],
+.button-bar input[type='button'],
 .button-bar button,
 .button-bar > a {
   display: inline-block;
@@ -184,12 +186,12 @@ a.button {
     font-weight: bold;
   }
 
-  input[type=email],
-  input[type=password],
-  input[type=search],
-  input[type=tel],
-  input[type=text],
-  input[type=url],
+  input[type='email'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'],
   select,
   textarea {
     border-color: darken($error-feedback, 5);

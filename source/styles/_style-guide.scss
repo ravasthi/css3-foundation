@@ -67,7 +67,7 @@
         'charcoal': $charcoal,
         'grey': $grey,
         'silver': $silver,
-        'greyish-white': $greyish-white
+        'greyish-white': $greyish-white,
       );
 
       @each $swatch-name, $swatch-color in $palette-colors {
@@ -102,12 +102,12 @@
   }
 
   .forms {
-    input[type=email],
-    input[type=password],
-    input[type=search],
-    input[type=tel],
-    input[type=text],
-    input[type=url],
+    input[type='email'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
     select {
       width: 200px;
 

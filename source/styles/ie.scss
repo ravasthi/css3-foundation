@@ -24,8 +24,8 @@
     zoom: 1;
   }
 
-  input[type=submit],
-  input[type=button],
+  input[type='submit'],
+  input[type='button'],
   button,
   a.button {
     overflow: visible;
@@ -36,8 +36,8 @@
 
 .ie8,
 .ie9 {
-  input[type=submit],
-  input[type=button],
+  input[type='submit'],
+  input[type='button'],
   button,
   a.button {
     &,

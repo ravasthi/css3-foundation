@@ -30,7 +30,8 @@ html {
 a {
   color: $link;
 
-  transition: color 0.3s ease-in-out 0;
+  transition: color $default-transition-duration
+    $default-transition-timing-function $default-transition-delay;
 
   text-decoration: none;
 
