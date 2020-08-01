@@ -1,8 +1,9 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const common = require('./webpack.config.common');
-const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
+
+const { merge } = require('webpack-merge');
 
 const DIST_SLUG = 'distribution';
 const HOST = process.env.HOST || 'localhost';

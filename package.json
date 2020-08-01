@@ -16,7 +16,7 @@
     "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
-    "css-loader": "^3.6.0",
+    "css-loader": "^4.1.1",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -32,7 +32,7 @@
     "prettier": "^2.0.5",
     "reset-css": "^5.0.1",
     "rimraf": "^3.0.2",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
     "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",
@@ -40,10 +40,10 @@
     "stylelint-order": "^4.0.0",
     "susy": "^3.0.1",
     "url-loader": "^4.1.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.0.9"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.4.1",
